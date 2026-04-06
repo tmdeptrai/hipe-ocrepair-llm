@@ -101,7 +101,8 @@ def main():
                     print(f"{BOLD}GT: {RESET} {gt_line}")
                     print(f"{BOLD}OCR:{RESET} {ocr_line}")
 
-            print(f"\n(and {remaining} more...)")
+            if remaining > 0:
+                print(f"\n(and {remaining} more...)")
             
     except Exception as e:
         print(f"Error: {e}")
