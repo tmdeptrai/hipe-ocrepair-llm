@@ -1,7 +1,3 @@
-"""
-Model card: https://huggingface.co/pykale/bart-base-ocr
-"""
-
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 model = AutoModelForSeq2SeqLM.from_pretrained('pykale/bart-base-ocr')
