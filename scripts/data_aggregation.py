@@ -42,7 +42,7 @@ def aggregate_split(data_dir: str, split_name: str) -> Dataset:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Aggregate all datasets to prepare for fine tuning")
     parser.add_argument("-i","--input_path",type=str,default="./HIPE-OCRepair-2026-data/data/v0.9",help="Directory containing all the datasets in .jsonl format")
-    parser.add_argument("-o","--output_path",type=str,default="./hipe_aggregated",help="Name of the output files for train/test in parquet format")
+    parser.add_argument("-o","--output_path",type=str,default="./finetune/",help="Name of the output files for train/test in parquet format")
     
     args = parser.parse_args()
     
@@ -51,8 +51,8 @@ if __name__ == "__main__":
     train_dataset = aggregate_split(base_dir, "train")
     dev_dataset = aggregate_split(base_dir, "dev")
 
-    train_output_path = args.output_path + "_train.parquet"
-    dev_output_path = args.output_path + "_dev.parquet"
+    train_output_path = args.output_path + "hipe_aggregated_train.parquet"
+    dev_output_path = args.output_path + "hipe_aggregated_dev.parquet"
     
     train_dataset.to_parquet(train_output_path)
     dev_dataset.to_parquet(dev_output_path)
