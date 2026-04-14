@@ -1,5 +1,6 @@
 import json
 import glob
+import os
 import pandas as pd
 from datasets import Dataset
 import argparse
@@ -47,12 +48,25 @@ def extract_aligned_chunks(ocr_text, gt_text, target_words=300):
     return chunks
 
 def aggregate_split(data_dir: str, split_name: str) -> Dataset:
-    search_pattern = f"{data_dir}/**/*_{split_name}_*.jsonl"
+    search_pattern = f"{data_dir}/**/*_{split_name}*.jsonl"
     file_paths = glob.glob(search_pattern, recursive=True)
+    
+    # exclude masked files and ensure we don't catch accidental splits
+    # e.g. for 'dev', don't want to catch 'dev-unmatched' if we only want 'dev'
+    # BUT for dta19, 'test-unmatched' IS the target.
+    # So we check if the filename contains split_name followed by either '_' or '-'
+    filtered_paths = []
+    for p in file_paths:
+        filename = os.path.basename(p)
+        if "masked" in filename:
+            continue
+        # Check for _test_ or _test-
+        if f"_{split_name}_" in filename or f"_{split_name}-" in filename:
+            filtered_paths.append(p)
     
     extracted_data = []
     
-    for file_path in file_paths:
+    for file_path in filtered_paths:
         with open(file_path, 'r', encoding='utf-8') as f:
             for line in f:
                 if not line.strip(): continue
@@ -88,15 +102,17 @@ def aggregate_split(data_dir: str, split_name: str) -> Dataset:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Aggregate all datasets to prepare for fine tuning")
     parser.add_argument("-i","--input_path",type=str,default="./HIPE-OCRepair-2026-data/data/v0.9",help="Directory containing all the datasets in .jsonl format")
-    parser.add_argument("-o","--output_path",type=str,default="./finetune/",help="Name of the output files for train/test in parquet format")
+    parser.add_argument("-o","--output_path",type=str,default="./data/",help="Name of the output files for train/test in parquet format")
     
     args = parser.parse_args()
     base_dir = args.input_path
 
     train_dataset = aggregate_split(base_dir, "train")
     dev_dataset = aggregate_split(base_dir, "dev")
+    test_dataset = aggregate_split(base_dir, "test")
 
     train_dataset.to_parquet(args.output_path + "hipe_aggregated_train.parquet")
     dev_dataset.to_parquet(args.output_path + "hipe_aggregated_dev.parquet")
+    test_dataset.to_parquet(args.output_path + "hipe_aggregated_test.parquet")
     
-    print("\nFiles chunked and saved! Ready for fast training.")
+    print("\nFiles chunked and saved! Ready for training.")

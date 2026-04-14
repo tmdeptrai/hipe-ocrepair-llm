@@ -48,3 +48,10 @@ This script downloads the BART model named `pykale/bart-base-ocr` to correct OCR
 ```bash
 python src/bart_base_ocr.py
 ```
+
+
+
+Rsync from local machine to l3icalculmaster:
+```bash
+rsync -avz ~/Desktop/hipe-ocrepair-llm mtran01@l3icalculmaster:/Utilisateurs/mtran01/ --exclude={'.venv/*','.venv'}
+```

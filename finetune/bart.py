@@ -20,7 +20,7 @@ def main(args):
 
     # Select model
     model_name = f'facebook/{args.model}'
-    output_dir = os.path.join('model', f'{args.model}-ocr')
+    output_dir = os.path.join('model', f'{args.output_name}')
 
     # Set up training data    
     train = Dataset.from_parquet(args.data)
@@ -53,8 +53,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fine-tuning BART')
     parser.add_argument('--model', type=str, choices=['bart-base', 'bart-large'],
                         default='bart-base', help='Specify model: bart-base, bart-large')
+    parser.add_argument('--output_name',type=str,default='bart-base-ocr',help='Output name of model adapter, always stored inside ./models')
     parser.add_argument('--config', type=str,default="finetune/config.yaml", help='Path to config')
-    parser.add_argument('--data', type=str, default="finetune/hipe_aggregated_train.parquet", help='Path to training data')
+    parser.add_argument('--data', type=str, default="data/hipe_aggregated_train.parquet", help='Path to training data')
     args = parser.parse_args()
 
     main(args)
