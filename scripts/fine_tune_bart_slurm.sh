@@ -1,17 +1,17 @@
 #!/bin/bash
-#SBATCH --job-name=ireallyamfantastic
+#SBATCH --job-name=claude-mythios-unlocked
 #SBATCH --partition=gpu-2080ti
 #SBATCH --qos=normal
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32768
-#SBATCH --time=01:00:00
+#SBATCH --time=01:30:00
 #SBATCH --mail-user=mtran01@univ-lr.fr
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu:2
-#SBATCH --output=job-%j.out
-#SBATCH --error=job-%j.err
+#SBATCH --output=finetune-logs/bart-%j.out
+#SBATCH --error=finetune-logs/bart-%j.err
 
 cd /Utilisateurs/mtran01/hipe-ocrepair-llm
 
