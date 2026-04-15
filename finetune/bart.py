@@ -35,6 +35,7 @@ def main(args):
     config['learning_rate'] = float(config['learning_rate'])
     train_args = Seq2SeqTrainingArguments(
         output_dir=output_dir,
+        seed=args.seed,
         **config,
     )
     trainer = Seq2SeqTrainer(
@@ -44,6 +45,12 @@ def main(args):
         data_collator=data_collator,
         processing_class=tokenizer,
     )
+    
+    print("\n--- TRAINING CONFIGS ---")
+    print("Model name:",model_name)
+    print("Training data:",args.data)
+    print("Output adapter will be saved to:",output_dir)
+    print("\n--- TRAINING STARTED ---")
     trainer.train()
     trainer.save_model(output_dir)
     print(f"Fine tuned model saved to {output_dir}")
@@ -56,6 +63,7 @@ if __name__ == '__main__':
     parser.add_argument('--output_name',type=str,default='bart-base-ocr',help='Output name of model adapter, always stored inside ./models')
     parser.add_argument('--config', type=str,default="finetune/config.yaml", help='Path to config')
     parser.add_argument('--data', type=str, default="data/hipe_aggregated_train.parquet", help='Path to training data')
+    parser.add_argument('--seed', type=int, default=42, help='Random seed for reproducibility')
     args = parser.parse_args()
 
     main(args)

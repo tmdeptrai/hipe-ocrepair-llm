@@ -6,7 +6,7 @@ report/main.aux
 report/main.out
 report/main.toc
 report/long.tex
-
+report/main.log
 model/
 GEMINI.md
 
@@ -72,7 +72,7 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
+# *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal

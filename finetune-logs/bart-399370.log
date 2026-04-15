@@ -1,0 +1,43 @@
+Wed Apr 15 13:58:44 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:19:00.0 Off |                  N/A |
+| 45%   65C    P0            102W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:1A:00.0 Off |                  N/A |
+| 51%   73C    P0             79W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/259 [00:00<?, ?it/s]Loading weights: 100%|██████████| 259/259 [00:00<00:00, 3091.58it/s]
+
+--- TRAINING CONFIGS ---
+Model name: facebook/bart-base
+Training data: data/datasets/overproof-combined_train.parquet
+Output adapter will be saved to: model/bart-base-ocr-overproof-combined
+
+--- TRAINING STARTED ---
+  0%|          | 0/40 [00:00<?, ?it/s]/Utilisateurs/mtran01/hipe-ocrepair-llm/.venv/lib/python3.12/site-packages/torch/nn/parallel/_functions.py:70: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn(
+  2%|▎         | 1/40 [00:03<02:05,  3.22s/it]  5%|▌         | 2/40 [00:05<01:50,  2.90s/it]  8%|▊         | 3/40 [00:08<01:44,  2.83s/it] 10%|█         | 4/40 [00:11<01:41,  2.83s/it] 12%|█▎        | 5/40 [00:14<01:37,  2.78s/it] 15%|█▌        | 6/40 [00:16<01:34,  2.79s/it] 18%|█▊        | 7/40 [00:19<01:31,  2.77s/it] 20%|██        | 8/40 [00:21<01:15,  2.35s/it] 22%|██▎       | 9/40 [00:23<01:16,  2.46s/it] 25%|██▌       | 10/40 [00:26<01:15,  2.53s/it] 28%|██▊       | 11/40 [00:29<01:15,  2.60s/it] 30%|███       | 12/40 [00:32<01:14,  2.66s/it] 32%|███▎      | 13/40 [00:34<01:13,  2.73s/it] 35%|███▌      | 14/40 [00:37<01:11,  2.74s/it] 38%|███▊      | 15/40 [00:40<01:08,  2.74s/it] 40%|████      | 16/40 [00:41<00:56,  2.35s/it] 42%|████▎     | 17/40 [00:44<00:57,  2.48s/it] 45%|████▌     | 18/40 [00:47<00:55,  2.53s/it] 48%|████▊     | 19/40 [00:50<00:55,  2.64s/it] 50%|█████     | 20/40 [00:53<00:53,  2.69s/it] 52%|█████▎    | 21/40 [00:55<00:52,  2.74s/it] 55%|█████▌    | 22/40 [00:58<00:49,  2.75s/it] 57%|█████▊    | 23/40 [01:01<00:47,  2.78s/it] 60%|██████    | 24/40 [01:03<00:38,  2.43s/it] 62%|██████▎   | 25/40 [01:05<00:37,  2.52s/it] 65%|██████▌   | 26/40 [01:08<00:37,  2.67s/it] 68%|██████▊   | 27/40 [01:11<00:35,  2.73s/it] 70%|███████   | 28/40 [01:14<00:33,  2.76s/it] 72%|███████▎  | 29/40 [01:17<00:30,  2.78s/it] 75%|███████▌  | 30/40 [01:20<00:27,  2.75s/it] 78%|███████▊  | 31/40 [01:22<00:24,  2.76s/it] 80%|████████  | 32/40 [01:24<00:18,  2.36s/it] 82%|████████▎ | 33/40 [01:27<00:17,  2.51s/it] 85%|████████▌ | 34/40 [01:29<00:15,  2.56s/it] 88%|████████▊ | 35/40 [01:32<00:13,  2.71s/it] 90%|█████████ | 36/40 [01:35<00:10,  2.70s/it] 92%|█████████▎| 37/40 [01:38<00:08,  2.74s/it] 95%|█████████▌| 38/40 [01:41<00:05,  2.76s/it] 98%|█████████▊| 39/40 [01:44<00:02,  2.78s/it]100%|██████████| 40/40 [01:45<00:00,  2.42s/it]                                               100%|██████████| 40/40 [01:45<00:00,  2.42s/it]100%|██████████| 40/40 [01:45<00:00,  2.64s/it]
+{'train_runtime': '105.7', 'train_samples_per_second': '11.4', 'train_steps_per_second': '0.379', 'train_loss': '26.11', 'epoch': '5'}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.28s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.28s/it]
+Fine tuned model saved to model/bart-base-ocr-overproof-combined
