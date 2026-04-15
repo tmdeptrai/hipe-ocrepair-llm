@@ -50,8 +50,11 @@ python src/bart_base_ocr.py
 ```
 
 
+# Nothing to see down here xD
 
 Rsync from local machine to l3icalculmaster:
 ```bash
 rsync -avz ~/Desktop/hipe-ocrepair-llm mtran01@l3icalculmaster:/Utilisateurs/mtran01/ --exclude={'.venv/*','.venv'}
 ```
+
+Google sheet link for experiment tracking: [Here](https://docs.google.com/spreadsheets/d/1RFEZXg5q-4pkao0pQvJn3HQheoMqu051YjwCMMazEto/edit?usp=sharing)

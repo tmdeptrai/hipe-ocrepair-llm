@@ -34,6 +34,7 @@ def process_datasets(data_dir: str, output_base: str):
                     # Extract metadata
                     dataset_name = doc.get("document_metadata", {}).get("primary_dataset_name", "unknown")
                     language = doc.get("document_metadata", {}).get("language", "unknown")
+                    doc_id = doc.get("document_metadata", {}).get("document_id", "unknown")
                     raw_ocr = doc.get("ocr_hypothesis", {}).get("transcription_unit", "")
                     raw_gt = doc.get("ground_truth", {}).get("transcription_unit", "")
                     
@@ -41,8 +42,10 @@ def process_datasets(data_dir: str, output_base: str):
                         dataset_buckets[dataset_name] = []
                         
                     chunks = extract_aligned_chunks(raw_ocr, raw_gt, target_words=300)
-                    for chunk in chunks:
+                    for idx, chunk in enumerate(chunks):
                         dataset_buckets[dataset_name].append({
+                            "document_id": doc_id,
+                            "chunk_idx": idx,
                             "language": language,
                             "ocr_text": chunk["ocr_text"],
                             "ground_truth": chunk["ground_truth"]
@@ -54,7 +57,10 @@ def process_datasets(data_dir: str, output_base: str):
             
             os.makedirs(os.path.join(output_base, "datasets"), exist_ok=True)
             df = pd.DataFrame(data)
-            df = df.sample(frac=1, random_state=42).reset_index(drop=True)
+            
+            # Only shuffle training data
+            if split == "train":
+                df = df.sample(frac=1, random_state=42).reset_index(drop=True)
             
             output_file = os.path.join(output_base, "datasets", f"{dataset_name}_{split}.parquet")
             Dataset.from_pandas(df).to_parquet(output_file)

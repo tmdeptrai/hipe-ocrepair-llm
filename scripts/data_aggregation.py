@@ -74,14 +74,17 @@ def aggregate_split(data_dir: str, split_name: str) -> Dataset:
                 
                 dataset_name = doc.get("document_metadata", {}).get("primary_dataset_name", "unknown")
                 language = doc.get("document_metadata", {}).get("language", "unknown")
+                doc_id = doc.get("document_metadata", {}).get("document_id", "unknown")
                 raw_ocr = doc.get("ocr_hypothesis", {}).get("transcription_unit", "")
                 raw_gt = doc.get("ground_truth", {}).get("transcription_unit", "")
                 
                 # Apply the aligned chunking
                 chunks = extract_aligned_chunks(raw_ocr, raw_gt, target_words=300)
                 
-                for chunk in chunks:
+                for idx, chunk in enumerate(chunks):
                     extracted_data.append({
+                        "document_id": doc_id,
+                        "chunk_idx": idx,
                         "dataset": dataset_name,
                         "language": language,
                         "ocr_text": chunk["ocr_text"],
@@ -96,7 +99,10 @@ def aggregate_split(data_dir: str, split_name: str) -> Dataset:
         print("Natural Language Distribution:")
         print(df['language'].value_counts())
     
-    df = df.sample(frac=1, random_state=42).reset_index(drop=True)
+    # Only shuffle training data
+    if split_name == "train":
+        df = df.sample(frac=1, random_state=42).reset_index(drop=True)
+        
     return Dataset.from_pandas(df)
 
 if __name__ == "__main__":

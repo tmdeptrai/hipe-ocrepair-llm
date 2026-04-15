@@ -33,6 +33,7 @@ def process_languages(data_dir: str, output_base: str):
                     doc = json.loads(line)
                     
                     language_code = doc.get("document_metadata", {}).get("language", "unknown")
+                    doc_id = doc.get("document_metadata", {}).get("document_id", "unknown")
                     if language_code not in target_langs:
                         continue
                         
@@ -41,8 +42,10 @@ def process_languages(data_dir: str, output_base: str):
                     raw_gt = doc.get("ground_truth", {}).get("transcription_unit", "")
                     
                     chunks = extract_aligned_chunks(raw_ocr, raw_gt, target_words=300)
-                    for chunk in chunks:
+                    for idx, chunk in enumerate(chunks):
                         language_buckets[lang_name].append({
+                            "document_id": doc_id,
+                            "chunk_idx": idx,
                             "dataset": doc.get("document_metadata", {}).get("primary_dataset_name", "unknown"),
                             "ocr_text": chunk["ocr_text"],
                             "ground_truth": chunk["ground_truth"]
@@ -54,7 +57,10 @@ def process_languages(data_dir: str, output_base: str):
             if not data: continue
             
             df = pd.DataFrame(data)
-            df = df.sample(frac=1, random_state=42).reset_index(drop=True)
+            
+            # Only shuffle training data
+            if split == "train":
+                df = df.sample(frac=1, random_state=42).reset_index(drop=True)
             
             output_file = os.path.join(output_base, "languages", f"{lang_name}_{split}.parquet")
             Dataset.from_pandas(df).to_parquet(output_file)
