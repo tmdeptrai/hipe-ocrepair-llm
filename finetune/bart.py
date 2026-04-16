@@ -7,16 +7,16 @@ import yaml
 
 
 # Load BART config from YAML file
-def load_config(file):
+def load_config(file,model_type):
     with open(file, 'r') as f:
         config = yaml.safe_load(f)
-    return config['bart']
+    return config[model_type] # bart-base, bart-large,...
 
 
 # Main function for fine-tuning BART
 def main(args):
     # Load config
-    config = load_config(args.config)
+    config = load_config(args.config,args.model)
 
     # Select model
     model_name = f'facebook/{args.model}'
@@ -25,7 +25,15 @@ def main(args):
     # Set up training data    
     train = Dataset.from_parquet(args.data)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    train = train.map(lambda x: tokenizer(x['ocr_text'], text_target=x['ground_truth'], max_length=1024, truncation=True), batched=True)
+    
+    def preprocess_function(examples):
+        inputs = [str(doc) for doc in examples["ocr_text"]]
+        model_inputs = tokenizer(inputs, max_length=1024, truncation=True, padding=False)
+        labels = tokenizer(text_target=examples["ground_truth"], max_length=1024, truncation=True, padding=False)
+        model_inputs["labels"] = labels["input_ids"]
+        return model_inputs
+    
+    train = train.map(preprocess_function, batched=True,remove_columns=train.column_names)
 
     # Initialise BART
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)

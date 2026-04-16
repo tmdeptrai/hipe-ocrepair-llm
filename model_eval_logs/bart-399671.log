@@ -1,0 +1,39 @@
+Thu Apr 16 10:53:40 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:67:00.0 Off |                  N/A |
+| 33%   48C    P8              4W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Loading model from model/bart-large-ocr-overproof-combined...
+Loading weights:   0%|          | 0/512 [00:00<?, ?it/s]Loading weights:  65%|██████▍   | 332/512 [00:00<00:00, 3318.81it/s]Loading weights: 100%|██████████| 512/512 [00:00<00:00, 2990.05it/s]
+Loading data from data/datasets/overproof-combined_test.parquet...
+Running batch inference on 56 samples...
+Generating Corrections:   0%|          | 0/14 [00:00<?, ?it/s]Generating Corrections:   7%|▋         | 1/14 [00:00<00:03,  3.32it/s]Generating Corrections:  21%|██▏       | 3/14 [00:00<00:01,  8.09it/s]Generating Corrections:  36%|███▌      | 5/14 [00:00<00:00, 10.74it/s]Generating Corrections:  50%|█████     | 7/14 [00:00<00:00, 12.89it/s]Generating Corrections:  64%|██████▍   | 9/14 [00:00<00:00, 14.57it/s]Generating Corrections:  79%|███████▊  | 11/14 [00:00<00:00, 15.91it/s]Generating Corrections:  93%|█████████▎| 13/14 [00:00<00:00, 16.91it/s]Generating Corrections: 100%|██████████| 14/14 [00:01<00:00, 13.61it/s]
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+Original CER:  0.0917 ± 0.0753
+Model CER:     0.9987 ± 0.0017
+CER Reduction: -988.49%
+Cohen's d:     -16.8722
+
+Detailed results saved to model_eval_logs/model_bart-large-ocr-overproof-combined_eval_results.parquet
