@@ -6,11 +6,11 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32768
-#SBATCH --time=01:30:00
+#SBATCH --time=06:00:00
 #SBATCH --mail-user=mtran01@univ-lr.fr
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu:1
-#SBATCH --output=finetune-logs/bart-%j.log
+#SBATCH --output=finetune-logs/bart-ft-%j.log
 
 cd /Utilisateurs/mtran01/hipe-ocrepair-llm
 
@@ -66,17 +66,17 @@ echo "--- TEST COMPLETE ---"
 #     --data data/languages/german_train.parquet \
 #     --output_name bart-base-ocr-german
 
-python finetune/bart.py \
-    --model bart-base \
-    --data data/hipe_aggregated_train.parquet \
-    --output_name bart-base-ocr-hipe_aggregated
+# python finetune/bart.py \
+#     --model bart-base \
+#     --data data/hipe_aggregated_train.parquet \
+#     --output_name bart-base-ocr-hipe_aggregated
 
 # ============ BART-LARGE VARIATIONS =================
 
 # python finetune/bart.py \
 #     --model bart-large \
 #     --data data/datasets/dta19_train.parquet \
-#     --output_name bart-large-ocr-dta19
+#     --output_name bart-large-ocr-dta19 \
 
 # python finetune/bart.py \
 #     --model bart-large \
@@ -112,3 +112,8 @@ python finetune/bart.py \
 #     --model bart-large \
 #     --data data/languages/german_train.parquet \
 #     --output_name bart-large-ocr-german
+
+python finetune/bart.py \
+    --model bart-large \
+    --data data/hipe_aggregated_train.parquet \
+    --output_name bart-large-ocr-hipe_aggregated

@@ -1,39 +1,0 @@
-Thu Apr 16 10:12:47 2026       
-+-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
-|-----------------------------------------+------------------------+----------------------+
-| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-|                                         |                        |               MIG M. |
-|=========================================+========================+======================|
-|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:67:00.0 Off |                  N/A |
-| 33%   48C    P8              2W /  250W |       0MiB /  11264MiB |      0%      Default |
-|                                         |                        |                  N/A |
-+-----------------------------------------+------------------------+----------------------+
-                                                                                         
-+-----------------------------------------------------------------------------------------+
-| Processes:                                                                              |
-|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
-|        ID   ID                                                               Usage      |
-|=========================================================================================|
-|  No running processes found                                                             |
-+-----------------------------------------------------------------------------------------+
---- TESTING PYTORCH ---
-PyTorch loaded successfully!
-CUDA available: True
---- TEST COMPLETE ---
-Loading model from model/bart-base-ocr-english...
-Loading weights:   0%|          | 0/260 [00:00<?, ?it/s]Loading weights:  27%|██▋       | 69/260 [00:00<00:00, 560.31it/s]Loading weights:  48%|████▊     | 126/260 [00:00<00:00, 334.67it/s]Loading weights:  63%|██████▎   | 164/260 [00:00<00:00, 297.91it/s]Loading weights:  75%|███████▌  | 196/260 [00:00<00:00, 287.30it/s]Loading weights:  87%|████████▋ | 226/260 [00:00<00:00, 246.03it/s]Loading weights: 100%|██████████| 260/260 [00:00<00:00, 292.29it/s]
-Loading data from data/languages/english_test.parquet...
-Running batch inference on 20 samples...
-Generating Corrections:   0%|          | 0/5 [00:00<?, ?it/s]Generating Corrections:  20%|██        | 1/5 [00:01<00:05,  1.35s/it]Generating Corrections:  40%|████      | 2/5 [00:02<00:04,  1.41s/it]Generating Corrections:  60%|██████    | 3/5 [00:03<00:02,  1.31s/it]Generating Corrections:  80%|████████  | 4/5 [00:05<00:01,  1.26s/it]Generating Corrections: 100%|██████████| 5/5 [00:06<00:00,  1.40s/it]Generating Corrections: 100%|██████████| 5/5 [00:06<00:00,  1.37s/it]
-
-==================================================
-GLOBAL EVALUATION REPORT
-==================================================
-Original CER:  0.0170 ± 0.0098
-Model CER:     0.0207 ± 0.0139
-CER Reduction: -21.87%
-Cohen's d:     -0.3010
-
-Detailed results saved to model_eval_logs/model_bart-base-ocr-english_eval_results.parquet

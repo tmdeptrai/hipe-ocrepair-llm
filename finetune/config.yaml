@@ -7,25 +7,25 @@ bart-base:
   logging_steps: 10
   save_strategy: 'no'
   learning_rate: 5e-5
-  warmup_ratio: 0.1
+  warmup_steps: 100
   max_grad_norm: 1.0
   weight_decay: 0.02
   fp16: True
   bf16: False
 
 bart-large:
-  num_train_epochs: 5
+  num_train_epochs: 15
   per_device_train_batch_size: 1
   gradient_accumulation_steps: 16    
   per_device_eval_batch_size: 1    
   logging_steps: 10
-  save_strategy: 'no'
-  learning_rate: 5e-6
+  save_strategy: 'epoch'
+  learning_rate: 2e-5
   max_grad_norm: 1.0
   warmup_steps: 100
-  weight_decay: 0.01
-  fp16: False
-  gradient_checkpointing: True 
+  weight_decay: 0.02
+  fp16: True
+  bf16: False
 
 llama-2:
   num_train_epochs: 5

@@ -4,7 +4,7 @@ import argparse
 import os
 import pandas as pd
 import yaml
-
+import torch
 
 # Load BART config from YAML file
 def load_config(file,model_type):
@@ -28,9 +28,18 @@ def main(args):
     
     def preprocess_function(examples):
         inputs = [str(doc) for doc in examples["ocr_text"]]
-        model_inputs = tokenizer(inputs, max_length=1024, truncation=True, padding=False)
-        labels = tokenizer(text_target=examples["ground_truth"], max_length=1024, truncation=True, padding=False)
-        model_inputs["labels"] = labels["input_ids"]
+        targets = [str(doc) for doc in examples["ground_truth"]]
+        
+        model_inputs = tokenizer(inputs, max_length=1024, truncation=True, padding="max_length")
+        labels = tokenizer(text_target=targets, max_length=1024, truncation=True, padding="max_length")
+        
+        masked_labels = []
+        for label_array in labels["input_ids"]:
+            masked_labels.append(
+                [-100 if token == tokenizer.pad_token_id else token for token in label_array]
+            )
+            
+        model_inputs["labels"] = masked_labels
         return model_inputs
     
     train = train.map(preprocess_function, batched=True,remove_columns=train.column_names)
@@ -38,6 +47,18 @@ def main(args):
     # Initialise BART
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
+    ## ========= I SPENT A WHOLE WEEK FOR THIS STUPID AH EXPLODING GRADIENT ERROR OF BART-LARGE REGARDING SOME FP16 FP32 PRECISION, FINALLY GEMINI GAVE ME A SOLUTION THAT TOUCHES THE MODEL AT THE BARE METAL LAYER. IF IT WORKS PLEASE DON'T TOUCH IT ==========
+    # --- THE FP16 UNSCALE SILVER BULLET ---
+    if args.model == "bart-large":
+        # 1. Force the model weights natively to FP32 (in case the Hub loaded any in FP16)
+        model = model.float()
+
+        # 2. Inject the Backward Hook to intercept and cast gradients
+        for param in model.parameters():
+            if param.requires_grad:
+                param.register_hook(lambda grad: grad.to(torch.float32) if grad is not None else None)
+    # --------------------------------------
+    
     # Fine-tune BART
     data_collator = DataCollatorForSeq2Seq(tokenizer, model=model)
     config['learning_rate'] = float(config['learning_rate'])

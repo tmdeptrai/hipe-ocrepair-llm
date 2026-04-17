@@ -1,0 +1,39 @@
+Fri Apr 17 14:20:07 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:19:00.0 Off |                  N/A |
+| 52%   79C    P0            102W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Loading model from model/bart-large-ocr-impresso-nzz...
+Loading weights:   0%|          | 0/512 [00:00<?, ?it/s]Loading weights:  15%|█▌        | 77/512 [00:00<00:00, 617.14it/s]Loading weights:  27%|██▋       | 139/512 [00:00<00:02, 128.86it/s]Loading weights:  33%|███▎      | 169/512 [00:01<00:03, 91.53it/s] Loading weights:  37%|███▋      | 188/512 [00:01<00:04, 79.43it/s]Loading weights:  40%|████      | 205/512 [00:02<00:03, 80.65it/s]Loading weights:  42%|████▏     | 217/512 [00:02<00:03, 77.44it/s]Loading weights:  45%|████▍     | 228/512 [00:02<00:03, 79.58it/s]Loading weights:  46%|████▋     | 238/512 [00:02<00:03, 74.17it/s]Loading weights:  48%|████▊     | 247/512 [00:02<00:04, 64.79it/s]Loading weights:  50%|████▉     | 255/512 [00:02<00:04, 63.51it/s]Loading weights:  51%|█████     | 262/512 [00:03<00:04, 56.43it/s]Loading weights:  56%|█████▌    | 287/512 [00:03<00:02, 81.05it/s]Loading weights:  58%|█████▊    | 298/512 [00:03<00:02, 82.78it/s]Loading weights:  60%|█████▉    | 307/512 [00:03<00:02, 84.16it/s]Loading weights:  63%|██████▎   | 321/512 [00:03<00:02, 79.04it/s]Loading weights:  65%|██████▍   | 331/512 [00:03<00:03, 59.90it/s]Loading weights:  70%|███████   | 359/512 [00:04<00:01, 91.99it/s]Loading weights:  74%|███████▎  | 377/512 [00:04<00:01, 92.32it/s]Loading weights:  76%|███████▌  | 389/512 [00:04<00:01, 93.40it/s]Loading weights:  79%|███████▊  | 402/512 [00:04<00:01, 65.16it/s]Loading weights:  80%|████████  | 411/512 [00:04<00:01, 64.41it/s]Loading weights:  82%|████████▏ | 419/512 [00:05<00:01, 65.73it/s]Loading weights:  85%|████████▍ | 434/512 [00:05<00:01, 73.08it/s]Loading weights:  86%|████████▋ | 442/512 [00:05<00:00, 73.86it/s]Loading weights:  89%|████████▉ | 456/512 [00:05<00:00, 85.55it/s]Loading weights:  91%|█████████ | 466/512 [00:05<00:00, 80.00it/s]Loading weights:  93%|█████████▎| 476/512 [00:05<00:00, 77.95it/s]Loading weights:  96%|█████████▌| 492/512 [00:05<00:00, 90.37it/s]Loading weights:  98%|█████████▊| 504/512 [00:05<00:00, 93.12it/s]Loading weights: 100%|██████████| 512/512 [00:05<00:00, 85.49it/s]
+Loading data from data/datasets/impresso-nzz_test.parquet...
+Running batch inference on 96 samples...
+Generating Corrections:   0%|          | 0/24 [00:00<?, ?it/s]Generating Corrections:   4%|▍         | 1/24 [00:28<10:48, 28.22s/it]Generating Corrections:   8%|▊         | 2/24 [00:54<10:01, 27.32s/it]Generating Corrections:  12%|█▎        | 3/24 [01:21<09:27, 27.02s/it]Generating Corrections:  17%|█▋        | 4/24 [01:59<10:26, 31.30s/it]Generating Corrections:  21%|██        | 5/24 [02:25<09:20, 29.50s/it]Generating Corrections:  25%|██▌       | 6/24 [02:49<08:14, 27.46s/it]Generating Corrections:  29%|██▉       | 7/24 [03:18<07:56, 28.01s/it]Generating Corrections:  33%|███▎      | 8/24 [03:43<07:11, 26.95s/it]Generating Corrections:  38%|███▊      | 9/24 [04:06<06:27, 25.83s/it]Generating Corrections:  42%|████▏     | 10/24 [04:37<06:24, 27.48s/it]Generating Corrections:  46%|████▌     | 11/24 [05:09<06:14, 28.84s/it]Generating Corrections:  50%|█████     | 12/24 [05:37<05:44, 28.71s/it]Generating Corrections:  54%|█████▍    | 13/24 [06:05<05:11, 28.28s/it]Generating Corrections:  58%|█████▊    | 14/24 [06:33<04:42, 28.27s/it]Generating Corrections:  62%|██████▎   | 15/24 [07:01<04:12, 28.10s/it]Generating Corrections:  67%|██████▋   | 16/24 [07:29<03:46, 28.28s/it]Generating Corrections:  71%|███████   | 17/24 [07:58<03:18, 28.29s/it]Generating Corrections:  75%|███████▌  | 18/24 [08:30<02:56, 29.41s/it]Generating Corrections:  79%|███████▉  | 19/24 [09:01<02:29, 29.90s/it]Generating Corrections:  83%|████████▎ | 20/24 [09:35<02:04, 31.19s/it]Generating Corrections:  88%|████████▊ | 21/24 [10:04<01:31, 30.50s/it]Generating Corrections:  92%|█████████▏| 22/24 [10:33<01:00, 30.20s/it]Generating Corrections:  96%|█████████▌| 23/24 [11:10<00:32, 32.05s/it]Generating Corrections: 100%|██████████| 24/24 [11:36<00:00, 30.29s/it]Generating Corrections: 100%|██████████| 24/24 [11:36<00:00, 29.02s/it]
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+Original CER:  0.0586 ± 0.0870
+Model CER:     0.1096 ± 0.1295
+CER Reduction: -87.01%
+Cohen's d:     -0.4599
+
+Detailed results saved to model_eval_logs/model_bart-large-ocr-impresso-nzz_eval_results.parquet
