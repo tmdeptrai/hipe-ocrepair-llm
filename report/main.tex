@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{extarticle}
 \setcounter{secnumdepth}{4}
 \usepackage{times}
 \setcounter{tocdepth}{4}
@@ -35,12 +35,12 @@
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
 \renewcommand\maketitlehookd{\vfill\null}
 
-\titleformat{\section}[display]
-  {\normalfont\huge\bfseries\filcenter}
-  {\thesection}
-  {0ex}
-  {\centerline{\rule{\textwidth}{0.5pt}}\vspace{1.5ex}}
-  [\vspace{0.5ex}\centerline{\rule{\textwidth}{0.5pt}}]
+% \titleformat{\section}[display]
+%   {\normalfont\huge\bfseries\filcenter}
+%   {\thesection}
+%   {0ex}
+%   {\centerline{\rule{\textwidth}{0.5pt}}\vspace{1.5ex}}
+%   [\vspace{0.5ex}\centerline{\rule{\textwidth}{0.5pt}}]
 
 \titleformat{name=\section,numberless}[display]
   {\normalfont\huge\bfseries\filcenter}
@@ -49,7 +49,7 @@
   {\centerline{\rule{\textwidth}{0.5pt}}\vspace{1.5ex}}
   [\vspace{0.5ex}\centerline{\rule{\textwidth}{0.5pt}}]
 
-\titlespacing*{\section}{0pt}{50pt}{30pt}
+\titlespacing*{\section}{0pt}{15pt}{10pt}
 
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -71,11 +71,10 @@
         {\large \textbf{LA ROCHELLE UNIVERSITÉ}} \\
         \vspace{0.5cm}
         {\large Licence Informatique} \\
-        \vfill
+        \vspace{1cm}
         \includegraphics[width=0.4\textwidth]{figures/La_Rochelle_Universite.png}
         \vspace{1cm}
 
-        \vspace{0.3cm}
         {\fontsize{27}{33}\selectfont \textbf{INTERNSHIP REPORT}}
 
         \vspace{1cm}
@@ -87,7 +86,6 @@
         {\large \textbf{Dr. Emanuela BOROS} \\
             \textbf{Prof. Antoine DOUCET} \\
             \normalsize(Laboratoire L3i)\\}
-        \vspace{0.2cm}
 
 
         \vspace{1.5cm}
@@ -95,7 +93,7 @@
         \vspace{0.5cm}
         {\fontsize{20}{25}\selectfont \textbf{``Preserving Historical Orthography: A Comparative Study of PEFT Decoders and Fine-Tuned BART in OCR Post-Correction''}}\\[2cm]
 
-        \vspace{1.5cm}
+        \vspace{1cm}
         {\Large Academic Year: 2025-2026}
     \end{center}
     \vspace*{\fill}
@@ -111,6 +109,9 @@
 % \listoffigures
 % \listoftables
 % \listofalgorithms
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
 \pagenumbering{gobble} 
 \newpage
 
@@ -119,13 +120,13 @@
 \section*{ACKNOWLEDGEMENT}
 \addcontentsline{toc}{section}{Acknowledgement}
 
-I would like to express my deepest gratitude to all those who have mentored and supported me throughout this internship.\\
+I would like to express my deepest gratitude to all those who have mentored and supported me throughout this internship.
 
-I want to sincerely thank Dr. Emanuela BOROS for her patient guidance for the past few months. Had it not been for her encouragement and advice, I could not have completed my thesis. Furthermore, I would like to convey my deepest appreciation to Prof. Antoine DOUCET for providing me with the invaluable opportunity to intern at La Rochelle University's L3i laboratory. I would be negligent if I did not mention all the people in the lab for their warmest welcome and hospitality.\\
+I want to sincerely thank Dr. Emanuela BOROS for her patient guidance for the past few months. Had it not been for her encouragement and advice, I could not have completed my thesis. Furthermore, I would like to convey my deepest appreciation to Prof. Antoine DOUCET for providing me with the invaluable opportunity to intern at La Rochelle University's L3i laboratory. I would be negligent if I did not mention all the people in the lab for their warmest welcome and hospitality.
 
-I am also extremely grateful to take part in the double degree exchange program between La Rochelle University and the University of Science and Technology of Hanoi. I would like to express my gratitude to all of the lecturers at La Rochelle University for their support and guidance despite my limited fluency in French. This experience has allowed me to connect with people from different cultural backgrounds and reshaping the way I understand and engage with the world around me.\\
+I am also extremely grateful to take part in the double degree exchange program between La Rochelle University and the University of Science and Technology of Hanoi. I would like to express my gratitude to all of the lecturers at La Rochelle University for their support and guidance despite my limited fluency in French. This experience has allowed me to connect with people from different cultural backgrounds and reshaping the way I understand and engage with the world around me.
 
-To my lovely family, thank you for all your blessings, I love you all. To my dear Oanh, thank you for the enormous emotional support. Thank you and shoutout to Le Linh Long for generously sponsoring my Overleaf pro plan.\\
+To my lovely family, thank you for all your blessings, I love you all. To my dear Oanh, thank you for the enormous emotional support. Thank you and shoutout to Le Linh Long for generously sponsoring my Overleaf pro plan.
 
 Last but not least, to those who are willingly spending your time reading my work, thank you and I hope you will have a wonderful time as I had when writing it.
 
@@ -135,13 +136,193 @@ Last but not least, to those who are willingly spending your time reading my wor
 \section*{ABSTRACT}
 \addcontentsline{toc}{section}{Abstract}
 
-Summary...
+Optical Character Recognition (OCR) technology improves accessibility of historical documents. However, OCR is often noisy and full of errors, making it difficult for scholars to extract meaningful information. Therefore, post-OCR correction techniques, which involve refining and enhancing the text generated by OCR, are necessary steps to overcome this challenge. This study explores the current state of OCR post-correction by comparing different methods, from simple Zero-Shot prompting to full Supervised Fine-Tuning (SFT). We provide a detailed qualitative analysis, using specific examples to explain why these models succeed or fail in enhancing historic documents.
 
+\newpage
+
+% \newpage
+% \addcontentsline{toc}{section}{Abstract}
+% \begin{abstract}
+
+% \end{abstract}
+
+% abcxyz
+% \\
+% \\
+% \textit{\textbf{Keywords}}: 
+% \newpage
+
+
+\section{Introduction}
+\subsection{Presentation of the Host Institution}
+Established in 1993, the Laboratoire Informatique, Image, Interaction (L3i) is the primary research center for Digital Sciences at La Rochelle Université \cite{l3i_website}. The laboratory consists of approximately 98 members specializing in fields such as Computer Science, Image Processing, and Human-Computer Interaction. The L3i is known for its transversal research vision, combining expertise in Artificial Intelligence and Knowledge Management with other disciplines, including Environmental Sciences and the Humanities.
+
+The laboratory maintains a dynamic ecosystem of industrial and academic partnerships. It manages several joint laboratories, such as IDEAS (with Yooz), which focuses on AI applied to administrative documents, and SAIL (avec Mangas.IO), dedicated to digital comics analysis. On an international level, the L3i collaborates closely with various institutions, including the ICTLab in Vietnam. This connection is particularly significant for this research, as it strengthens scientific exchanges between Europe and Southeast Asia.
+
+Within this research environment, my internship is supervised by Dr. Emanuela Boros and Prof. Antoine Doucet. The work is deeply integrated into the framework of HIPE-OCRepair\cite{hipe_ocrepair_2026}, an upcoming competition for the ICDAR 2026 conference \cite{icdar_2026}. This initiative is dedicated to the OCR post-correction of multilingual historical documents using Large Language Models (LLMs). The project aims to address the "OCR debt" found in large digitized collections, where manual correction is not possible. By providing standardized datasets in English, French, and German, the HIPE-OCRepair benchmark allows for a systematic evaluation of different AI architectures for preserving historical text and orthography.
+
+\subsection{Context and Motivation}
+%LONG introduction là phần rất quan trọng mà cu em viết phần như này hơi ngắn, giới thiệu bài toán em p giới thiệu sao để 1 người k biết gì về domain em đọc vẫn hiểu
+
+As the world moves toward digital records, historical documents are also being digitized. These archives are important sources for researchers to understand past events, social changes and cultural perspectives. While scanning and Optical Character Recognition (OCR) technology improve accessibility of these documents, the extracted text is often noisy and full of errors.
+
+The quality of OCR frequently suffers due to the unique challenges of historical newspapers. These challenges include physical degradation over time (such as bleed-through, ink spills, and fading), poor print quality, outdated typefaces, and complex page layouts. Consequently, this noise significantly hampers text mining techniques and keyword searches, making it difficult for scholars to extract meaningful information.
+
+To unlock the full potential of these primary sources, addressing these OCR errors is crucial. Therefore, post-OCR correction techniques, which involve refining and enhancing the text generated by OCR, are necessary steps to overcome this challenge.
+
+However, working with historical text involves more than just reading degraded scans. The language itself has evolved over time. Historical documents frequently contain archaic spellings, unique grammar, and vocabulary that are no longer used today. This linguistic evolution adds a layer of complexity to the digitization process.
+
+\subsection{Problem Statement}
+
+In recent years, deep learning approaches, particularly Large Language Models (LLMs), have shown remarkable success in natural language processing. However, applying these state-of-the-art models to historical OCR post-correction introduces significant challenges.  %LONG: hot take nma cái câu In recent years, deep learning approaches, particularly Large Language Models (LLMs) của em rất lủng củng, viết lại nhé. với cả remarkable success nnao em cx nên nói 1-2 câu ấy
+
+First, standard language models are primarily trained on modern text. Adapting them to understand the complexities of historical spelling requires specialized training. Without it, they tend to "over-correct" the text, replacing valid historical words with modern equivalents. 
+
+Second, distinguishing between actual OCR noise and a valid historical spelling variation is a highly complex task. When faced with degraded text, models can struggle to guess the correct word, sometimes generating text that alters the original meaning. Therefore, there is a critical need to evaluate how well different model architectures can reduce scanning errors while keeping the historical authenticity of the document intact.
+
+\subsection{Proposed Solution}
+
+To address the dual challenge of reducing OCR noise and preventing over-correction, this thesis evaluates several modern deep learning models. Instead of relying on a single architecture, this study compares different approaches across four main experiments:
+
+\begin{itemize}
+    \item \textbf{Sequence-to-Sequence (Seq2Seq) Models:} We evaluate the standard encoder-decoder approach by fine-tuning models from the BART family. This includes testing different model sizes (Base vs. Large) and exploring multilingual models (mBART).
+    
+    \item \textbf{Decoder-Only (Generative) Models:} We investigate modern Large Language Models (LLMs), such as Qwen. We compare different ways to use them, from simple Zero-Shot prompting to full Supervised Fine-Tuning (SFT).
+    
+    \item \textbf{Domain-Specific Models:} We compare our general models against systems that were specifically built and pre-trained for OCR correction. This includes specialized Seq2Seq models (like PyKale) and specialized generative models (like Pleias).
+    
+    \item \textbf{The Impact of Metadata:} We conduct specific experiments to see if adding extra context (metadata) to the prompts during fine-tuning improves a generative model's ability to correct historical text.
+\end{itemize}
+
+By comparing these different methods, this study explores the current state of OCR post-correction. We will evaluate each approach quantitatively by comparing different metrics before and after correction. Furthermore, we will provide a detailed qualitative analysis, using specific examples to explain why these models succeed or fail in enhancing historical documents. The detailed results and architectural comparisons will be discussed in the following chapters.
+
+\section{Literature Review}
+\subsection{Optical Character Recognition (OCR) in Historical Context}
+\subsection{Sequence-to-Sequence Models for Text Correction}
+\subsection{Large Language Models (LLMs) and Generative AI}
+\subsection{Parameter-Efficient Fine-Tuning (PEFT)}
+
+\section{Methodology and Experimental Setup}
+\subsection{The HIPE-OCRepair 2026 Dataset}
+
+To train and evaluate the models, this study utilizes the HIPE-OCRepair benchmark dataset. This dataset is specifically designed for the ICDAR 2026 competition and provides a standardized environment for OCR post-correction on historical documents. 
+
+The benchmark gathers data from several historical collections, spanning the 17th to the 20th centuries. It covers three languages: English, French, and German. The documents include a variety of challenging historical materials, primarily newspapers and printed works, originating from established archives such as DTA-19 (German), Impresso (multilingual), Overproof (English), and subsets of previous ICDAR 2017 competitions.
+
+\subsubsection{Data Format and Structure}
+A key characteristic of this dataset is that the models do not have access to the original scanned images. They must perform the correction purely based on text and context. 
+
+The data is provided in JSONL format, where each text segment (typically a paragraph) contains the following key fields:
+\begin{itemize}
+    \item \textbf{OCR Hypothesis:} The raw, noisy text generated by the original OCR engine. This is the main input for the model.
+    \item \textbf{Curated Ground Truth:} The manually corrected and standardized reference text. This is used as the target during training and is hidden during testing.
+    \item \textbf{Document Metadata:} Rich contextual information, including the document's language, publication date, document type, and OCR quality indicators (such as baseline CER and WER).
+\end{itemize}
+
+\subsubsection{Correction Challenges and Examples}
+Historical OCR noise is not just limited to misspelled words. The errors often include arbitrary spaces (segmentation errors), incorrect capitalization, and complete character replacements caused by faded ink or complex historical layouts. Furthermore, the original ground truth itself often requires curation to standardize spacing and transcription rules before it can be used to train a model. 
+
+Table \ref{tab:dataset_examples} illustrates realistic examples from the dataset. It demonstrates the differences between the original archival ground truth, the noisy OCR output that the model receives, and the fully curated target text the model is expected to learn.
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\raggedright\arraybackslash}p{2.5cm} >{\raggedright\arraybackslash}p{4cm} >{\raggedright\arraybackslash}p{4cm} >{\raggedright\arraybackslash}p{4cm}}
+    \toprule
+    \textbf{Subdataset} & \textbf{Original Ground Truth} & \textbf{OCR Transcription (Input)} & \textbf{Curated Ground Truth (Target)} \\
+    \midrule
+    
+    ICDAR-2017 (FR) & 
+    L'agence Havas nous transmet les dé pêches qui suivent\dots & 
+    L'agence Havas nous transmet les dé pêches qui suivent\dots & 
+    L'agence Havas nous transmet les dépêches qui suivent\dots \\
+    
+    ICDAR-2017 (FR) & 
+    Deux bataillons d'infanterie de La Manoubaont été envoyés\dots & 
+    deux bataillons d'infanterie do La Manoubaont été envoyés\dots & 
+    Deux bataillons d'infanterie de La Manouba ont été envoyés\dots \\
+    
+    ICDAR-2017 (FR) & 
+    Une vingtaine d'hommes sont descendus et se sont mis à la recherche du coupable\dots & 
+    une vingtaine d'hom mes\dots à la re cherche du coupable\dots & 
+    Une vingtaine d'hommes\dots à la recherche du coupable\dots \\
+    
+    ICDAR-2017 (FR) & 
+    Après quelques instants de recherches\dots & 
+    Après quelques ins-tan de recherches\dots & 
+    Après quelques instants de recherches\dots \\
+    
+    ICDAR-2017 (FR) & 
+    \dots s'efforçait de calmer les mutins\dots & 
+    s'ef-.forçait de calmer les mutins\dots & 
+    \dots s'efforçait de calmer les mutins\dots \\
+    
+    \bottomrule
+    \end{tabular}
+    \caption{Examples of the original ground truth, the noisy OCR input, and the curated target text from the HIPE-OCRepair dataset.}
+    \label{tab:dataset_examples}
+\end{table}
+
+\subsubsection{Exploratory Data Analysis (EDA)}
+To better understand the distribution of the data and the initial level of degradation, an Exploratory Data Analysis was conducted across the training, validation (dev), and test splits. 
+
+As shown in Table \ref{tab:eda_summary}, the baseline Character Error Rate (CER) and Word Error Rate (WER) vary significantly depending on the historical collection. For instance, datasets containing older newspapers or more complex layouts naturally exhibit higher baseline error rates. Understanding these baseline metrics is crucial for evaluating the true effectiveness of the post-correction models later in this study.
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{llcccc}
+    \toprule
+    \textbf{Split \& Dataset} & \textbf{Period} & \textbf{Languages (Samples)} & \textbf{CER (mean $\pm$ std)} & \textbf{WER (mean $\pm$ std)} & \textbf{OCR Score} \\
+    \midrule
+    \multicolumn{6}{l}{\textbf{Train Split}} \\
+    \midrule
+    dta19 & 1815 - 1891 & de (570) & 0.0336 $\pm$ 0.0268 & N/A & N/A \\
+    icdar2017 & N/A & en (455), fr (391) & 0.0417 $\pm$ 0.0316 & 0.1740 $\pm$ 0.1139 & 0.8947 $\pm$ 0.0681 \\
+    impresso-nzz & 1781 - 1946 & de (150) & 0.0617 $\pm$ 0.1018 & 0.2477 $\pm$ 0.2789 & 0.7714 $\pm$ 0.0709 \\
+    impresso-snippets & 1801 - 1959 & en (50), de (50), fr (50) & 0.0367 $\pm$ 0.0297 & 0.2252 $\pm$ 0.1997 & N/A \\
+    overproof-combined & 1843 - 1954 & en (146) & 0.0866 $\pm$ 0.0821 & 0.3112 $\pm$ 0.1929 & 0.8879 $\pm$ 0.0810 \\
+    
+    \midrule
+    \multicolumn{6}{l}{\textbf{Validation (Dev) Split}} \\
+    \midrule
+
+    dta19 & 1797 - 1898 & de (330) & 0.0342 $\pm$ 0.0270 & N/A & N/A \\
+    icdar2017 & N/A & en (188) & 0.0511 $\pm$ 0.0340 & 0.2168 $\pm$ 0.1256 & 0.9307 $\pm$ 0.0458 \\
+    impresso-snippets & 1801 - 1956 & en (10), de (10), fr (10) & 0.0414 $\pm$ 0.0345 & 0.2561 $\pm$ 0.1892 & N/A \\
+    overproof-combined & 1872 - 1954 & en (30) & 0.0845 $\pm$ 0.0577 & 0.3427 $\pm$ 0.1666 & 0.8770 $\pm$ 0.0715 \\
+    \midrule
+    \multicolumn{6}{l}{\textbf{Test Split}} \\
+    \midrule
+
+    dta19 & 1802 - 1863 & de (240) & 0.0330 $\pm$ 0.0272 & N/A & N/A \\
+    icdar2017 & N/A & en (101), fr (100) & 0.0312 $\pm$ 0.0253 & 0.1375 $\pm$ 0.0860 & 0.9106 $\pm$ 0.0525 \\
+    impresso-nzz & 1780 - 1939 & de (17) & 0.0989 $\pm$ 0.1828 & 0.3836 $\pm$ 0.6777 & 0.7771 $\pm$ 0.0684 \\
+    impresso-snippets & 1801 - 1959 & en (100), de (100), fr (100) & 0.0365 $\pm$ 0.0301 & 0.2257 $\pm$ 0.2258 & N/A \\
+    overproof-combined & 1859 - 1949 & en (32) & 0.0903 $\pm$ 0.0708 & 0.3145 $\pm$ 0.1821 & 0.8838 $\pm$ 0.0775 \\
+    \bottomrule
+    \end{tabular}
+    }
+    \caption{Exploratory Data Analysis showing the baseline error rates and sample distributions across the different datasets and splits.}
+    \label{tab:eda_summary}
+\end{table}
+
+\subsection{BART Fine-Tuning}
+\subsection{Qwen Fine-Tuning with QLoRA}
+\subsection{Evaluation Protocol}
+
+\section{Results and Discussion}
+\subsection{Quantitative Results}
+\subsection{Qualitative Analysis}
+\subsection{Overall Discussion}
+
+\section{Conclusion}
 % ==========================================
 % BIBLIOGRAPHY & APPENDIX
 % ==========================================
 \newpage
-\bibliographystyle{plain}
+\bibliographystyle{unsrturl}
 \bibliography{references}
 \addcontentsline{toc}{section}{Bibliography}
 
