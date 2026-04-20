@@ -24,7 +24,7 @@ echo "--- TEST COMPLETE ---"
 
 # Uncomment to choose the evaluation that we want:
 
-# ============ BART-BASE VARIATIONS =================
+# ======================= BART-BASE VARIATIONS =========================
 
 # python model_eval/evaluate_bart.py \
 #     --model_path model/bart-base-ocr-dta19 \
@@ -71,7 +71,7 @@ echo "--- TEST COMPLETE ---"
 #     --data_path data/hipe_aggregated_test.parquet \
 #     --batch_size 4
 
-# ============ BART-LARGE VARIATIONS =================
+# ===================== BART-LARGE VARIATIONS =========================
 
 # python model_eval/evaluate_bart.py \
 #     --model_path model/bart-large-ocr-dta19 \
@@ -113,7 +113,54 @@ echo "--- TEST COMPLETE ---"
 #     --data_path data/languages/german_test.parquet \
 #     --batch_size 4
 
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-hipe_aggregated \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4
+
+# =================== MULTI-LINGUAL BART VARIATION =====================
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-dta19 \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-icdar2017 \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-impresso-nzz \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-impresso-snippets \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-overproof-combined \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-english \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-french \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-german \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4
+
 python model_eval/evaluate_bart.py \
-    --model_path model/bart-large-ocr-hipe_aggregated \
+    --model_path model/mbart-large-50-ocr-hipe_aggregated \
     --data_path data/hipe_aggregated_test.parquet \
     --batch_size 4

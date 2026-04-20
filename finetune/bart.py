@@ -87,7 +87,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fine-tuning BART')
-    parser.add_argument('--model', type=str, choices=['bart-base', 'bart-large'],
+    parser.add_argument('--model', type=str, choices=['bart-base', 'bart-large', 'mbart-large-50'],
                         default='bart-base', help='Specify model: bart-base, bart-large')
     parser.add_argument('--output_name',type=str,default='bart-base-ocr',help='Output name of model adapter, always stored inside ./models')
     parser.add_argument('--config', type=str,default="finetune/config.yaml", help='Path to config')

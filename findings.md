@@ -62,3 +62,31 @@ GT: `...nor to expiscate an invitation from him...`
 Output: `...nor to explicate an invitation in any hint...`
 
 (It didn't know the rare Scottish word "expiscate", so it invented a grammatically acceptable, but completely wrong, English phrase).
+
+
+## MBART-LARGE-50:
+
+OCR: tiny the innocent
+
+Ground Truth: slay the innocent
+
+Model Output: discredit the innocent (It completely ignored the visual characters and just guessed a bad thing to do to innocent people).
+
+OCR: debtor to his I iWgination
+
+Ground Truth: debtor to his imagination
+
+Model Output: debtor to his invention (It knew "I iWgination" was wrong, but instead of fixing the spelling, it generated a completely different synonym).
+
+OCR: the f itly of one
+
+Ground Truth: the folly of one
+
+Model Output: the irony of one
+
+
+OCR: Jmlice might as well
+
+Ground Truth: Justice might as well
+
+Model Output: Ellice might as well (It assumed "Jmlice" was a person's name and hallucinated "Ellice").
