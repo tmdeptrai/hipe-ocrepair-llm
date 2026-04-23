@@ -1,0 +1,153 @@
+Wed Apr 22 15:27:57 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:CD:00.0 Off |                    0 |
+|  0%   46C    P0             80W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-4B...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   0%|          | 1/398 [00:00<01:16,  5.16it/s]Loading weights:   4%|▍         | 15/398 [00:00<00:06, 56.00it/s]Loading weights:  11%|█         | 42/398 [00:00<00:02, 124.57it/s]Loading weights:  14%|█▍        | 57/398 [00:00<00:02, 120.10it/s]Loading weights:  18%|█▊        | 71/398 [00:00<00:03, 97.72it/s] Loading weights:  24%|██▍       | 96/398 [00:00<00:02, 134.70it/s]Loading weights:  28%|██▊       | 112/398 [00:01<00:04, 66.94it/s]Loading weights:  31%|███       | 124/398 [00:01<00:04, 66.10it/s]Loading weights:  34%|███▎      | 134/398 [00:01<00:03, 71.22it/s]Loading weights:  36%|███▌      | 144/398 [00:01<00:03, 73.97it/s]Loading weights:  39%|███▊      | 154/398 [00:02<00:03, 66.18it/s]Loading weights:  41%|████      | 163/398 [00:02<00:03, 67.12it/s]Loading weights:  43%|████▎     | 171/398 [00:02<00:03, 67.54it/s]Loading weights:  45%|████▌     | 180/398 [00:02<00:03, 69.74it/s]Loading weights:  48%|████▊     | 190/398 [00:02<00:02, 71.21it/s]Loading weights:  50%|████▉     | 198/398 [00:02<00:04, 48.72it/s]Loading weights:  52%|█████▏    | 205/398 [00:03<00:05, 38.49it/s]Loading weights:  54%|█████▍    | 214/398 [00:03<00:04, 44.37it/s]Loading weights:  56%|█████▌    | 223/398 [00:03<00:03, 47.08it/s]Loading weights:  59%|█████▉    | 236/398 [00:03<00:02, 60.90it/s]Loading weights:  62%|██████▏   | 246/398 [00:03<00:02, 68.88it/s]Loading weights:  64%|██████▍   | 256/398 [00:03<00:02, 67.08it/s]Loading weights:  67%|██████▋   | 267/398 [00:03<00:01, 72.87it/s]Loading weights:  69%|██████▉   | 275/398 [00:04<00:01, 73.23it/s]Loading weights:  71%|███████   | 283/398 [00:04<00:02, 48.30it/s]Loading weights:  73%|███████▎  | 290/398 [00:04<00:02, 52.08it/s]Loading weights:  77%|███████▋  | 306/398 [00:04<00:01, 73.99it/s]Loading weights:  79%|███████▉  | 316/398 [00:04<00:01, 77.78it/s]Loading weights:  82%|████████▏ | 326/398 [00:04<00:00, 74.30it/s]Loading weights:  84%|████████▍ | 335/398 [00:04<00:00, 70.87it/s]Loading weights:  87%|████████▋ | 345/398 [00:05<00:00, 74.10it/s]Loading weights:  89%|████████▉ | 355/398 [00:05<00:00, 70.45it/s]Loading weights:  92%|█████████▏| 365/398 [00:05<00:00, 65.95it/s]Loading weights:  94%|█████████▍| 374/398 [00:05<00:00, 62.72it/s]Loading weights:  97%|█████████▋| 388/398 [00:05<00:00, 64.85it/s]Loading weights: 100%|██████████| 398/398 [00:05<00:00, 68.78it/s]
+Loading LoRA Adapter from model/qwen3-4B-ocr-impresso-snippets-base...
+Loading data from data/datasets/impresso-snippets_test.parquet...
+Running batch inference on 300 samples...
+Generating Corrections:   0%|          | 0/75 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   1%|▏         | 1/75 [00:21<26:12, 21.25s/it]Generating Corrections:   3%|▎         | 2/75 [00:39<24:01, 19.74s/it]Generating Corrections:   4%|▍         | 3/75 [00:56<21:45, 18.13s/it]Generating Corrections:   5%|▌         | 4/75 [01:15<21:55, 18.53s/it]Generating Corrections:   7%|▋         | 5/75 [01:33<21:38, 18.55s/it]Generating Corrections:   8%|▊         | 6/75 [01:52<21:22, 18.58s/it]Generating Corrections:   9%|▉         | 7/75 [02:10<20:58, 18.51s/it]Generating Corrections:  11%|█         | 8/75 [02:30<21:05, 18.89s/it]Generating Corrections:  12%|█▏        | 9/75 [02:48<20:20, 18.49s/it]Generating Corrections:  13%|█▎        | 10/75 [03:04<19:21, 17.87s/it]Generating Corrections:  15%|█▍        | 11/75 [03:22<19:00, 17.81s/it]Generating Corrections:  16%|█▌        | 12/75 [03:49<21:32, 20.51s/it]Generating Corrections:  17%|█▋        | 13/75 [04:04<19:31, 18.89s/it]Generating Corrections:  19%|█▊        | 14/75 [04:18<17:52, 17.58s/it]Generating Corrections:  20%|██        | 15/75 [04:36<17:34, 17.58s/it]Generating Corrections:  21%|██▏       | 16/75 [04:50<16:16, 16.55s/it]Generating Corrections:  23%|██▎       | 17/75 [05:10<16:54, 17.49s/it]Generating Corrections:  24%|██▍       | 18/75 [05:24<15:37, 16.45s/it]Generating Corrections:  25%|██▌       | 19/75 [05:40<15:21, 16.46s/it]Generating Corrections:  27%|██▋       | 20/75 [05:56<14:50, 16.19s/it]Generating Corrections:  28%|██▊       | 21/75 [06:13<14:43, 16.36s/it]Generating Corrections:  29%|██▉       | 22/75 [06:26<13:35, 15.38s/it]Generating Corrections:  31%|███       | 23/75 [06:38<12:39, 14.61s/it]Generating Corrections:  32%|███▏      | 24/75 [06:56<13:07, 15.44s/it]Generating Corrections:  33%|███▎      | 25/75 [07:14<13:36, 16.34s/it]Generating Corrections:  35%|███▍      | 26/75 [07:26<12:14, 14.99s/it]Generating Corrections:  36%|███▌      | 27/75 [07:41<11:56, 14.92s/it]Generating Corrections:  37%|███▋      | 28/75 [07:54<11:10, 14.27s/it]Generating Corrections:  39%|███▊      | 29/75 [08:06<10:34, 13.80s/it]Generating Corrections:  40%|████      | 30/75 [08:21<10:36, 14.13s/it]Generating Corrections:  41%|████▏     | 31/75 [08:36<10:36, 14.47s/it]Generating Corrections:  43%|████▎     | 32/75 [08:52<10:36, 14.80s/it]Generating Corrections:  44%|████▍     | 33/75 [09:11<11:14, 16.07s/it]Generating Corrections:  45%|████▌     | 34/75 [09:41<13:51, 20.29s/it]Generating Corrections:  47%|████▋     | 35/75 [10:02<13:34, 20.37s/it]Generating Corrections:  48%|████▊     | 36/75 [10:14<11:41, 17.99s/it]Generating Corrections:  49%|████▉     | 37/75 [10:31<11:15, 17.77s/it]Generating Corrections:  51%|█████     | 38/75 [10:43<09:52, 16.03s/it]Generating Corrections:  52%|█████▏    | 39/75 [10:58<09:24, 15.68s/it]Generating Corrections:  53%|█████▎    | 40/75 [11:12<08:46, 15.05s/it]Generating Corrections:  55%|█████▍    | 41/75 [11:26<08:21, 14.74s/it]Generating Corrections:  56%|█████▌    | 42/75 [11:41<08:06, 14.74s/it]Generating Corrections:  57%|█████▋    | 43/75 [11:55<07:49, 14.66s/it]Generating Corrections:  59%|█████▊    | 44/75 [12:09<07:26, 14.40s/it]Generating Corrections:  60%|██████    | 45/75 [12:23<07:07, 14.23s/it]Generating Corrections:  61%|██████▏   | 46/75 [12:35<06:31, 13.50s/it]Generating Corrections:  63%|██████▎   | 47/75 [12:50<06:37, 14.20s/it]Generating Corrections:  64%|██████▍   | 48/75 [13:08<06:54, 15.36s/it]Generating Corrections:  65%|██████▌   | 49/75 [13:26<06:56, 16.00s/it]Generating Corrections:  67%|██████▋   | 50/75 [13:38<06:06, 14.68s/it]Generating Corrections:  68%|██████▊   | 51/75 [13:50<05:37, 14.08s/it]Generating Corrections:  69%|██████▉   | 52/75 [14:03<05:17, 13.81s/it]Generating Corrections:  71%|███████   | 53/75 [14:22<05:34, 15.22s/it]Generating Corrections:  72%|███████▏  | 54/75 [14:39<05:34, 15.92s/it]Generating Corrections:  73%|███████▎  | 55/75 [14:57<05:30, 16.51s/it]Generating Corrections:  75%|███████▍  | 56/75 [15:11<05:00, 15.80s/it]Generating Corrections:  76%|███████▌  | 57/75 [15:22<04:14, 14.12s/it]Generating Corrections:  77%|███████▋  | 58/75 [15:35<03:56, 13.89s/it]Generating Corrections:  79%|███████▊  | 59/75 [15:47<03:35, 13.46s/it]Generating Corrections:  80%|████████  | 60/75 [16:03<03:29, 13.94s/it]Generating Corrections:  81%|████████▏ | 61/75 [16:14<03:06, 13.32s/it]Generating Corrections:  83%|████████▎ | 62/75 [16:26<02:47, 12.87s/it]Generating Corrections:  84%|████████▍ | 63/75 [16:39<02:33, 12.80s/it]Generating Corrections:  85%|████████▌ | 64/75 [16:56<02:34, 14.06s/it]Generating Corrections:  87%|████████▋ | 65/75 [17:12<02:26, 14.69s/it]Generating Corrections:  88%|████████▊ | 66/75 [17:29<02:18, 15.38s/it]Generating Corrections:  89%|████████▉ | 67/75 [17:49<02:14, 16.85s/it]Generating Corrections:  91%|█████████ | 68/75 [18:06<01:58, 16.87s/it]Generating Corrections:  92%|█████████▏| 69/75 [18:23<01:41, 16.97s/it]Generating Corrections:  93%|█████████▎| 70/75 [18:43<01:29, 17.83s/it]Generating Corrections:  95%|█████████▍| 71/75 [18:57<01:06, 16.68s/it]Generating Corrections:  96%|█████████▌| 72/75 [19:15<00:51, 17.14s/it]Generating Corrections:  97%|█████████▋| 73/75 [19:29<00:32, 16.05s/it]Generating Corrections:  99%|█████████▊| 74/75 [19:42<00:15, 15.22s/it]Generating Corrections: 100%|██████████| 75/75 [20:03<00:00, 16.84s/it]Generating Corrections: 100%|██████████| 75/75 [20:03<00:00, 16.05s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 147 (char 146)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Die Arbeiterinnenvereine und Arbeiter¬\\nunionen, welche einen Frauentag veranstel¬\\nten wollen, sind gebeten, so rasch als mög¬\\lich\\ndem Zentralvorstansds des Arbeiterinnen-Ver¬\\nbandes, Zürich, Werdstraße 40, Mitteilung zu\\nmachen, damit für Referenten ge¬\\nsorgt werden kann. Zugleich sind alle\\nArbeiterorganisationen ersucht, an diesem\\nden Tag keine anderen Veranstaltungen abzuhal¬\\ten, damit überall seine starke Friedenskund¬\\ngebühre.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 381 (char 380)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Die nationalen Augenzeugen sind dunkler als je.\\nMar will eine Nationalversammlung zusammen¬\\nberrufen, welche entscheiden soll, ob das Kaiserthum fort¬\\nzubestehen habe oder nicht. Die Karisten seien bei\\nSau Louis de Potosi geschlagen worden und was weit\\nschlimmer wäre, sei einer ihrer Führer: Porfirio Diaz\\nmit 8000 Mann zum Kaiserthum übergegangen. Letz¬\\zteres wird aus New-Ort übrigens nur gerüchtswcisc\\ngemeldet.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \uXXXX escape: line 1 column 110 (char 109)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"England. In Belfast gährt es noch immer\\nund Polizei wie Militär haben alle Hände voll zu\\uthun, um die Ordnung aufrecht zu erhalten. In\\nFolge der Unruhen wurden noch 400 Polizisten zur\\nVerstärkung der Sicherheit hingesandt, so daß die dor\\ntige Polizeimacht 1400 Mann beträgt. Die Schen¬\\nken sind geschlossen. Jufanterie u. Kavallerie patrouil¬\\nliren durch die Straßen. Viele Konstabler wurden\\nverwundet, hauptsächlich durch Steinwürfe. Ueber 50\\nverletzte Personen fanden Aufnahme in den Hospitälern.\\nEs fanden eine Reihe von Verhaftungen wegen Stein¬\\nwurf und Angriffs auf Bürgerhäuser statt. Neuesten","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 644 (char 643)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Correspondenzen.\\nZürich, 14. Aug. Der Verkehr an der heutigen Börse\\nzeigte eine sehr feste Stimmung; Nordostbahn-Actien insbeson¬\\nder waren zu steigenden Cursen gesucht. Nachmittags, als\\nhohe Cursen aus Genf gemeldet wurden, stiegen Stammactien der\\nNordostbahn weiter um 5 Fr., Prioritätsactien um 15 Fr. Bei\\ndiesen Papieren ist die Speculationslust bereits zur Speculations¬\\nwuth geworden und ihre Erfolge werden dadurch gefördert,\\ndass nach einem Aufschläge, wie er heute stattfand, die Ver¬\\nkäufer sich immer mehr zurückziehen und bei entschiedenem\\nVordringen die unglaublichsten Cursen im Bereiche der Möglich¬\\keit erscheinen.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 266 (char 265)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"London, 21. April. Reuter meldet aus Washington\\nAlle japanischen Kriegsschiffe in der Nähe der amerikani¬\\nschen Küste erhielten den Befehl, sich nach ihren Heimat¬\\nstationen zu begeben mit Ausnahme derjenigen, die mit\\nder Bergung der „Asama" zu tun haben. Der Komman¬\\ndant des Kreuzers „New Orleans" berichtete, er habe nichts\\nvon einer angeblichen Tätigkeit der Japaner in der\\nTurtle-Vari gefunden, außer daß sie das Wrack des Kriegs¬\\nschiffes „Asama" zu bergen suchten.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting property name enclosed in double quotes: line 1 column 447 (char 446)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Die Musikgesellschaft spielt die französische,\\nbelgische und luxemburgische Nationalhymne,\\nwelche von den Anwesenben stehenb angehört\\nwürbe. - Hr. Oberschulinspektor Welter, ber\\nVertreter der Regierung, richtet in luxembur¬\\ngischem Dialekt eine kurze Ansprache an bie\\nVersammelten, in welcher er seiner Freude\\nAusbruch verleiht, batz das schöne Werk, ent¬\\nsprechenb dem Grundsatz, „Was lange währt,\\nwirb endlich gut", zu einem solch schönen Enbe\\ngeführt werben konnte. Wenn auch in einer\\nAnsprache bemerkt würbe, bie Bevölkerung\\nrüge ben großen Luxus des Baues, so sei bem\\nentgegenzustellen, batz für bie Schule nichts\\ntoo groß sei. mld batz gerade bie Schule bem","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \uXXXX escape: line 1 column 293 (char 292)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Soeben erschienen\\nder zweite Band des Standardwerkes\\nvon Prof. Dr. Cam. Wampach\\nUrkunden- und Quellenbuch\\nzur Geschichte der altenburgischen Territorien\\nbis zur burgundischen Zeit\\n78 und 62 Seiten Umfang\\nEin Werk, auf das jeder Geschichtsforscher zurückgreifen muß,\\und über das sich die Fachpresse in den belobigsten Aus¬\\ndrücken geäußert hat.\\nPreis für Länder mit Frankenwährung 100 lux. Franken.\\nVerlag der St. Paulus-Druckerei Luxemburg.\\nZu beziehen durch alle Buchhandlungen.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \uXXXX escape: line 1 column 401 (char 400)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Das Informationsamt gab die Bildung\\neines obersten Ausschusses für die\\nKriegslenkung bekannt. In der Be¬\\nkanntmachung heißt es v. a.: „Mit Billi¬\\ngung des Kaisers wurde ein oberster\\nAusschuß für die Kriegslenkung er¬\\nrichtet, um die grundlegende Politik der\\nKriegführung und die Herstellung einer\\ngrößeren Harmonie der Zusammenarbeit\\nzwischen den kämpfenden Streitkräften\\und der Zivilverwaltung festzulegen.“","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 286 (char 285)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Genevo. Die Arbeiten für Tür und\\nFensterverklinkung werden einstimmig\\nHerrn Friedrich aus Esch zum Preise von\\n43 690 Fr. überlassen. Die Glaserar¬\\nbeiten erhält Herr Joh. Steil aus Rodin¬\\ngen zum Preise von 10 815 Fr. Die\\nGranitarbeiten müssen in nächster Sit¬\\zung nochmals vergeben werden aus\\nGründen keiner absoluten Majorität.\\n9. Hilfsdomizil- u. Optionsgesuche wer¬\\nden in geheimer Sitzung erledigt.\\nK. M.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 82 (char 81)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"NEW ZEALAND AND MIGRATION FROM\\nLIVERPOOL. The owners of the "White Star" Line of\\nBritish and Australian Ex-Royal Mail Clippers, comprising the\\n"Red Jacket," "White Star," "Blue Jacket," "Prince of the Seas,"\\n"Telegraph," "Mermaid," "Shalimar," "Miriam," "Emma," &c.,\\n&c., will despatch one of their famous clippers from Liverpool for\\nNew Zealand on the 10th of every month; the first departure will\\nbe on the 10th May, for Auckland and Wellington. These vessels\\nare guaranteed to sail punctually to the day, and will be furnished\\nwith the same completeness and efficiency which have gained for\\ntheir Melbourne line so great a patronage. FREE GRANTS of\\nLAND, in the fine province of Auckland, New Zealand, are supplied to\\nsuitable parties paying their own passage, full particulars of which,\\nand passage money, may be obtained on application to the owners,\\nH. T. WILSON and CHAMBERS, 21, Water-street, Liverpool.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 751 (char 750)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"CONFEDERATION SUISSE.\\nAinsi que l\'on sait, le tunnel au col dit Menouve doit être percé\\nici à 5 ans et être livré alors à la circulation. Mais il est évident\\nque ce terme n\'est qu\'une illusion, si les routes conduisant au tunnel\\nne sont pas terminées en même temps. Parlant de cette idée, le con¬\\nseil fédéral s\'est adressé au gouvernement du Valais qui a à sa charge\\nl\'établissement de la route de Marligny au col de Menouve en uninv¬\\nitant de lui faire connaître les dispositions qu\'il a prises à ce sujet.\\nLe Valais doit s\'attendre à des mesures identiques de la part du\\nPiémont.\\nBERNE. - Une pieuse et touchante cérémonie a eu lieu, aujour¬\\nd\'hui à midi, à l\'église catholique de Berne, à l\'occasion de lheureuse dé¬\\livrance de S. M. impératrice des Français. Le Te Deum a","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 539 (char 538)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"La Compagnie des chemins de fer de\\nl\'Etat a arrêté un projet qui a pour but\\nde modifier le service si défectueux des\\nlignes de l\'Ouest par la gare Saint-\\nLezare, par la transformation de celle-ci\\net l\'électrification des lignes de la ban¬\\nieue. Ce projet comporte la construc¬\\tion d\'une immense gare souterraine\\nétablie au-dessous des bâtiments actuels\\net à laquelle aboutiraient les voies de\\nbanlieue, s\'enfonçant au dessous des\\nvoies de grande ligne. Dans ce projet,\\nquatorze voies au lieu de huit desser¬\\viraient tous les besoins et le tunnel\\ndes Batignolles disparaîtrait.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 500 (char 499)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"M. George Grey, secrétaire d\'Etat au dé¬\\npartement de l\'intérieur, a prononcé sa dé¬\\ncision au sujet du mémoire demandant un\\nsursis à l\'exécution de la sentence pronon¬\\nce contre Franz Muller, et présenté par\\nla Société allemande de protection légale.\\nAprès une longue consultation avec le chef\\nbaron Pollock et le baron Martin, le se¬\\ncrétaire d\'Etat est arrivé à cette conclusion,\\nque les représentations contenues dans ledit\\nmémoire ne justifieraient le sursis en au¬\\cune manière. En conséquence, l\'exécution\\ndu condamné aura lieu, dit le Globe, à huit\\nheures, lundi matin.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0365 ± 0.0300
+Model CER:     0.0318 ± 0.0423
+CER Reduction: 12.75%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.2257 ± 0.2254
+Model WER:     0.1136 ± 0.1143
+WER Reduction: 49.67%
+==================================================
+
+Detailed results saved to model_eval_logs/qwen3-4B-ocr-impresso-snippets-base_impresso-snippets_test_nometa_results.parquet

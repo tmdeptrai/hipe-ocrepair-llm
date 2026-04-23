@@ -4,7 +4,14 @@ import os
 import pandas as pd
 from datasets import Dataset
 import argparse
+import re
 from data_aggregation import extract_aligned_chunks
+
+def extract_year(date_str):
+    if pd.isna(date_str) or date_str == "n/a" or date_str == "":
+        return None
+    match = re.search(r'(\d{4})', str(date_str))
+    return int(match.group(1)) if match else None
 
 def process_languages(data_dir: str, output_base: str):
     splits = ["train", "dev", "test"]
@@ -32,12 +39,17 @@ def process_languages(data_dir: str, output_base: str):
                     if not line.strip(): continue
                     doc = json.loads(line)
                     
-                    language_code = doc.get("document_metadata", {}).get("language", "unknown")
-                    doc_id = doc.get("document_metadata", {}).get("document_id", "unknown")
+                    metadata = doc.get("document_metadata", {})
+                    language_code = metadata.get("language", "unknown")
+                    doc_id = metadata.get("document_id", "unknown")
                     if language_code not in target_langs:
                         continue
                         
                     lang_name = target_langs[language_code]
+                    dataset_name = metadata.get("primary_dataset_name", "unknown")
+                    date_raw = metadata.get("date", "")
+                    year = extract_year(date_raw)
+                    
                     raw_ocr = doc.get("ocr_hypothesis", {}).get("transcription_unit", "")
                     raw_gt = doc.get("ground_truth", {}).get("transcription_unit", "")
                     
@@ -46,7 +58,9 @@ def process_languages(data_dir: str, output_base: str):
                         language_buckets[lang_name].append({
                             "document_id": doc_id,
                             "chunk_idx": idx,
-                            "dataset": doc.get("document_metadata", {}).get("primary_dataset_name", "unknown"),
+                            "dataset": dataset_name,
+                            "language": language_code,
+                            "year": year,
                             "ocr_text": chunk["ocr_text"],
                             "ground_truth": chunk["ground_truth"]
                         })

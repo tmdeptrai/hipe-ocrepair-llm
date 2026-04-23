@@ -6,20 +6,39 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from metrics import get_comparative_report
 
-def batch_inference(texts: list, model, tokenizer, device, batch_size=16):
+def batch_inference(df: pd.DataFrame, model, tokenizer, device, batch_size=16, with_metadata=False):
     """
     Performs inference in batches for massive speedups on GPU.
-    Relies on the fact that the dataset is already chunked below 1024 tokens.
+    Injects metadata prefix before generation and strips it afterward.
     """
     all_outputs = []
     
-    # Process the dataset in batches
-    for i in tqdm(range(0, len(texts), batch_size), desc="Generating Corrections"):
-        batch_texts = texts[i:i + batch_size]
+    for i in tqdm(range(0, len(df), batch_size), desc="Generating Corrections"):
+        batch_df = df.iloc[i:i + batch_size]
+        
+        prompts = []
+        prefixes = []
+        
+        for _, row in batch_df.iterrows():
+            ocr_text = row['ocr_text']
+            prefix = ""
+            
+            if with_metadata:
+                year = row.get('year', None)
+                dataset = row.get('dataset', 'unknown')
+                lang = row.get('language', 'unknown')
+                
+                prefix = f"[Dataset: {dataset}, Language: {lang}"
+                if year and pd.notnull(year):
+                    prefix += f", Year: {int(year)}"
+                prefix += "] "
+            
+            prefixes.append(prefix)
+            prompts.append(prefix + ocr_text)
         
         # Tokenize with truncation and padding
         inputs = tokenizer(
-            batch_texts, 
+            prompts, 
             return_tensors="pt", 
             padding=True, 
             truncation=True, 
@@ -34,7 +53,14 @@ def batch_inference(texts: list, model, tokenizer, device, batch_size=16):
             )
             
         decoded = tokenizer.batch_decode(outputs, skip_special_tokens=True)
-        all_outputs.extend([text.strip() for text in decoded])
+        
+        # Remove the prefix from the final output
+        for output_text, prefix in zip(decoded, prefixes):
+            output_text = output_text.strip()
+            # If the model regurgitated our prefix, cleanly slice it off
+            if prefix and output_text.startswith(prefix):
+                output_text = output_text[len(prefix):].strip()
+            all_outputs.append(output_text)
         
     return all_outputs
 
@@ -45,6 +71,7 @@ def main():
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--batch_size", type=int, default=4, help="Batch size for generation")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of samples for quick testing")
+    parser.add_argument("--with_metadata", action="store_true", help="Include metadata prefix in evaluation prompts")
     
     args = parser.parse_args()
     
@@ -59,13 +86,13 @@ def main():
         df = df.head(args.limit)
     
     print(f"Running batch inference on {len(df)} samples...")
-    # Run the entire OCR text column through the batched inference
     corrected_texts = batch_inference(
-        df['ocr_text'].tolist(), 
+        df, 
         model, 
         tokenizer, 
         args.device, 
-        batch_size=args.batch_size
+        batch_size=args.batch_size,
+        with_metadata=args.with_metadata
     )
     
     # Attach the predictions back to the dataframe
@@ -82,13 +109,27 @@ def main():
         df['model_output'].tolist()
     )
     
-    print(f"Original CER:  {report['ocr_stats']['mean']:.4f} ± {report['ocr_stats']['std']:.4f}")
-    print(f"Model CER:     {report['model_stats']['mean']:.4f} ± {report['model_stats']['std']:.4f}")
-    print(f"CER Reduction: {report['relative_cer_reduction']*100:.2f}%")
-    print(f"Cohen's d:     {report['cohens_d']:.4f}")
+    print("--- Character Error Rate (CER) ---")
+    print(f"Original CER:  {report['ocr_cer_stats']['mean']:.4f} ± {report['ocr_cer_stats']['std']:.4f}")
+    print(f"Model CER:     {report['model_cer_stats']['mean']:.4f} ± {report['model_cer_stats']['std']:.4f}")
+    print(f"CER Reduction: {report['relative_cer_reduction']*100:.2f}%\n")
+    
+    print("--- Word Error Rate (WER) ---")
+    print(f"Original WER:  {report['ocr_wer_stats']['mean']:.4f} ± {report['ocr_wer_stats']['std']:.4f}")
+    print(f"Model WER:     {report['model_wer_stats']['mean']:.4f} ± {report['model_wer_stats']['std']:.4f}")
+    print(f"WER Reduction: {report['relative_wer_reduction']*100:.2f}%")
+    print("="*50)
+
 
     os.makedirs("model_eval_logs", exist_ok=True)
-    output_file = os.path.join("model_eval_logs", f"{str(args.model_path).replace('/', '_')}_eval_results.parquet")
+    
+    model_id = os.path.basename(os.path.normpath(args.model_path))
+    dataset_id = os.path.splitext(os.path.basename(args.data_path))[0]
+    meta_flag = "meta" if args.with_metadata else "nometa"
+    
+    filename = f"{model_id}_{dataset_id}_{meta_flag}_results.parquet"
+    output_file = os.path.join("model_eval_logs", filename)
+    
     df.to_parquet(output_file)
     print(f"\nDetailed results saved to {output_file}")
 

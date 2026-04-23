@@ -1,0 +1,65 @@
+Wed Apr 22 13:23:02 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:CD:00.0 Off |                    0 |
+|  0%   20C    P8             22W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-4B...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   0%|          | 1/398 [00:00<00:41,  9.61it/s]Loading weights:   6%|▌         | 22/398 [00:00<00:03, 105.30it/s]Loading weights:  15%|█▍        | 58/398 [00:00<00:01, 207.89it/s]Loading weights:  20%|██        | 80/398 [00:00<00:01, 167.29it/s]Loading weights:  25%|██▍       | 98/398 [00:00<00:02, 125.08it/s]Loading weights:  28%|██▊       | 113/398 [00:00<00:02, 118.98it/s]Loading weights:  32%|███▏      | 127/398 [00:01<00:02, 116.92it/s]Loading weights:  38%|███▊      | 150/398 [00:01<00:01, 143.56it/s]Loading weights:  42%|████▏     | 168/398 [00:01<00:01, 146.07it/s]Loading weights:  46%|████▌     | 184/398 [00:01<00:01, 118.37it/s]Loading weights:  53%|█████▎    | 209/398 [00:01<00:01, 146.04it/s]Loading weights:  57%|█████▋    | 226/398 [00:01<00:01, 125.21it/s]Loading weights:  62%|██████▏   | 245/398 [00:01<00:01, 134.94it/s]Loading weights:  65%|██████▌   | 260/398 [00:01<00:01, 128.32it/s]Loading weights:  69%|██████▉   | 274/398 [00:02<00:01, 113.86it/s]Loading weights:  73%|███████▎  | 292/398 [00:02<00:00, 128.83it/s]Loading weights:  77%|███████▋  | 306/398 [00:02<00:00, 118.82it/s]Loading weights:  80%|████████  | 320/398 [00:02<00:00, 114.44it/s]Loading weights:  83%|████████▎ | 332/398 [00:02<00:00, 112.98it/s]Loading weights:  89%|████████▊ | 353/398 [00:02<00:00, 136.43it/s]Loading weights:  92%|█████████▏| 368/398 [00:02<00:00, 132.06it/s]Loading weights:  96%|█████████▌| 382/398 [00:02<00:00, 124.58it/s]Loading weights: 100%|██████████| 398/398 [00:03<00:00, 132.62it/s]
+Loading LoRA Adapter from model/qwen3-4B-ocr-dta19-base...
+Loading data from data/datasets/dta19_test.parquet...
+Running batch inference on 283 samples...
+Generating Corrections:   0%|          | 0/71 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   1%|▏         | 1/71 [00:34<40:41, 34.87s/it]Generating Corrections:   3%|▎         | 2/71 [01:07<38:35, 33.56s/it]Generating Corrections:   4%|▍         | 3/71 [01:53<44:36, 39.37s/it]Generating Corrections:   6%|▌         | 4/71 [02:25<40:39, 36.41s/it]Generating Corrections:   7%|▋         | 5/71 [03:02<40:12, 36.56s/it]Generating Corrections:   8%|▊         | 6/71 [03:38<39:18, 36.28s/it]Generating Corrections:  10%|▉         | 7/71 [04:29<43:54, 41.16s/it]Generating Corrections:  11%|█▏        | 8/71 [05:04<41:09, 39.20s/it]Generating Corrections:  13%|█▎        | 9/71 [05:30<36:07, 34.96s/it]Generating Corrections:  14%|█▍        | 10/71 [06:24<41:35, 40.91s/it]Generating Corrections:  15%|█▌        | 11/71 [07:12<43:13, 43.22s/it]Generating Corrections:  17%|█▋        | 12/71 [07:43<38:50, 39.50s/it]Generating Corrections:  18%|█▊        | 13/71 [08:23<38:19, 39.64s/it]Generating Corrections:  20%|█▉        | 14/71 [09:09<39:18, 41.38s/it]Generating Corrections:  21%|██        | 15/71 [09:46<37:26, 40.11s/it]Generating Corrections:  23%|██▎       | 16/71 [10:30<37:51, 41.30s/it]Generating Corrections:  24%|██▍       | 17/71 [11:02<34:40, 38.54s/it]Generating Corrections:  25%|██▌       | 18/71 [11:34<32:24, 36.69s/it]Generating Corrections:  27%|██▋       | 19/71 [12:23<34:49, 40.17s/it]Generating Corrections:  28%|██▊       | 20/71 [12:59<33:16, 39.15s/it]Generating Corrections:  30%|██▉       | 21/71 [13:25<29:16, 35.14s/it]Generating Corrections:  31%|███       | 22/71 [14:02<29:01, 35.54s/it]Generating Corrections:  32%|███▏      | 23/71 [14:51<31:48, 39.76s/it]Generating Corrections:  34%|███▍      | 24/71 [15:24<29:35, 37.79s/it]Generating Corrections:  35%|███▌      | 25/71 [16:13<31:32, 41.15s/it]Generating Corrections:  37%|███▋      | 26/71 [16:57<31:26, 41.92s/it]Generating Corrections:  38%|███▊      | 27/71 [17:28<28:16, 38.56s/it]Generating Corrections:  39%|███▉      | 28/71 [18:06<27:31, 38.41s/it]Generating Corrections:  41%|████      | 29/71 [18:51<28:17, 40.41s/it]Generating Corrections:  42%|████▏     | 30/71 [19:35<28:17, 41.40s/it]Generating Corrections:  44%|████▎     | 31/71 [20:15<27:22, 41.07s/it]Generating Corrections:  45%|████▌     | 32/71 [20:46<24:47, 38.14s/it]Generating Corrections:  46%|████▋     | 33/71 [21:29<25:06, 39.63s/it]Generating Corrections:  48%|████▊     | 34/71 [22:01<22:56, 37.21s/it]Generating Corrections:  49%|████▉     | 35/71 [22:25<19:53, 33.15s/it]Generating Corrections:  51%|█████     | 36/71 [23:37<26:11, 44.90s/it]Generating Corrections:  52%|█████▏    | 37/71 [24:10<23:23, 41.27s/it]Generating Corrections:  54%|█████▎    | 38/71 [24:52<22:48, 41.46s/it]Generating Corrections:  55%|█████▍    | 39/71 [25:42<23:29, 44.05s/it]Generating Corrections:  56%|█████▋    | 40/71 [26:12<20:32, 39.75s/it]Generating Corrections:  58%|█████▊    | 41/71 [26:42<18:33, 37.12s/it]Generating Corrections:  59%|█████▉    | 42/71 [27:14<17:04, 35.34s/it]Generating Corrections:  61%|██████    | 43/71 [27:47<16:09, 34.63s/it]Generating Corrections:  62%|██████▏   | 44/71 [28:34<17:16, 38.40s/it]Generating Corrections:  63%|██████▎   | 45/71 [29:21<17:45, 40.96s/it]Generating Corrections:  65%|██████▍   | 46/71 [30:10<18:07, 43.49s/it]Generating Corrections:  66%|██████▌   | 47/71 [30:53<17:17, 43.23s/it]Generating Corrections:  68%|██████▊   | 48/71 [31:25<15:16, 39.84s/it]Generating Corrections:  69%|██████▉   | 49/71 [31:54<13:25, 36.59s/it]Generating Corrections:  70%|███████   | 50/71 [32:26<12:19, 35.23s/it]Generating Corrections:  72%|███████▏  | 51/71 [32:57<11:19, 33.96s/it]Generating Corrections:  73%|███████▎  | 52/71 [33:35<11:10, 35.27s/it]Generating Corrections:  75%|███████▍  | 53/71 [34:12<10:45, 35.86s/it]Generating Corrections:  76%|███████▌  | 54/71 [34:41<09:35, 33.83s/it]Generating Corrections:  77%|███████▋  | 55/71 [35:06<08:16, 31.01s/it]Generating Corrections:  79%|███████▉  | 56/71 [35:53<08:59, 35.97s/it]Generating Corrections:  80%|████████  | 57/71 [36:36<08:51, 37.93s/it]Generating Corrections:  82%|████████▏ | 58/71 [37:24<08:51, 40.85s/it]Generating Corrections:  83%|████████▎ | 59/71 [38:02<08:00, 40.07s/it]Generating Corrections:  85%|████████▍ | 60/71 [38:36<07:01, 38.32s/it]Generating Corrections:  86%|████████▌ | 61/71 [39:33<07:18, 43.89s/it]Generating Corrections:  87%|████████▋ | 62/71 [40:11<06:19, 42.16s/it]Generating Corrections:  89%|████████▊ | 63/71 [40:41<05:07, 38.46s/it]Generating Corrections:  90%|█████████ | 64/71 [41:26<04:42, 40.30s/it]Generating Corrections:  92%|█████████▏| 65/71 [42:12<04:12, 42.14s/it]Generating Corrections:  93%|█████████▎| 66/71 [42:54<03:31, 42.21s/it]Generating Corrections:  94%|█████████▍| 67/71 [43:43<02:56, 44.20s/it]Generating Corrections:  96%|█████████▌| 68/71 [44:12<01:58, 39.65s/it]Generating Corrections:  97%|█████████▋| 69/71 [44:56<01:21, 40.92s/it]Generating Corrections:  99%|█████████▊| 70/71 [45:41<00:41, 41.98s/it]Generating Corrections: 100%|██████████| 71/71 [46:14<00:00, 39.33s/it]Generating Corrections: 100%|██████████| 71/71 [46:14<00:00, 39.07s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 1238 (char 1237)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Von dir noch was auf Erden.\\nHastig schreiten sie nun aufwaͤrts,\\n„Sey die Mordthat unsrer Haͤnde,\\nSinnend nach, dem Sinnenden jezt entfallen\\nSo bluͤhend, leicht, wie junge Rosenblaͤtter,\\nSchien vom Altar sich zu senken,\\nJhrer Schoͤnheit, weit im Lande\\nErgreif\' es, Sturm, in dem Wuͤthen,\\nDahin den raschen Trott,\\nZornesbleich und furchtergriffen,\\nUnd dort blickt der schuldlose Hirt der Sonne\\nSie will zu schonen manchmal auch belieben,\\n„Mir nicht den Kuss! bin\' sein nicht werth;\\nSie streifen in den Wald hinaus,\\n„Sie schlummern in der Zukunft Schattengaͤngen\\nWird kein Busen baͤnger schlagen?\\nNoch die Sonn\' in die Kapelle,\\nDie mir durch ihren Trug\\nWas trauerst du, mein schoͤner Junge?\\nUnd zertruͤmmert sein Gebau.\\nLenau\'? Gedich 15\\nUnd die Wellen der Durance\\nDrohend klirren ihre Saͤbel,\\nAn des Doͤrfchens stillem Saume\\nChantereine, der Hauptmann ist es\\nVerschwunden ist das letzte Leben,\\nDa kommt der Lenz, der schoͤne Junge,\\nGleich der Unsterblichkeit Loos, wenn uns der Ewige winkt;\\nDer Wind nun auf zum wilden Reigen,\\n„Tief sank ich\' ins Verderben!\\nWir sind vorbei. Der Sturm lenkt sein Gefieder\\nDas der Prinz nunmehr bezogen,\\nSo wiegt der Bursche seine Maid\',\'has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Unterminated string starting at: line 1 column 19 (char 18)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"sten, hat sich etwas von dem Pedantismus\\ngeschlichen, der ihn bei seiner Erziehung ein—\\nzwangte, und der sich jetzt in dem sklavischen\\nAnhaͤngen an irgend eine Form, ausspricht.\\nEr schrieb und zeichnete den Baumeistern\\nmit angstlicher Genauigkeit jedes Detail der\\nGebaͤude vor, und jede geringe Abweichung,\\nvon dem aufgestellten Muster, das er muͤh—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—\\n—'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0350 ± 0.0346
+Model CER:     0.0365 ± 0.0574
+CER Reduction: -4.30%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.1870 ± 0.1391
+Model WER:     0.1137 ± 0.1144
+WER Reduction: 39.17%
+==================================================
+
+Detailed results saved to model_eval_logs/qwen3-4B-ocr-dta19-base_dta19_test_nometa_results.parquet

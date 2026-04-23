@@ -1,0 +1,136 @@
+Wed Apr 22 10:52:23 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:88:00.0 Off |                    0 |
+|  0%   49C    P0             82W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-4B...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   1%|          | 4/398 [00:00<00:11, 33.52it/s]Loading weights:   8%|▊         | 30/398 [00:00<00:02, 156.60it/s]Loading weights:  15%|█▍        | 58/398 [00:00<00:01, 206.35it/s]Loading weights:  21%|██        | 82/398 [00:00<00:01, 207.54it/s]Loading weights:  26%|██▌       | 104/398 [00:00<00:01, 196.88it/s]Loading weights:  33%|███▎      | 130/398 [00:00<00:01, 213.91it/s]Loading weights:  38%|███▊      | 152/398 [00:00<00:01, 175.72it/s]Loading weights:  48%|████▊     | 190/398 [00:00<00:00, 220.56it/s]Loading weights:  56%|█████▌    | 223/398 [00:01<00:00, 247.33it/s]Loading weights:  63%|██████▎   | 249/398 [00:01<00:00, 249.03it/s]Loading weights:  69%|██████▉   | 275/398 [00:01<00:00, 245.28it/s]Loading weights:  76%|███████▌  | 301/398 [00:01<00:00, 244.03it/s]Loading weights:  82%|████████▏ | 326/398 [00:01<00:00, 245.27it/s]Loading weights:  88%|████████▊ | 351/398 [00:01<00:00, 243.29it/s]Loading weights:  94%|█████████▍| 376/398 [00:01<00:00, 195.95it/s]Loading weights: 100%|██████████| 398/398 [00:01<00:00, 218.10it/s]
+No adapter path provided. Evaluating the BASE MODEL...
+Loading data from data/languages/english_test.parquet...
+Running batch inference on 308 samples...
+Generating Corrections:   0%|          | 0/77 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   1%|▏         | 1/77 [00:17<22:43, 17.94s/it]Generating Corrections:   3%|▎         | 2/77 [00:35<21:48, 17.45s/it]Generating Corrections:   4%|▍         | 3/77 [00:52<21:28, 17.42s/it]Generating Corrections:   5%|▌         | 4/77 [01:12<22:31, 18.51s/it]Generating Corrections:   6%|▋         | 5/77 [01:25<19:39, 16.38s/it]Generating Corrections:   8%|▊         | 6/77 [01:42<19:56, 16.85s/it]Generating Corrections:   9%|▉         | 7/77 [02:02<20:39, 17.71s/it]Generating Corrections:  10%|█         | 8/77 [02:19<20:07, 17.50s/it]Generating Corrections:  12%|█▏        | 9/77 [02:37<19:57, 17.61s/it]Generating Corrections:  13%|█▎        | 10/77 [02:53<19:10, 17.18s/it]Generating Corrections:  14%|█▍        | 11/77 [03:04<16:39, 15.14s/it]Generating Corrections:  16%|█▌        | 12/77 [03:28<19:30, 18.01s/it]Generating Corrections:  17%|█▋        | 13/77 [03:44<18:21, 17.21s/it]Generating Corrections:  18%|█▊        | 14/77 [04:03<18:45, 17.87s/it]Generating Corrections:  19%|█▉        | 15/77 [04:19<18:00, 17.43s/it]Generating Corrections:  21%|██        | 16/77 [04:37<17:56, 17.64s/it]Generating Corrections:  22%|██▏       | 17/77 [04:51<16:28, 16.47s/it]Generating Corrections:  23%|██▎       | 18/77 [05:10<16:55, 17.21s/it]Generating Corrections:  25%|██▍       | 19/77 [05:25<15:59, 16.54s/it]Generating Corrections:  26%|██▌       | 20/77 [05:44<16:25, 17.29s/it]Generating Corrections:  27%|██▋       | 21/77 [05:59<15:29, 16.59s/it]Generating Corrections:  29%|██▊       | 22/77 [06:15<14:52, 16.23s/it]Generating Corrections:  30%|██▉       | 23/77 [06:32<14:58, 16.64s/it]Generating Corrections:  31%|███       | 24/77 [06:48<14:30, 16.43s/it]Generating Corrections:  32%|███▏      | 25/77 [07:07<14:49, 17.11s/it]Generating Corrections:  34%|███▍      | 26/77 [07:23<14:25, 16.98s/it]Generating Corrections:  35%|███▌      | 27/77 [07:39<13:54, 16.69s/it]Generating Corrections:  36%|███▋      | 28/77 [07:55<13:21, 16.36s/it]Generating Corrections:  38%|███▊      | 29/77 [08:10<12:49, 16.04s/it]Generating Corrections:  39%|███▉      | 30/77 [08:28<12:59, 16.59s/it]Generating Corrections:  40%|████      | 31/77 [08:45<12:49, 16.72s/it]Generating Corrections:  42%|████▏     | 32/77 [09:00<12:11, 16.27s/it]Generating Corrections:  43%|████▎     | 33/77 [09:19<12:24, 16.91s/it]Generating Corrections:  44%|████▍     | 34/77 [09:39<12:43, 17.76s/it]Generating Corrections:  45%|████▌     | 35/77 [10:01<13:19, 19.03s/it]Generating Corrections:  47%|████▋     | 36/77 [10:19<12:48, 18.75s/it]Generating Corrections:  48%|████▊     | 37/77 [10:34<11:47, 17.69s/it]Generating Corrections:  49%|████▉     | 38/77 [10:44<10:06, 15.54s/it]Generating Corrections:  51%|█████     | 39/77 [10:51<08:11, 12.93s/it]Generating Corrections:  52%|█████▏    | 40/77 [10:59<07:00, 11.36s/it]Generating Corrections:  53%|█████▎    | 41/77 [11:06<06:06, 10.18s/it]Generating Corrections:  55%|█████▍    | 42/77 [11:13<05:19,  9.13s/it]Generating Corrections:  56%|█████▌    | 43/77 [11:21<04:57,  8.74s/it]Generating Corrections:  57%|█████▋    | 44/77 [11:28<04:34,  8.33s/it]Generating Corrections:  58%|█████▊    | 45/77 [11:37<04:28,  8.38s/it]Generating Corrections:  60%|█████▉    | 46/77 [11:47<04:38,  8.99s/it]Generating Corrections:  61%|██████    | 47/77 [12:04<05:40, 11.34s/it]Generating Corrections:  62%|██████▏   | 48/77 [12:15<05:28, 11.33s/it]Generating Corrections:  64%|██████▎   | 49/77 [12:22<04:41, 10.06s/it]Generating Corrections:  65%|██████▍   | 50/77 [12:32<04:31, 10.05s/it]Generating Corrections:  66%|██████▌   | 51/77 [12:39<03:52,  8.95s/it]Generating Corrections:  68%|██████▊   | 52/77 [12:47<03:41,  8.84s/it]Generating Corrections:  69%|██████▉   | 53/77 [12:54<03:19,  8.30s/it]Generating Corrections:  70%|███████   | 54/77 [13:02<03:03,  7.96s/it]Generating Corrections:  71%|███████▏  | 55/77 [13:09<02:53,  7.87s/it]Generating Corrections:  73%|███████▎  | 56/77 [13:17<02:44,  7.85s/it]Generating Corrections:  74%|███████▍  | 57/77 [13:25<02:35,  7.76s/it]Generating Corrections:  75%|███████▌  | 58/77 [13:33<02:28,  7.82s/it]Generating Corrections:  77%|███████▋  | 59/77 [13:38<02:09,  7.21s/it]Generating Corrections:  78%|███████▊  | 60/77 [13:46<02:07,  7.48s/it]Generating Corrections:  79%|███████▉  | 61/77 [13:58<02:17,  8.58s/it]Generating Corrections:  81%|████████  | 62/77 [14:08<02:16,  9.10s/it]Generating Corrections:  82%|████████▏ | 63/77 [14:15<01:57,  8.41s/it]Generating Corrections:  83%|████████▎ | 64/77 [14:38<02:46, 12.78s/it]Generating Corrections:  84%|████████▍ | 65/77 [14:56<02:54, 14.55s/it]Generating Corrections:  86%|████████▌ | 66/77 [15:12<02:44, 14.94s/it]Generating Corrections:  87%|████████▋ | 67/77 [15:35<02:52, 17.24s/it]Generating Corrections:  88%|████████▊ | 68/77 [15:57<02:49, 18.80s/it]Generating Corrections:  90%|████████▉ | 69/77 [16:21<02:41, 20.24s/it]Generating Corrections:  91%|█████████ | 70/77 [16:41<02:20, 20.11s/it]Generating Corrections:  92%|█████████▏| 71/77 [17:00<01:58, 19.83s/it]Generating Corrections:  94%|█████████▎| 72/77 [17:27<01:50, 22.14s/it]Generating Corrections:  95%|█████████▍| 73/77 [17:46<01:24, 21.03s/it]Generating Corrections:  96%|█████████▌| 74/77 [18:06<01:02, 20.91s/it]Generating Corrections:  97%|█████████▋| 75/77 [18:20<00:37, 18.82s/it]Generating Corrections:  99%|█████████▊| 76/77 [18:40<00:18, 18.93s/it]Generating Corrections: 100%|██████████| 77/77 [18:58<00:00, 18.73s/it]Generating Corrections: 100%|██████████| 77/77 [18:58<00:00, 14.78s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 115 (char 116)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "A LITTLE MORE GRAPE. Now, Charley, my boy, there\'s a bottle of wine that\'s forty years old." "Forty years! by Jove, I\'m astonished!" What, because it is so old?" No, Jack; but to find it so infernally small of its age." GENTEEL PEOPLE The young lady who lets her mother do the ironing for fear of spoiling her hands; the miss who wears thin shoes on a rainy day; the young gentleman who is ashamed to be seen walking with his father.",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 2 column 1128 (char 1129)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "Sugar - Considerable shipments to London, per Pilgrim and Golconda, for planters\' account. Local sales for India and Singapore at 5 dollars to 74 dollars for white, A}/i dollars to i}£ dollars for yellow, and 3 dollars to 3% aollars for brown. Itara.- The Golconda takes a large quantity to England for planters\' aoeount. Sales for the Singapore and China market at 50 to 55 cents per gallon, 33 to 35 per cent, over proof Pepper.- There has been much competition for the few lots coming to mar kot lo tireen the vessels loading for America, and prices have been (Breed up to 7 dollars 90 eenie per picul for West Coast, and 7 dollars 65 cents per picul for East Coast. A small lot of Trutry of fair quality sold at 7 dollars 77J| cents per picul. The pressing demand for America being sati\'fled, a decline of rates may noir be looked forward to. White pepper is scarce, and paid as high u W/i dollar« per picul. Citen.- None in market. Oulla Percha.- In great demand. A small parcel has been pur- chased for Singapore at 23 dollars per picul. India Rubber.- Is muou wanted, and purchased as it arrives at \\9l4 dollars to 20 dollars per picul. I |!I(des - Continue in demand for America ; rales of Buffalo at 7 dollars to 7J, and cow at 10 dollars to 10\' per picul. Borns-In demand at 7 dollars to 7 J dollars per picul. Supplies vtry-limittd. Spies».- Nutmeg» are selling at 41 dollars per picul, HO to tho lb. Mace 34 dollars per picul. Penang c\'oros 23 dollars per picul, crop very small. Zmxibar cloves 7W dollars per picul. Gum Benjamin.- Purchases of No 2 quality at 17 dollars to l8 dollars per picul. No »applies of No. 1. Bctelnat-8tooks have been lightened by shipments to Cal- cutta ;",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 655 (char 656)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "LAW.\\nINSOLVENCY COURT.\\nFRIDAY.\\nSt\'IlKF.NDliltS.\\nThomas Shono, of Nobbs-street, Surry Hills, \\"broker\\nCause of insolvency Pressure of creditors liabilities,\\n£109 los Asse s, £33 Mr b Lxons, official assignee\\nJohn Keith Moinson, of Tumut, millwright Causes\\nof insolvency Pressure of creditois and losses m nuning\\nspeculations Liabilities, £289. Assets, £131 3s Mi\\nA Sradcni m, official assignee\\nJoierh Holmes, fjtony Crc k, Ironbarks, libourcr\\nCuises of m^olvcn y Looses m bu moss as lodjjing-house\\nkeppei Liabilitles, £59 lis Id Assets, Jc9 Mi 1 1\\nHunipherx < ffioinl assignee\\nGooroo Weruci, of Grafton, cirpenfer Cius"s ot m\\nsOlviney Pinssiuo of creditois md sickness m fimilx\\nLnbilines, £ol 13s lid Assets, £& Mr It H Sempill,\\noTirnl assignee\\nHoheit Bartholomew, of Tumut, miller, now labourer\\nCauses of insolvency Pir-ssuro of creditors nd losses in\\nbusiness Liiliiit.es. £221 Is 7d Assois, £72 11s. ¡Sir\\nI 1 Iliunpherx, ( \'licinl nssignei",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 372 (char 373)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "I METROPOLITAN DISTRICT COURT.\\n\' MONDAY.\\n{Before Mr. District Court Judge FOKBKS.)\\nROHDB AND AKOTKBU V. LAllK AND OTTIEltS.\\nTo recover £37 2s. Gd. for commission.. Mr, Curtis\\nappeared for the plaintiffs, and Mr. Bradley for the defend-\\nants. Verdict for tho defendants.\\nSYDNEY TRAMWAY ANT) OMNIBUS COMPANY V. THE\\nCOMMISSIONER POR RAILWAYS. " .\\nTo recover £100 for damage caused to au omnibus\\nbelonging to the plaintiff« by a tramcar of the defendant\'s\\ncoming into collision with it. Mr. V. O. Williams appeared\\nfor the plaintiffs, and Mr. John Williams for the defence.\\nVerdict for £60 5s.\\n¡3EKVICF. AND OTHERS V. EVANS,\\nTo rocover £11 6B. 4d. duo on a promissory noto. Mr.\\nWilliamson appcnrcd for the plaintiffs, and obtained »\\nverdict.",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 1210 (char 1211)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "IMPROVEMENTS IN. SYDNEY OdP{ Business people and others familiar with the «reamr«.! the steam dredge and other appliancoB used in conn«*T with deepening operations on tho eastern sid« of CiS Quay will, doubtless, bo glad to leam that tho work has been completed. The work has been in piogress about Z jours. It will bo lemembered that tho building of throe sections of new wharfs was finished about in or 12 months ago, two of tho sections being about 600 feet in length, and the other (tho central section) being about 1200 feet. Opposito the wharfs it has boon necessary to soenrV. depth of 20 feet at low water spring tides. Foi sotuo tim« past attontion has bun devoted to that portion of tho Syd» Cove whioh is boundod on tho east bv the central section of the wharf. It has been nooesBory to\'blast and dredgo tí» rock in somo piucos to a depth of 10 loot. Tho work has not. been continuous, having been curried on onli as opportunity would allow, otherwise it would, doubtless havo boen completed much sooner. Serious induction wiis caused durtug the wool season ia consequence of shir* being berthed in that part of tho harbour, a Mrï0 spondent, who writes above the Bignaturo of "Eineri oneed," attributes - tho delay to tho character of ihn machinery employed. Ho expresses it »s h|8 convie. lion that it ia of an antiquated description and" urges that if tho Government had imported\' from Melbourno ono of Foul\'s Compressed Air Rock. borers, und other appliances of a modem character tbo work would havo beon expedited, and a con-\' Biderablo saving eilocted. The correspondent referred to also thinks that the appointment of a harbour master would lead to tho moro satlntuctorj carrying out ot barbour improvements. Wo have caused inquiries lo bo made about tho rocoiumendatiotis contained in tto letter, and kavo learnt that it is considered thit ti« machinery which has boen employed was tie mort BUitublo for tho purpose The rock which had to be removed wns irregular aud patchy, and consisted of n loft kind of enndHtono. Hud theio beon a large mass of »oin rock to bo operated upon, steam drills could havo been employed with advantugo;",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 2 column 485 (char 486)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "I THE HAYMARKET HIPPODROME.\\n\\nPespito Oír» heivy downpour of rain on Saturday\\nnif,ht the Ili} market Hippodrome wns largely at-\\ntended The llohcmiaii Dramatic Company produced\\nthe American dunn, \\"A Triitor\'fl Doom\\" The stag-\\ning waa good, the scenic cfTccta being dm to thft\\nefforts of Mr ti Casev Ihc principal characters\\nwere sustained hy Mr Milton MOOT, Mr T A Homll\\nCon Mr C Archer Mr S M\'Oowan Miss rtliel Grey,\\nMini Louie Hartley nnd Misa Violet \\atea \\".\\n\\nTraitor o Doom\' will be plajed cicli evening until\\nFriday when \\"Dick Turpin\'s Rule to York\\" will be\\nproduced A mitineo will te liclil on Saturday af-\\nfternoon",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 2 column 816 (char 817)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "URTLE COOGEE SHOOTING CASE. ATTENTION-T-S. BPTIORABT,E CONDITTOX The case of George Leslie Miller. \\"Alio is -\\"..ríiid yvltli .bootine nt Lily May Davis, iu Ä«l Mundnrr.il. Towers, Little Coo- li was nguiu before the Paddington Pollen ciurt icslerdny. before Mr Aubroy JIowlc, Amber Magistrate The bearing «*na spe V\'lsllv nrmnged to enable medical testimony lib-glAin, lit) tbe doctor AVIIO had examined .Ml*» D»Ali at the hospital \\"Ans about to leuyo on an cAtendcd trip niilcnce mm filAen to the effort Hint Miss Bail» np°» oimulnntton, Avns found to be uigerlne fiera a puni lured Around under tbc St nrmplt On July ss Constable O\'llrlen «is handed .1 bullet, which lind boen extract- ed and also two flatteucó* pieces of bullet yr.idi «ere found in ben elothlnp;. M. pre- se, t Ml su l)a\\ls was suficrliiK from paraljsls of both legs She would not be able to up near at court for at least four -Hecks, and 1 ..ron then bbe A«auld have to be carried. To Air 1 AA\\" Abigail (who appeared tor the nc-cuscd), witness stated that It was not possible to predict nhen Miss 0a«*ln would be able to appear There uns a doubt an to whether she would icgnln the use of her limbs, yvhich yvctild always be pnrnlysed. She had »n Injnri to the spine, «hieb no operation could cure Mr jVblgtil suggested -nilli a «len to say las Miss D_«is ii muLb stifferlnj, omi incon «cnlcncc is possible thal lit ii tend with the magistrate al Hie hosplt-il for Hu- tnklus of furllier o«ldenir II ««ould savL Miss Da\\ls icing brought to Ihp couit Mr Moule thml ed Mi j\\blsnll for tho sug- gestion mid sild he ««oulil curtin«, our to h*t\\e> tbe suggestion carried oui The further hearing ««as remanded lo Sep timber 21 |",\n  "has_modifications": false\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 2 column 171 (char 172)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "JUNIOR HOCKEY. Australian Championship. QUEENSLAND AND N.S.W. WIN The limit interest stake hockey championship car mini «as begun at North Bilcjiton \\c leid-", Ne« Soulli Wiles Vlcloili South Austialla mid Qiicen« Innd fleldid tpams nil the playeis being undei Uti age of Jl -.ens In the two mutch-"! playiri -iislcidai HIP foim tllsplaicd mi of n hlp.li slandaid Althoueh Vtc loil" and Sniilh Australia wcie beuten de-.Mir-lt In New South Wales and Queensland lespectlvly Iheli teams foiight stioniiousli *lhc South Ans tialliis maklnfi 1 bell fiist npponinnre In a Junloi championship larked evpcrlenic pnillcularlv In nt tpc k Smith Victorias fioall eener ivmu7cd with his snics against Ni w South Wales He nppei\'s a custodian with brlsslit piospicis of lulu national honnms NLV. South Wilts bia! Vlctmla bv fi coals io nil Smith enlv stoppid ii hort tmnei in HIM m urli ! Ickln li« hall clcai He s-uctl nanin «lth a hard kiel nilen rim lool lh( ball Into the circle alici comblnlnc «eil nilli Davis and Lislle The count!*, numbers of the Ne« South Wales ti nu spenllH adapted themselves lo the style of plnv of the Svdncy men lucas of Llsmorr opened the scoilnc aflei reed\'HIE a -Hal,hi slow lill Horn Di". Is Although hard picssed Victoria stood un well but rould not finish oil its mo,(.mellis Ne« South Wales scoied Us -eeond no-il attei a pemlt, lulh tnken h\\ Divls «hen Smllh fell on Hu bill Smllh obsliucted Davis In attempting, lo tlcai Hie boll and a penally (toni «us awarded "PIens Inneiscd Ni« South Waluss i.oal-1 lo Un r I» shnv\\ln" splendid antlrlpnllon \'ollowln- » sholl coinei lill by Lucas Into the coal mom h Nr« South WalPS conllnuid Its pipssuii In the spcond half and Dalln sioieri afin lerelvina a pass from Lueas Vletoila then lmpio\\cd t ons\'d eiablv and roi 10 minnies kepi up a ronstenl altad but Us pflorts «LTI, fiiillless Lucas scnud New South Wales s fifth poa! nfter a passing nish by Davis Stevens and livan and Dnlbi netti d the M\\lh altei a contle by Leslie iioni the 1I2I1I nine;",\n  "has_modifications": false\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 1105 (char 1106)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "Widow Fay of Oregon has set up a cigar factory, and her woods are said to be the best in the state. Converted Indians sing \\"Now I Lay Me\\" with warwhoop accompaniment. The effect is said to be very soothing. The Japanese make strong string of paper, and we have seen a very good cord of wood, but not lately. Littleton Tram. A correspondence from Salt Lake City says the Mormon girls have the freshest, fairest, darkest, and most healthy complexions he ever saw. Within the last ten years 100,000,001 acres of public lands have been given away. not, however, to the landless, homesteaders. in the midst of the jungle, in the midst of the timber, and swung off into that unblinking bourne whence he can never return. By the Indianapolis connecting lines. -All embryo infants (if any) in Virginia City, Nevada, painted his bull, brother in the latest style \\"of the fierce Sioux\\". \\"ml \\"I\'ll bitcd him as a captured one of Spotted Tail, at twenty-five cents a , t,.,. \',. l(ttom,t:,, , .J; and recognised and eluded her thrilling M)\'1\' For several months past W. H. Allen, 51 \\" ,)"\' Uen Uvh \' i\'loomlngtoii, I healing the lindivid uilllictod. occunviii" roouu in Ihn 1 nupln s hank block. Ho C(4mn lQ a dimax on Tucvlay ,,1,-bt by I ulnplng with tho wifonf a Gurinan named I Honigardnor, who llvm Mimewhere near \' iU "Vmiy AcrbS\'\' -J1" "l600 "wn twU h\'vo \' watching .Mount Vesuvius for the past ,, dc(;,HrtJ mt flro unmilt,\'lkft. indfcntfona that n spout will occur within iinothor month. The mountain is eranlrje nnd sighing, clouds of ashes are being bJown out, nnu n warning n uccn given linear Inhabitants, to gather their bJU\'choUl effects anil remove to safer places. I A gopd story Is told of n St.",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 2 column 1087 (char 1088)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "ROBERTS GRATEFUL FOR QUEENS WORDS LONDON, Feb. 28.— In her dispatch to Lord Roberts following the announcement of the surrender of GeneraK Cronje ~- her Majesty said: -, , . . \'. _ . \\"Accept for. yourself and all under your command my, warmest congratulations on this splendid news.\\" — . : . , ¦Lord Roberts replied as follows: . \\"All under ¦my : command are grateful foryourMaJesty\'s most gracious message. • Congratulations fronv their Queen are an \' honor the ¦ soldiers dearly prize.\\" - General Buller. has wired his thanks to the v Queen for her telegram of gracious sympathy and encouragement. . CONGRESSMEN TO CRONJE. WASHINGTON, ,\', Feb. 28.—Representa tive : Fitzgerald -of Massachusetts \'. to-day ; passed around among his Democratic col leagues | the •¦-. following cable >to \'General Cronje, the defeated Boer general. ~ Up to to-day, about thirty of them had slgntd It: \\"General \\" CronJel\'Cape Towiv Africa: Members of the United States House cf Representatives ;| congratulate .s you -and your ; soldiers on^ the magnificent\' display of courage \\ and ¦: heroism ¦In your \\" brave fight for. human rights.\\" t , . ? ¦.: CONFLICTS AT BELFAST. BELFAST, \\" Feb. 28.— A v rumor, . that Ladysmith had been relieved led to street demonstrations } Ln* Belfast ¦ to-day which precipitated conflicts between the Orange men and Nationalists; There was consid erable , stone i throwing . and many • persons were. injured and .some property damaged. BOERS SAID TO USE EXPLOSIVE BULLETS ROBERTS IMPRESSED BY CRONJE\'S INGENUITY •LONDON, March I.— Winston Churchill. In a dispatch from Colenso dated Tuesday,. says: \'/;\'•;• \'~- .\'-/ \\" . \' .\'< \\" \\" : The\'condltion of the wounded who were tin tended - on \' the \\ hillside Sunday - was so\' painful- that General Buller sent a flag of truce\', to\' the enemy ;",\n  "has_modifications": false\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting property name enclosed in double quotes: line 2 column 34 (char 35)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": " , . \'_¦,:",.:-\' : ..\' \'*¦. v ¦",\n  "has_modifications": false\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0447 ± 0.0706
+Model CER:     0.0449 ± 0.0755
+CER Reduction: -0.51%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.1664 ± 0.1372
+Model WER:     0.1737 ± 0.1441
+WER Reduction: -4.41%
+==================================================
+
+Detailed results saved to model_eval_logs/zeroshot_Qwen3-4B_english_test_meta_results.parquet

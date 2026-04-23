@@ -1,0 +1,29 @@
+Thu Apr 23 13:35:56 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:1A:00.0 Off |                  N/A |
+| 53%   83C    P0            115W /  250W |       0MiB /  11264MiB |     17%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Loading model from model/bart-large-ocr-french-metadata...
+Loading weights:   0%|          | 0/512 [00:00<?, ?it/s]Loading weights:  19%|█▉        | 96/512 [00:00<00:00, 645.26it/s]Loading weights:  31%|███▏      | 161/512 [00:00<00:01, 270.27it/s]Loading weights:  39%|███▊      | 198/512 [00:00<00:01, 213.13it/s]Loading weights:  44%|████▍     | 225/512 [00:00<00:01, 221.50it/s]Loading weights:  49%|████▉     | 251/512 [00:01<00:02, 120.52it/s]Loading weights:  54%|█████▍    | 277/512 [00:01<00:01, 137.89it/s]Loading weights:  58%|█████▊    | 298/512 [00:01<00:01, 130.61it/s]Loading weights:  62%|██████▏   | 318/512 [00:01<00:01, 142.07it/s]Loading weights:  66%|██████▋   | 340/512 [00:01<00:01, 139.36it/s]Loading weights:  70%|██████▉   | 357/512 [00:02<00:01, 143.23it/s]Loading weights:  73%|███████▎  | 374/512 [00:02<00:01, 131.25it/s]Loading weights:  78%|███████▊  | 398/512 [00:02<00:00, 135.55it/s]Loading weights:  82%|████████▏ | 422/512 [00:02<00:00, 136.77it/s]Loading weights:  85%|████████▌ | 437/512 [00:02<00:00, 132.57it/s]Loading weights:  88%|████████▊ | 451/512 [00:02<00:00, 127.26it/s]Loading weights:  92%|█████████▏| 470/512 [00:02<00:00, 129.58it/s]Loading weights:  96%|█████████▌| 490/512 [00:03<00:00, 137.22it/s]Loading weights: 100%|██████████| 512/512 [00:03<00:00, 161.04it/s]
+Loading data from data/languages/french_test.parquet...
+Running batch inference on 295 samples...
+Generating Corrections:   0%|          | 0/74 [00:00<?, ?it/s]Generating Corrections:   1%|▏         | 1/74 [00:17<20:57, 17.23s/it]Generating Corrections:   3%|▎         | 2/74 [00:34<20:48, 17.34s/it]Generating Corrections:   4%|▍         | 3/74 [00:52<20:36, 17.41s/it]Generating Corrections:   5%|▌         | 4/74 [01:13<21:54, 18.79s/it]Generating Corrections:   7%|▋         | 5/74 [01:33<22:22, 19.46s/it]Generating Corrections:   8%|▊         | 6/74 [01:50<21:12, 18.72s/it]Generating Corrections:   9%|▉         | 7/74 [02:10<21:01, 18.82s/it]Generating Corrections:  11%|█         | 8/74 [02:32<22:04, 20.06s/it]Generating Corrections:  12%|█▏        | 9/74 [02:57<23:29, 21.68s/it]Generating Corrections:  14%|█▎        | 10/74 [03:17<22:17, 20.90s/it]Generating Corrections:  15%|█▍        | 11/74 [03:36<21:28, 20.44s/it]Generating Corrections:  16%|█▌        | 12/74 [03:54<20:29, 19.83s/it]Generating Corrections:  18%|█▊        | 13/74 [04:12<19:29, 19.18s/it]Generating Corrections:  19%|█▉        | 14/74 [04:35<20:14, 20.25s/it]Generating Corrections:  20%|██        | 15/74 [04:59<20:58, 21.33s/it]Generating Corrections:  22%|██▏       | 16/74 [05:18<19:53, 20.57s/it]Generating Corrections:  23%|██▎       | 17/74 [05:37<19:20, 20.36s/it]Generating Corrections:  24%|██▍       | 18/74 [05:54<18:02, 19.33s/it]Generating Corrections:  26%|██▌       | 19/74 [06:15<18:12, 19.86s/it]Generating Corrections:  27%|██▋       | 20/74 [06:37<18:17, 20.33s/it]Generating Corrections:  28%|██▊       | 21/74 [06:57<17:55, 20.29s/it]Generating Corrections:  30%|██▉       | 22/74 [07:16<17:15, 19.91s/it]Generating Corrections:  31%|███       | 23/74 [07:34<16:20, 19.22s/it]Generating Corrections:  32%|███▏      | 24/74 [07:52<15:51, 19.03s/it]Generating Corrections:  34%|███▍      | 25/74 [08:13<15:59, 19.59s/it]Generating Corrections:  35%|███▌      | 26/74 [08:34<16:02, 20.05s/it]

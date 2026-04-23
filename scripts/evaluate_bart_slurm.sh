@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=gpt7.0
+#SBATCH --job-name=bart_eval
 #SBATCH --partition=gpu-2080ti
-#SBATCH --qos=normal
+#SBATCH --qos=test
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
@@ -71,6 +71,62 @@ echo "--- TEST COMPLETE ---"
 #     --data_path data/hipe_aggregated_test.parquet \
 #     --batch_size 4
 
+# ======================= BART-BASE WITH METADATA =========================
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-dta19-metadata \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-icdar2017-metadata \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-impresso-nzz-metadata \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-impresso-snippets-metadata \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-overproof-combined-metadata \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-english-metadata \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-french-metadata \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-german-metadata \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-base-ocr-hipe_aggregated-metadata \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
 # ===================== BART-LARGE VARIATIONS =========================
 
 # python model_eval/evaluate_bart.py \
@@ -118,6 +174,63 @@ echo "--- TEST COMPLETE ---"
 #     --data_path data/hipe_aggregated_test.parquet \
 #     --batch_size 4
 
+
+# ===================== BART-LARGE WITH METADATA =========================
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-dta19-metadata \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-icdar2017-metadata \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-impresso-nzz-metadata \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-impresso-snippets-metadata \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-overproof-combined-metadata \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-english-metadata \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-french-metadata \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-german-metadata \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+python model_eval/evaluate_bart.py \
+    --model_path model/bart-large-ocr-hipe_aggregated-metadata \
+    --data_path data/hipe_aggregated_test.parquet \
+    --batch_size 4 \
+    --with_metadata
+
 # =================== MULTI-LINGUAL BART VARIATION =====================
 
 # python model_eval/evaluate_bart.py \
@@ -160,7 +273,63 @@ echo "--- TEST COMPLETE ---"
 #     --data_path data/languages/german_test.parquet \
 #     --batch_size 4
 
-python model_eval/evaluate_bart.py \
-    --model_path model/mbart-large-50-ocr-hipe_aggregated \
-    --data_path data/hipe_aggregated_test.parquet \
-    --batch_size 4
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-hipe_aggregated \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4
+
+# =================== MULTI-LINGUAL BART WITH METADATA =====================
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-dta19-metadata \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-icdar2017-metadata \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-impresso-nzz-metadata \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-impresso-snippets-metadata \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-overproof-combined-metadata \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-english-metadata \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-french-metadata \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-german-metadata \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path model/mbart-large-50-ocr-hipe_aggregated-metadata \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata

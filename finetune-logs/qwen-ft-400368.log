@@ -1,0 +1,65 @@
+Tue Apr 21 13:04:45 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:CD:00.0 Off |                    0 |
+|  0%   59C    P0             87W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   1%|          | 3/398 [00:00<00:19, 20.74it/s]Loading weights:   9%|▉         | 37/398 [00:00<00:02, 178.52it/s]Loading weights:  19%|█▉        | 75/398 [00:00<00:01, 258.29it/s]Loading weights:  28%|██▊       | 113/398 [00:00<00:00, 300.06it/s]Loading weights:  37%|███▋      | 148/398 [00:00<00:00, 312.13it/s]Loading weights:  47%|████▋     | 187/398 [00:00<00:00, 337.30it/s]Loading weights:  56%|█████▌    | 223/398 [00:00<00:00, 344.18it/s]Loading weights:  65%|██████▍   | 258/398 [00:00<00:00, 334.38it/s]Loading weights:  75%|███████▍  | 298/398 [00:00<00:00, 352.66it/s]Loading weights:  84%|████████▍ | 334/398 [00:01<00:00, 348.41it/s]Loading weights:  93%|█████████▎| 370/398 [00:01<00:00, 350.91it/s]Loading weights: 100%|██████████| 398/398 [00:01<00:00, 318.56it/s]
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+/Utilisateurs/mtran01/hipe-ocrepair-llm/.venv/lib/python3.12/site-packages/dill/_dill.py:423: PicklingWarning: Cannot locate reference to <class '__main__.OCRCorrection'>.
+  StockPickler.save(self, obj, save_persistent_id)
+/Utilisateurs/mtran01/hipe-ocrepair-llm/.venv/lib/python3.12/site-packages/dill/_dill.py:423: PicklingWarning: Cannot pickle <class '__main__.OCRCorrection'>: __main__.OCRCorrection has recursive self-references that trigger a RecursionError.
+  StockPickler.save(self, obj, save_persistent_id)
+Applying formatting function to train dataset:   0%|          | 0/150 [00:00<?, ? examples/s]Applying formatting function to train dataset: 100%|██████████| 150/150 [00:00<00:00, 3741.53 examples/s]
+Adding EOS to train dataset:   0%|          | 0/150 [00:00<?, ? examples/s]Adding EOS to train dataset: 100%|██████████| 150/150 [00:00<00:00, 16328.72 examples/s]
+Tokenizing train dataset:   0%|          | 0/150 [00:00<?, ? examples/s]Tokenizing train dataset:  77%|███████▋  | 116/150 [00:00<00:00, 1144.02 examples/s]Tokenizing train dataset: 100%|██████████| 150/150 [00:00<00:00, 1034.88 examples/s]
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+
+======Training configs========
+Model name: Qwen/qwen3-4B
+Training data: data/datasets/impresso-snippets_train.parquet
+Hyperparameters:
+  num_train_epochs: 5
+  per_device_train_batch_size: 8
+  gradient_accumulation_steps: 2
+  gradient_checkpointing: True
+  optim: paged_adamw_32bit
+  logging_steps: 10
+  save_strategy: no
+  learning_rate: 0.0002
+  bf16: True
+  fp16: False
+  tf32: True
+  max_grad_norm: 0.3
+  warmup_ratio: 0.03
+  lr_scheduler_type: constant
+
+=======Training started=========
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:08<07:15,  8.90s/it]  4%|▍         | 2/50 [00:15<06:03,  7.58s/it]  6%|▌         | 3/50 [00:24<06:25,  8.19s/it]  8%|▊         | 4/50 [00:31<05:46,  7.54s/it] 10%|█         | 5/50 [00:37<05:22,  7.17s/it] 12%|█▏        | 6/50 [00:44<05:13,  7.13s/it] 14%|█▍        | 7/50 [00:51<04:59,  6.96s/it] 16%|█▌        | 8/50 [00:59<05:07,  7.33s/it] 18%|█▊        | 9/50 [01:05<04:52,  7.12s/it] 20%|██        | 10/50 [01:08<03:49,  5.73s/it]                                                20%|██        | 10/50 [01:08<03:49,  5.73s/it] 22%|██▏       | 11/50 [01:15<04:00,  6.17s/it] 24%|██▍       | 12/50 [01:23<04:08,  6.54s/it] 26%|██▌       | 13/50 [01:30<04:07,  6.69s/it] 28%|██▊       | 14/50 [01:37<04:04,  6.79s/it] 30%|███       | 15/50 [01:43<03:55,  6.74s/it] 32%|███▏      | 16/50 [01:50<03:52,  6.83s/it] 34%|███▍      | 17/50 [01:57<03:48,  6.92s/it] 36%|███▌      | 18/50 [02:04<03:40,  6.89s/it] 38%|███▊      | 19/50 [02:12<03:44,  7.24s/it] 40%|████      | 20/50 [02:15<02:54,  5.81s/it]                                                40%|████      | 20/50 [02:15<02:54,  5.81s/it] 42%|████▏     | 21/50 [02:21<02:54,  6.03s/it] 44%|████▍     | 22/50 [02:28<02:54,  6.22s/it] 46%|████▌     | 23/50 [02:36<03:00,  6.69s/it] 48%|████▊     | 24/50 [02:43<02:53,  6.69s/it] 50%|█████     | 25/50 [02:50<02:52,  6.91s/it] 52%|█████▏    | 26/50 [02:56<02:40,  6.67s/it] 54%|█████▍    | 27/50 [03:03<02:33,  6.67s/it] 56%|█████▌    | 28/50 [03:10<02:29,  6.82s/it] 58%|█████▊    | 29/50 [03:17<02:22,  6.78s/it] 60%|██████    | 30/50 [03:19<01:49,  5.49s/it]                                                60%|██████    | 30/50 [03:19<01:49,  5.49s/it] 62%|██████▏   | 31/50 [03:26<01:53,  5.99s/it] 64%|██████▍   | 32/50 [03:34<01:55,  6.39s/it] 66%|██████▌   | 33/50 [03:40<01:51,  6.56s/it] 68%|██████▊   | 34/50 [03:47<01:45,  6.61s/it] 70%|███████   | 35/50 [03:54<01:41,  6.76s/it] 72%|███████▏  | 36/50 [04:01<01:33,  6.69s/it] 74%|███████▍  | 37/50 [04:08<01:29,  6.90s/it] 76%|███████▌  | 38/50 [04:18<01:31,  7.65s/it] 78%|███████▊  | 39/50 [04:24<01:18,  7.15s/it] 80%|████████  | 40/50 [04:26<00:57,  5.79s/it]                                                80%|████████  | 40/50 [04:26<00:57,  5.79s/it] 82%|████████▏ | 41/50 [04:33<00:55,  6.19s/it] 84%|████████▍ | 42/50 [04:42<00:54,  6.86s/it] 86%|████████▌ | 43/50 [04:50<00:50,  7.18s/it] 88%|████████▊ | 44/50 [04:57<00:42,  7.10s/it] 90%|█████████ | 45/50 [05:04<00:35,  7.06s/it] 92%|█████████▏| 46/50 [05:10<00:27,  6.80s/it] 94%|█████████▍| 47/50 [05:17<00:20,  6.83s/it] 96%|█████████▌| 48/50 [05:23<00:13,  6.65s/it] 98%|█████████▊| 49/50 [05:30<00:06,  6.69s/it]100%|██████████| 50/50 [05:32<00:00,  5.34s/it]                                               100%|██████████| 50/50 [05:32<00:00,  5.34s/it]                                               100%|██████████| 50/50 [05:32<00:00,  5.34s/it]100%|██████████| 50/50 [05:32<00:00,  6.65s/it]
+{'loss': '1.662', 'grad_norm': '0.06982', 'learning_rate': '0.0002', 'entropy': '1.349', 'num_tokens': '7.469e+04', 'mean_token_accuracy': '0.7128', 'epoch': '1'}
+{'loss': '1.205', 'grad_norm': '0.05444', 'learning_rate': '0.0002', 'entropy': '1.264', 'num_tokens': '1.494e+05', 'mean_token_accuracy': '0.7853', 'epoch': '2'}
+{'loss': '1.114', 'grad_norm': '0.06128', 'learning_rate': '0.0002', 'entropy': '1.109', 'num_tokens': '2.241e+05', 'mean_token_accuracy': '0.7986', 'epoch': '3'}
+{'loss': '1.03', 'grad_norm': '0.08008', 'learning_rate': '0.0002', 'entropy': '1.051', 'num_tokens': '2.988e+05', 'mean_token_accuracy': '0.8089', 'epoch': '4'}
+{'loss': '0.9285', 'grad_norm': '0.07715', 'learning_rate': '0.0002', 'entropy': '0.9562', 'num_tokens': '3.734e+05', 'mean_token_accuracy': '0.8229', 'epoch': '5'}
+{'train_runtime': '332.4', 'train_samples_per_second': '2.256', 'train_steps_per_second': '0.15', 'train_loss': '1.188', 'epoch': '5'}
+
+Model has been saved to model/qwen3-4B-ocr-impresso-snippets-base

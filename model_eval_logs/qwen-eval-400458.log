@@ -1,0 +1,57 @@
+Tue Apr 21 20:25:53 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:48:00.0 Off |                    0 |
+|  0%   20C    P8             24W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-4B...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   0%|          | 1/398 [00:11<1:16:23, 11.54s/it]Loading weights:   8%|▊         | 31/398 [00:11<01:37,  3.75it/s] Loading weights:  15%|█▌        | 61/398 [00:11<00:38,  8.83it/s]Loading weights:  23%|██▎       | 91/398 [00:12<00:20, 14.95it/s]Loading weights:  29%|██▊       | 114/398 [00:12<00:13, 20.74it/s]Loading weights:  35%|███▌      | 141/398 [00:12<00:08, 30.94it/s]Loading weights:  42%|████▏     | 169/398 [00:12<00:05, 44.72it/s]Loading weights:  48%|████▊     | 192/398 [00:13<00:05, 37.22it/s]Loading weights:  52%|█████▏    | 208/398 [00:14<00:05, 32.79it/s]Loading weights:  62%|██████▏   | 245/398 [00:14<00:02, 53.39it/s]Loading weights:  69%|██████▉   | 276/398 [00:14<00:01, 74.03it/s]Loading weights:  76%|███████▌  | 302/398 [00:14<00:01, 92.91it/s]Loading weights:  84%|████████▎ | 333/398 [00:14<00:00, 120.51it/s]Loading weights:  92%|█████████▏| 366/398 [00:14<00:00, 151.40it/s]Loading weights:  99%|█████████▉| 394/398 [00:14<00:00, 152.81it/s]Loading weights: 100%|██████████| 398/398 [00:14<00:00, 26.91it/s] 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+No adapter path provided. Evaluating the BASE MODEL...
+Loading data from data/datasets/icdar2017_test.parquet...
+Running batch inference on 347 samples...
+Generating Corrections:   0%|          | 0/87 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   1%|          | 1/87 [00:20<28:46, 20.08s/it]Generating Corrections:   2%|▏         | 2/87 [00:37<26:19, 18.58s/it]Generating Corrections:   3%|▎         | 3/87 [00:55<25:24, 18.15s/it]Generating Corrections:   5%|▍         | 4/87 [01:15<26:20, 19.04s/it]Generating Corrections:   6%|▌         | 5/87 [01:28<22:56, 16.79s/it]Generating Corrections:   7%|▋         | 6/87 [01:46<23:11, 17.19s/it]Generating Corrections:   8%|▊         | 7/87 [02:06<24:09, 18.12s/it]Generating Corrections:   9%|▉         | 8/87 [02:23<23:36, 17.93s/it]Generating Corrections:  10%|█         | 9/87 [02:41<23:18, 17.93s/it]Generating Corrections:  11%|█▏        | 10/87 [02:58<22:25, 17.47s/it]Generating Corrections:  13%|█▎        | 11/87 [03:08<19:28, 15.38s/it]Generating Corrections:  14%|█▍        | 12/87 [03:33<22:48, 18.25s/it]Generating Corrections:  15%|█▍        | 13/87 [03:49<21:33, 17.48s/it]Generating Corrections:  16%|█▌        | 14/87 [04:10<22:27, 18.45s/it]Generating Corrections:  17%|█▋        | 15/87 [04:26<21:29, 17.91s/it]Generating Corrections:  18%|█▊        | 16/87 [04:45<21:22, 18.06s/it]Generating Corrections:  20%|█▉        | 17/87 [04:59<19:38, 16.83s/it]Generating Corrections:  21%|██        | 18/87 [05:18<20:05, 17.47s/it]Generating Corrections:  22%|██▏       | 19/87 [05:33<19:01, 16.79s/it]Generating Corrections:  23%|██▎       | 20/87 [05:52<19:40, 17.62s/it]Generating Corrections:  24%|██▍       | 21/87 [06:08<18:35, 16.90s/it]Generating Corrections:  25%|██▌       | 22/87 [06:23<17:53, 16.51s/it]Generating Corrections:  26%|██▋       | 23/87 [06:41<18:00, 16.88s/it]Generating Corrections:  28%|██▊       | 24/87 [06:57<17:25, 16.59s/it]Generating Corrections:  29%|██▊       | 25/87 [07:16<17:50, 17.27s/it]Generating Corrections:  30%|██▉       | 26/87 [07:33<17:27, 17.17s/it]Generating Corrections:  31%|███       | 27/87 [07:49<16:59, 16.99s/it]Generating Corrections:  32%|███▏      | 28/87 [08:05<16:24, 16.68s/it]Generating Corrections:  33%|███▎      | 29/87 [08:20<15:38, 16.18s/it]Generating Corrections:  34%|███▍      | 30/87 [08:38<15:56, 16.78s/it]Generating Corrections:  36%|███▌      | 31/87 [08:56<15:46, 16.90s/it]Generating Corrections:  37%|███▋      | 32/87 [09:11<15:02, 16.41s/it]Generating Corrections:  38%|███▊      | 33/87 [09:30<15:21, 17.07s/it]Generating Corrections:  39%|███▉      | 34/87 [09:50<16:01, 18.15s/it]Generating Corrections:  40%|████      | 35/87 [10:12<16:43, 19.30s/it]Generating Corrections:  41%|████▏     | 36/87 [10:30<16:06, 18.96s/it]Generating Corrections:  43%|████▎     | 37/87 [10:46<14:51, 17.82s/it]Generating Corrections:  44%|████▎     | 38/87 [10:56<12:51, 15.75s/it]Generating Corrections:  45%|████▍     | 39/87 [11:20<14:22, 17.96s/it]Generating Corrections:  46%|████▌     | 40/87 [11:43<15:21, 19.60s/it]Generating Corrections:  47%|████▋     | 41/87 [12:04<15:26, 20.15s/it]Generating Corrections:  48%|████▊     | 42/87 [12:28<15:52, 21.18s/it]Generating Corrections:  49%|████▉     | 43/87 [12:51<15:52, 21.66s/it]Generating Corrections:  51%|█████     | 44/87 [13:15<16:00, 22.34s/it]Generating Corrections:  52%|█████▏    | 45/87 [13:37<15:40, 22.38s/it]Generating Corrections:  53%|█████▎    | 46/87 [14:03<16:03, 23.49s/it]Generating Corrections:  54%|█████▍    | 47/87 [14:32<16:39, 24.99s/it]Generating Corrections:  55%|█████▌    | 48/87 [14:56<16:05, 24.77s/it]Generating Corrections:  56%|█████▋    | 49/87 [15:19<15:20, 24.22s/it]Generating Corrections:  57%|█████▋    | 50/87 [15:41<14:35, 23.67s/it]Generating Corrections:  59%|█████▊    | 51/87 [16:03<13:54, 23.17s/it]Generating Corrections:  60%|█████▉    | 52/87 [16:28<13:51, 23.75s/it]Generating Corrections:  61%|██████    | 53/87 [16:49<12:52, 22.73s/it]Generating Corrections:  62%|██████▏   | 54/87 [17:11<12:26, 22.61s/it]Generating Corrections:  63%|██████▎   | 55/87 [17:34<12:10, 22.84s/it]Generating Corrections:  64%|██████▍   | 56/87 [17:57<11:49, 22.89s/it]Generating Corrections:  66%|██████▌   | 57/87 [18:20<11:23, 22.79s/it]Generating Corrections:  67%|██████▋   | 58/87 [18:43<11:04, 22.92s/it]Generating Corrections:  68%|██████▊   | 59/87 [19:07<10:52, 23.29s/it]Generating Corrections:  69%|██████▉   | 60/87 [19:31<10:32, 23.43s/it]Generating Corrections:  70%|███████   | 61/87 [19:53<09:57, 23.00s/it]Generating Corrections:  71%|███████▏  | 62/87 [20:14<09:18, 22.34s/it]Generating Corrections:  72%|███████▏  | 63/87 [20:37<09:03, 22.65s/it]Generating Corrections:  74%|███████▎  | 64/87 [21:02<08:51, 23.11s/it]Generating Corrections:  75%|███████▍  | 65/87 [21:23<08:20, 22.73s/it]Generating Corrections:  76%|███████▌  | 66/87 [21:45<07:51, 22.45s/it]Generating Corrections:  77%|███████▋  | 67/87 [22:08<07:30, 22.51s/it]Generating Corrections:  78%|███████▊  | 68/87 [22:30<07:06, 22.45s/it]Generating Corrections:  79%|███████▉  | 69/87 [22:52<06:38, 22.14s/it]Generating Corrections:  80%|████████  | 70/87 [23:15<06:23, 22.56s/it]Generating Corrections:  82%|████████▏ | 71/87 [23:38<06:01, 22.62s/it]Generating Corrections:  83%|████████▎ | 72/87 [23:58<05:29, 21.98s/it]Generating Corrections:  84%|████████▍ | 73/87 [24:19<05:01, 21.55s/it]Generating Corrections:  85%|████████▌ | 74/87 [24:41<04:41, 21.62s/it]Generating Corrections:  86%|████████▌ | 75/87 [25:04<04:26, 22.19s/it]Generating Corrections:  87%|████████▋ | 76/87 [25:25<04:00, 21.86s/it]Generating Corrections:  89%|████████▊ | 77/87 [25:46<03:36, 21.65s/it]Generating Corrections:  90%|████████▉ | 78/87 [26:09<03:16, 21.80s/it]Generating Corrections:  91%|█████████ | 79/87 [26:32<02:57, 22.22s/it]Generating Corrections:  92%|█████████▏| 80/87 [26:54<02:36, 22.31s/it]Generating Corrections:  93%|█████████▎| 81/87 [27:19<02:18, 23.15s/it]Generating Corrections:  94%|█████████▍| 82/87 [27:40<01:52, 22.44s/it]Generating Corrections:  95%|█████████▌| 83/87 [28:03<01:30, 22.56s/it]Generating Corrections:  97%|█████████▋| 84/87 [28:26<01:08, 22.80s/it]Generating Corrections:  98%|█████████▊| 85/87 [28:48<00:45, 22.57s/it]Generating Corrections:  99%|█████████▉| 86/87 [29:10<00:22, 22.32s/it]Generating Corrections: 100%|██████████| 87/87 [29:31<00:00, 21.97s/it]Generating Corrections: 100%|██████████| 87/87 [29:31<00:00, 20.37s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 3 column 3 (char 713)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "There was a government that emerged from the crushing of Paris. A man did this terrible thing of bombing Paris, shooting at the passersby, and machine-gunning children and women. He believed he would succeed. Never has his crime been forgiven. His reign carried the smell of his corpses. His judiciary and clergy, despite telling him that law and heaven were with him, could not acquit him, and no blessed water could wash the blood from his hands. His omnipotence was being eaten away by the Twelfth of December. The dead moved beneath the earth and constantly shook the throne of this victorious man. They always prevented him from sitting there, and in the end, they pushed him down."\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0305 ± 0.0287
+Model CER:     0.0547 ± 0.1316
+CER Reduction: -79.46%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.1330 ± 0.0918
+Model WER:     0.1255 ± 0.2027
+WER Reduction: 5.62%
+==================================================
+
+Detailed results saved to model_eval_logs/zeroshot_Qwen3-4B_icdar2017_test_nometa_results.parquet

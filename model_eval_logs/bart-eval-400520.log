@@ -1,0 +1,60 @@
+Wed Apr 22 01:33:37 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:1A:00.0 Off |                  N/A |
+| 55%   83C    P0            116W /  250W |       0MiB /  11264MiB |     21%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Loading model from model/mbart-large-50-ocr-overproof-combined...
+Loading weights:   0%|          | 0/516 [00:00<?, ?it/s]Loading weights:  48%|████▊     | 246/516 [00:00<00:00, 2175.37it/s]Loading weights:  90%|████████▉ | 464/516 [00:01<00:00, 251.14it/s] Loading weights: 100%|██████████| 516/516 [00:01<00:00, 273.80it/s]
+Loading data from data/datasets/overproof-combined_test.parquet...
+Running batch inference on 56 samples...
+Generating Corrections:   0%|          | 0/14 [00:00<?, ?it/s]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+`use_return_dict` is deprecated! Use `return_dict` instead!
+Generating Corrections:   7%|▋         | 1/14 [00:23<05:05, 23.52s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  14%|█▍        | 2/14 [00:32<03:02, 15.22s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  21%|██▏       | 3/14 [00:43<02:25, 13.18s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  29%|██▊       | 4/14 [00:58<02:17, 13.72s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  36%|███▌      | 5/14 [01:06<01:46, 11.84s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  43%|████▎     | 6/14 [01:17<01:33, 11.64s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  50%|█████     | 7/14 [01:39<01:45, 15.03s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  57%|█████▋    | 8/14 [01:50<01:21, 13.52s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  64%|██████▍   | 9/14 [02:04<01:09, 13.85s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  71%|███████▏  | 10/14 [02:10<00:45, 11.34s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  79%|███████▊  | 11/14 [02:21<00:33, 11.22s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  86%|████████▌ | 12/14 [02:29<00:20, 10.09s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  93%|█████████▎| 13/14 [02:38<00:09,  9.87s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections: 100%|██████████| 14/14 [02:48<00:00,  9.98s/it]Generating Corrections: 100%|██████████| 14/14 [02:48<00:00, 12.05s/it]
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.1037 ± 0.1384
+Model CER:     0.1426 ± 0.1365
+CER Reduction: -37.43%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.3041 ± 0.1932
+Model WER:     0.3158 ± 0.2063
+WER Reduction: -3.84%
+==================================================
+
+Detailed results saved to model_eval_logs/model_mbart-large-50-ocr-overproof-combined_eval_results.parquet

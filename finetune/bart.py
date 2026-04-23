@@ -27,8 +27,26 @@ def main(args):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     def preprocess_function(examples):
-        inputs = [str(doc) for doc in examples["ocr_text"]]
+        inputs = []
         targets = [str(doc) for doc in examples["ground_truth"]]
+        
+        for i in range(len(examples["ocr_text"])):
+            ocr_text = str(examples["ocr_text"][i])
+            
+            if args.with_metadata:
+                # Safely get metadata, defaulting to unknown if column is missing
+                dataset = examples.get("dataset", ["unknown"] * len(targets))[i]
+                lang = examples.get("language", ["unknown"] * len(targets))[i]
+                year = examples.get("year", [None] * len(targets))[i]
+                
+                prefix = f"[Dataset: {dataset}, Language: {lang}"
+                if year is not None and pd.notnull(year):
+                    prefix += f", Year: {int(year)}"
+                prefix += "] "
+                
+                inputs.append(prefix + ocr_text)
+            else:
+                inputs.append(ocr_text)
         
         model_inputs = tokenizer(inputs, max_length=1024, truncation=True, padding="max_length")
         labels = tokenizer(text_target=targets, max_length=1024, truncation=True, padding="max_length")
@@ -48,7 +66,6 @@ def main(args):
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
     ## ========= I SPENT A WHOLE WEEK FOR THIS STUPID AH EXPLODING GRADIENT ERROR OF BART-LARGE REGARDING SOME FP16 FP32 PRECISION, FINALLY GEMINI GAVE ME A SOLUTION THAT TOUCHES THE MODEL AT THE BARE METAL LAYER. IF IT WORKS PLEASE DON'T TOUCH IT ==========
-    # --- THE FP16 UNSCALE SILVER BULLET ---
     if args.model == "bart-large":
         # 1. Force the model weights natively to FP32 (in case the Hub loaded any in FP16)
         model = model.float()
@@ -93,6 +110,7 @@ if __name__ == '__main__':
     parser.add_argument('--config', type=str,default="finetune/config.yaml", help='Path to config')
     parser.add_argument('--data', type=str, default="data/hipe_aggregated_train.parquet", help='Path to training data')
     parser.add_argument('--seed', type=int, default=42, help='Random seed for reproducibility')
+    parser.add_argument('--with_metadata', action='store_true', help='Include metadata control codes in inputs')
     args = parser.parse_args()
 
     main(args)

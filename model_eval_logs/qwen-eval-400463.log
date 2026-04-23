@@ -1,0 +1,73 @@
+Tue Apr 21 20:56:31 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:48:00.0 Off |                    0 |
+|  0%   56C    P0             92W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-4B...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   4%|▎         | 14/398 [00:00<00:02, 129.20it/s]Loading weights:   9%|▉         | 37/398 [00:00<00:02, 178.85it/s]Loading weights:  14%|█▍        | 55/398 [00:00<00:02, 149.95it/s]Loading weights:  18%|█▊        | 71/398 [00:00<00:03, 104.37it/s]Loading weights:  21%|██        | 83/398 [00:00<00:03, 102.21it/s]Loading weights:  24%|██▍       | 95/398 [00:00<00:03, 82.01it/s] Loading weights:  27%|██▋       | 108/398 [00:01<00:03, 90.37it/s]Loading weights:  30%|██▉       | 119/398 [00:01<00:03, 90.47it/s]Loading weights:  32%|███▏      | 129/398 [00:01<00:03, 88.82it/s]Loading weights:  35%|███▍      | 139/398 [00:01<00:03, 83.35it/s]Loading weights:  37%|███▋      | 148/398 [00:01<00:03, 77.06it/s]Loading weights:  40%|███▉      | 158/398 [00:01<00:02, 80.03it/s]Loading weights:  42%|████▏     | 168/398 [00:01<00:02, 83.42it/s]Loading weights:  44%|████▍     | 177/398 [00:01<00:02, 82.90it/s]Loading weights:  47%|████▋     | 186/398 [00:02<00:02, 81.48it/s]Loading weights:  49%|████▉     | 195/398 [00:02<00:03, 66.63it/s]Loading weights:  53%|█████▎    | 210/398 [00:02<00:02, 85.90it/s]Loading weights:  55%|█████▌    | 220/398 [00:02<00:02, 82.60it/s]Loading weights:  58%|█████▊    | 229/398 [00:02<00:02, 79.03it/s]Loading weights:  60%|█████▉    | 238/398 [00:02<00:02, 75.44it/s]Loading weights:  62%|██████▏   | 247/398 [00:02<00:02, 72.56it/s]Loading weights:  65%|██████▍   | 257/398 [00:02<00:01, 76.47it/s]Loading weights:  67%|██████▋   | 267/398 [00:03<00:01, 81.46it/s]Loading weights:  69%|██████▉   | 276/398 [00:03<00:01, 83.14it/s]Loading weights:  72%|███████▏  | 285/398 [00:03<00:01, 78.40it/s]Loading weights:  74%|███████▎  | 293/398 [00:03<00:01, 78.56it/s]Loading weights:  76%|███████▌  | 301/398 [00:03<00:01, 77.77it/s]Loading weights:  78%|███████▊  | 311/398 [00:03<00:01, 79.49it/s]Loading weights:  80%|████████  | 319/398 [00:03<00:00, 79.16it/s]Loading weights:  82%|████████▏ | 327/398 [00:03<00:00, 77.51it/s]Loading weights:  84%|████████▍ | 335/398 [00:03<00:00, 71.81it/s]Loading weights:  87%|████████▋ | 346/398 [00:04<00:00, 71.96it/s]Loading weights:  90%|████████▉ | 357/398 [00:04<00:00, 79.49it/s]Loading weights:  92%|█████████▏| 368/398 [00:04<00:00, 82.12it/s]Loading weights:  95%|█████████▍| 378/398 [00:04<00:00, 85.32it/s]Loading weights:  97%|█████████▋| 388/398 [00:04<00:00, 87.90it/s]Loading weights: 100%|█████████▉| 397/398 [00:04<00:00, 87.63it/s]Loading weights: 100%|██████████| 398/398 [00:04<00:00, 85.13it/s]
+No adapter path provided. Evaluating the BASE MODEL...
+Loading data from data/languages/french_test.parquet...
+Running batch inference on 295 samples...
+Generating Corrections:   0%|          | 0/74 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   1%|▏         | 1/74 [00:25<30:54, 25.40s/it]Generating Corrections:   3%|▎         | 2/74 [00:48<29:09, 24.29s/it]Generating Corrections:   4%|▍         | 3/74 [01:10<27:14, 23.02s/it]Generating Corrections:   5%|▌         | 4/74 [01:34<27:09, 23.28s/it]Generating Corrections:   7%|▋         | 5/74 [01:57<26:36, 23.14s/it]Generating Corrections:   8%|▊         | 6/74 [02:20<26:32, 23.43s/it]Generating Corrections:   9%|▉         | 7/74 [02:43<25:51, 23.16s/it]Generating Corrections:  11%|█         | 8/74 [03:09<26:30, 24.10s/it]Generating Corrections:  12%|█▏        | 9/74 [03:38<27:36, 25.49s/it]Generating Corrections:  14%|█▎        | 10/74 [04:02<26:48, 25.14s/it]Generating Corrections:  15%|█▍        | 11/74 [04:25<25:43, 24.50s/it]Generating Corrections:  16%|█▌        | 12/74 [04:48<24:42, 23.91s/it]Generating Corrections:  18%|█▊        | 13/74 [05:10<23:49, 23.43s/it]Generating Corrections:  19%|█▉        | 14/74 [05:35<23:58, 23.97s/it]Generating Corrections:  20%|██        | 15/74 [05:56<22:32, 22.92s/it]Generating Corrections:  22%|██▏       | 16/74 [06:19<22:06, 22.87s/it]Generating Corrections:  23%|██▎       | 17/74 [06:42<21:53, 23.05s/it]Generating Corrections:  24%|██▍       | 18/74 [07:05<21:32, 23.08s/it]Generating Corrections:  26%|██▌       | 19/74 [07:28<21:02, 22.95s/it]Generating Corrections:  27%|██▋       | 20/74 [07:51<20:45, 23.07s/it]Generating Corrections:  28%|██▊       | 21/74 [08:15<20:40, 23.41s/it]Generating Corrections:  30%|██▉       | 22/74 [08:39<20:18, 23.44s/it]Generating Corrections:  31%|███       | 23/74 [09:01<19:34, 23.03s/it]Generating Corrections:  32%|███▏      | 24/74 [09:22<18:39, 22.38s/it]Generating Corrections:  34%|███▍      | 25/74 [09:45<18:31, 22.69s/it]Generating Corrections:  35%|███▌      | 26/74 [10:09<18:31, 23.16s/it]Generating Corrections:  36%|███▋      | 27/74 [10:31<17:50, 22.78s/it]Generating Corrections:  38%|███▊      | 28/74 [10:53<17:15, 22.51s/it]Generating Corrections:  39%|███▉      | 29/74 [11:16<16:55, 22.57s/it]Generating Corrections:  41%|████      | 30/74 [11:38<16:31, 22.53s/it]Generating Corrections:  42%|████▏     | 31/74 [12:00<15:56, 22.23s/it]Generating Corrections:  43%|████▎     | 32/74 [12:23<15:50, 22.62s/it]Generating Corrections:  45%|████▍     | 33/74 [12:46<15:30, 22.68s/it]Generating Corrections:  46%|████▌     | 34/74 [13:07<14:41, 22.04s/it]Generating Corrections:  47%|████▋     | 35/74 [13:27<14:02, 21.61s/it]Generating Corrections:  49%|████▊     | 36/74 [13:49<13:44, 21.69s/it]Generating Corrections:  50%|█████     | 37/74 [14:13<13:44, 22.27s/it]Generating Corrections:  51%|█████▏    | 38/74 [14:34<13:10, 21.95s/it]Generating Corrections:  53%|█████▎    | 39/74 [14:55<12:40, 21.74s/it]Generating Corrections:  54%|█████▍    | 40/74 [15:18<12:24, 21.89s/it]Generating Corrections:  55%|█████▌    | 41/74 [15:41<12:16, 22.31s/it]Generating Corrections:  57%|█████▋    | 42/74 [16:04<11:56, 22.40s/it]Generating Corrections:  58%|█████▊    | 43/74 [16:29<12:00, 23.25s/it]Generating Corrections:  59%|█████▉    | 44/74 [16:50<11:15, 22.53s/it]Generating Corrections:  61%|██████    | 45/74 [17:13<10:56, 22.65s/it]Generating Corrections:  62%|██████▏   | 46/74 [17:36<10:40, 22.88s/it]Generating Corrections:  64%|██████▎   | 47/74 [17:58<10:11, 22.64s/it]Generating Corrections:  65%|██████▍   | 48/74 [18:20<09:42, 22.39s/it]Generating Corrections:  66%|██████▌   | 49/74 [18:41<09:11, 22.07s/it]Generating Corrections:  68%|██████▊   | 50/74 [18:49<07:04, 17.68s/it]Generating Corrections:  69%|██████▉   | 51/74 [18:59<05:54, 15.43s/it]Generating Corrections:  70%|███████   | 52/74 [19:09<05:03, 13.79s/it]Generating Corrections:  72%|███████▏  | 53/74 [19:19<04:25, 12.67s/it]Generating Corrections:  73%|███████▎  | 54/74 [19:26<03:39, 10.97s/it]Generating Corrections:  74%|███████▍  | 55/74 [19:33<03:07,  9.87s/it]Generating Corrections:  76%|███████▌  | 56/74 [19:39<02:33,  8.54s/it]Generating Corrections:  77%|███████▋  | 57/74 [19:46<02:17,  8.11s/it]Generating Corrections:  78%|███████▊  | 58/74 [19:53<02:04,  7.77s/it]Generating Corrections:  80%|███████▉  | 59/74 [20:02<02:01,  8.11s/it]Generating Corrections:  81%|████████  | 60/74 [20:09<01:49,  7.85s/it]Generating Corrections:  82%|████████▏ | 61/74 [20:17<01:42,  7.87s/it]Generating Corrections:  84%|████████▍ | 62/74 [20:24<01:32,  7.72s/it]Generating Corrections:  85%|████████▌ | 63/74 [20:34<01:31,  8.35s/it]Generating Corrections:  86%|████████▋ | 64/74 [20:42<01:22,  8.24s/it]Generating Corrections:  88%|████████▊ | 65/74 [20:54<01:25,  9.45s/it]Generating Corrections:  89%|████████▉ | 66/74 [21:06<01:21, 10.14s/it]Generating Corrections:  91%|█████████ | 67/74 [21:14<01:06,  9.50s/it]Generating Corrections:  92%|█████████▏| 68/74 [21:24<00:57,  9.55s/it]Generating Corrections:  93%|█████████▎| 69/74 [21:35<00:51, 10.21s/it]Generating Corrections:  95%|█████████▍| 70/74 [21:45<00:40, 10.13s/it]Generating Corrections:  96%|█████████▌| 71/74 [21:53<00:27,  9.31s/it]Generating Corrections:  97%|█████████▋| 72/74 [22:00<00:17,  8.71s/it]Generating Corrections:  99%|█████████▊| 73/74 [22:12<00:09,  9.75s/it]Generating Corrections: 100%|██████████| 74/74 [22:19<00:00,  8.96s/it]Generating Corrections: 100%|██████████| 74/74 [22:19<00:00, 18.10s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 3 column 3 (char 713)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "There was a government that emerged from the crushing of Paris. A man did this terrible thing of bombing Paris, shooting at the passersby, and machine-gunning children and women. He believed he would succeed. Never has his crime been forgiven. His reign carried the smell of his corpses. His judiciary and clergy, despite telling him that law and heaven were with him, could not acquit him, and no blessed water could wash the blood from his hands. His omnipotence was being eaten away by the Twelfth of December. The dead moved beneath the earth and constantly shook the throne of this victorious man. They always prevented him from sitting there, and in the end, they pushed him down."\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 2 column 93 (char 94)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "Samedi 22 novembre 1845.\\n\\n< i Visité les leçons d\'allemand dans la 5 \\\'\\\' \\\' classe du collège\\n>\\n» inférieur ; beaucoup de désordre, de négligence et de pa\\n» resse, 13 élèves n\'avaient pas fait leurs tâches. »\\nCes deux citations nous dispensent de tout commentaire,\\nde toute réflexion, et expliquent bien des choses.\\nAgréez, etc.\\nLausanne le 17 janvier 1846.\\nR. ÔD. BLANCHET,\\nvice-président du Conseil de l\'Instruction publique-",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 2 column 384 (char 385)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "Monsieur le ministre,\\nJ\'ai eu l\'honneur de recevoir votre lettre\\npar express. Je place mon pays avant tout,\\net malgré les déboires et les dégoûts dont\\nj\'ai été abreuvé, je suis prêt à reprendre\\nle commandement d\'un corps d\'armée. Mais\\nje ne veux tenir ce commandement que\\nd\'un gouvernement régulier, dont le pre-\\nmier acte aura été de faire passer en ju-\\ nigment les ambitieux, et les incapables qui\\nont perdu la France!\\nRecevez, M. le ministre, l\'assurance de\\nma haute considération.\\nd\'Aurelles de Paladine.",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0301 ± 0.0261
+Model CER:     0.0870 ± 0.1741
+CER Reduction: -189.41%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.1626 ± 0.1611
+Model WER:     0.2367 ± 0.2947
+WER Reduction: -45.53%
+==================================================
+
+Detailed results saved to model_eval_logs/zeroshot_Qwen3-4B_french_test_nometa_results.parquet

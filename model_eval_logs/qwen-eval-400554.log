@@ -1,0 +1,89 @@
+Wed Apr 22 10:40:41 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:88:00.0 Off |                    0 |
+|  0%   55C    P0             85W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-4B...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   0%|          | 1/398 [00:01<09:28,  1.43s/it]Loading weights:   6%|▌         | 23/398 [00:01<00:19, 19.09it/s]Loading weights:  10%|▉         | 39/398 [00:02<00:22, 16.24it/s]Loading weights:  14%|█▍        | 55/398 [00:03<00:16, 20.92it/s]Loading weights:  20%|██        | 81/398 [00:03<00:08, 38.10it/s]Loading weights:  26%|██▌       | 104/398 [00:03<00:05, 55.96it/s]Loading weights:  30%|███       | 120/398 [00:04<00:07, 39.56it/s]Loading weights:  33%|███▎      | 133/398 [00:04<00:08, 32.29it/s]Loading weights:  37%|███▋      | 147/398 [00:05<00:08, 29.00it/s]Loading weights:  39%|███▊      | 154/398 [00:05<00:09, 24.61it/s]Loading weights:  44%|████▍     | 176/398 [00:05<00:05, 39.28it/s]Loading weights:  48%|████▊     | 192/398 [00:06<00:04, 47.48it/s]Loading weights:  59%|█████▉    | 235/398 [00:06<00:01, 90.49it/s]Loading weights:  66%|██████▌   | 262/398 [00:06<00:01, 115.46it/s]Loading weights:  71%|███████▏  | 284/398 [00:06<00:01, 103.99it/s]Loading weights:  81%|████████  | 323/398 [00:06<00:00, 113.47it/s]Loading weights:  86%|████████▌ | 342/398 [00:07<00:00, 121.75it/s]Loading weights:  92%|█████████▏| 367/398 [00:07<00:00, 130.27it/s]Loading weights: 100%|██████████| 398/398 [00:07<00:00, 54.61it/s] 
+No adapter path provided. Evaluating the BASE MODEL...
+Loading data from data/datasets/impresso-snippets_test.parquet...
+Running batch inference on 300 samples...
+Generating Corrections:   0%|          | 0/75 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   1%|▏         | 1/75 [00:11<14:30, 11.77s/it]Generating Corrections:   3%|▎         | 2/75 [00:21<13:09, 10.82s/it]Generating Corrections:   4%|▍         | 3/75 [00:30<11:56,  9.95s/it]Generating Corrections:   5%|▌         | 4/75 [00:41<12:04, 10.21s/it]Generating Corrections:   7%|▋         | 5/75 [00:51<11:49, 10.14s/it]Generating Corrections:   8%|▊         | 6/75 [01:02<11:53, 10.34s/it]Generating Corrections:   9%|▉         | 7/75 [01:12<11:34, 10.21s/it]Generating Corrections:  11%|█         | 8/75 [01:22<11:31, 10.32s/it]Generating Corrections:  12%|█▏        | 9/75 [01:32<11:07, 10.11s/it]Generating Corrections:  13%|█▎        | 10/75 [01:40<10:19,  9.54s/it]Generating Corrections:  15%|█▍        | 11/75 [01:50<10:21,  9.71s/it]Generating Corrections:  16%|█▌        | 12/75 [02:05<11:46, 11.21s/it]Generating Corrections:  17%|█▋        | 13/75 [02:13<10:46, 10.42s/it]Generating Corrections:  19%|█▊        | 14/75 [02:21<09:52,  9.71s/it]Generating Corrections:  20%|██        | 15/75 [02:31<09:42,  9.70s/it]Generating Corrections:  21%|██▏       | 16/75 [02:39<09:00,  9.16s/it]Generating Corrections:  23%|██▎       | 17/75 [02:49<09:11,  9.51s/it]Generating Corrections:  24%|██▍       | 18/75 [02:58<08:44,  9.20s/it]Generating Corrections:  25%|██▌       | 19/75 [03:07<08:26,  9.04s/it]Generating Corrections:  27%|██▋       | 20/75 [03:15<08:11,  8.93s/it]Generating Corrections:  28%|██▊       | 21/75 [03:25<08:11,  9.10s/it]Generating Corrections:  29%|██▉       | 22/75 [03:32<07:29,  8.48s/it]Generating Corrections:  31%|███       | 23/75 [03:38<06:49,  7.88s/it]Generating Corrections:  32%|███▏      | 24/75 [03:48<07:11,  8.46s/it]Generating Corrections:  33%|███▎      | 25/75 [03:58<07:26,  8.93s/it]Generating Corrections:  35%|███▍      | 26/75 [04:05<06:48,  8.34s/it]Generating Corrections:  36%|███▌      | 27/75 [04:13<06:32,  8.18s/it]Generating Corrections:  37%|███▋      | 28/75 [04:20<06:15,  7.98s/it]Generating Corrections:  39%|███▊      | 29/75 [04:27<05:50,  7.61s/it]Generating Corrections:  40%|████      | 30/75 [04:35<05:46,  7.70s/it]Generating Corrections:  41%|████▏     | 31/75 [04:42<05:35,  7.63s/it]Generating Corrections:  43%|████▎     | 32/75 [04:51<05:40,  7.92s/it]Generating Corrections:  44%|████▍     | 33/75 [05:02<06:06,  8.72s/it]Generating Corrections:  45%|████▌     | 34/75 [05:19<07:40, 11.24s/it]Generating Corrections:  47%|████▋     | 35/75 [05:30<07:32, 11.32s/it]Generating Corrections:  48%|████▊     | 36/75 [05:37<06:33, 10.09s/it]Generating Corrections:  49%|████▉     | 37/75 [05:48<06:24, 10.13s/it]Generating Corrections:  51%|█████     | 38/75 [05:54<05:34,  9.04s/it]Generating Corrections:  52%|█████▏    | 39/75 [06:03<05:22,  8.95s/it]Generating Corrections:  53%|█████▎    | 40/75 [06:10<04:53,  8.40s/it]Generating Corrections:  55%|█████▍    | 41/75 [06:17<04:33,  8.06s/it]Generating Corrections:  56%|█████▌    | 42/75 [06:25<04:23,  7.97s/it]Generating Corrections:  57%|█████▋    | 43/75 [06:33<04:14,  7.97s/it]Generating Corrections:  59%|█████▊    | 44/75 [06:41<04:04,  7.87s/it]Generating Corrections:  60%|██████    | 45/75 [06:49<03:58,  7.95s/it]Generating Corrections:  61%|██████▏   | 46/75 [06:55<03:32,  7.33s/it]Generating Corrections:  63%|██████▎   | 47/75 [07:03<03:32,  7.61s/it]Generating Corrections:  64%|██████▍   | 48/75 [07:14<03:56,  8.74s/it]Generating Corrections:  65%|██████▌   | 49/75 [07:25<04:00,  9.27s/it]Generating Corrections:  67%|██████▋   | 50/75 [07:32<03:34,  8.57s/it]Generating Corrections:  68%|██████▊   | 51/75 [07:39<03:19,  8.29s/it]Generating Corrections:  69%|██████▉   | 52/75 [07:47<03:03,  7.97s/it]Generating Corrections:  71%|███████   | 53/75 [07:57<03:09,  8.64s/it]Generating Corrections:  72%|███████▏  | 54/75 [08:07<03:07,  8.94s/it]Generating Corrections:  73%|███████▎  | 55/75 [08:17<03:05,  9.27s/it]Generating Corrections:  75%|███████▍  | 56/75 [08:24<02:45,  8.69s/it]Generating Corrections:  76%|███████▌  | 57/75 [08:29<02:19,  7.74s/it]Generating Corrections:  77%|███████▋  | 58/75 [08:37<02:08,  7.55s/it]Generating Corrections:  79%|███████▊  | 59/75 [08:43<01:57,  7.33s/it]Generating Corrections:  80%|████████  | 60/75 [08:52<01:55,  7.72s/it]Generating Corrections:  81%|████████▏ | 61/75 [08:59<01:43,  7.41s/it]Generating Corrections:  83%|████████▎ | 62/75 [09:05<01:34,  7.23s/it]Generating Corrections:  84%|████████▍ | 63/75 [09:14<01:29,  7.50s/it]Generating Corrections:  85%|████████▌ | 64/75 [09:23<01:29,  8.14s/it]Generating Corrections:  87%|████████▋ | 65/75 [09:32<01:23,  8.36s/it]Generating Corrections:  88%|████████▊ | 66/75 [09:42<01:19,  8.82s/it]Generating Corrections:  89%|████████▉ | 67/75 [09:54<01:18,  9.77s/it]Generating Corrections:  91%|█████████ | 68/75 [10:03<01:06,  9.53s/it]Generating Corrections:  92%|█████████▏| 69/75 [10:13<00:57,  9.55s/it]Generating Corrections:  93%|█████████▎| 70/75 [10:24<00:51, 10.24s/it]Generating Corrections:  95%|█████████▍| 71/75 [10:32<00:37,  9.39s/it]Generating Corrections:  96%|█████████▌| 72/75 [10:42<00:28,  9.51s/it]Generating Corrections:  97%|█████████▋| 73/75 [10:49<00:17,  8.85s/it]Generating Corrections:  99%|█████████▊| 74/75 [10:56<00:08,  8.48s/it]Generating Corrections: 100%|██████████| 75/75 [11:08<00:00,  9.53s/it]Generating Corrections: 100%|██████████| 75/75 [11:08<00:00,  8.92s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 74 (char 75)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "Sie ist tot, die Frau haben einen „König von Congo" entdeckt. Siefer räthfelhaste Mann hat nach einer potu»\\ngieyisdh-ofsiaiösen Sepesdhe gegen die Erwerbungen bet\\nCongogesellschaft protestirt und bie Souberänetät Portu*\\ngalS anerkannt. 2fn ben jetzigen Umständen Rändeln indefj\\nbie Portugiefen fing, Wenn sic ihre (Entdeckung bei „Kö-\\nige bom Congo" möglichst für sich behalten, fonst\\nfönnten sie Wohl Sefahr laufen, gehörig heimgeleuchtet zu\\nbekommen.",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 261 (char 262)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "London, 21. April. Reuter meldet aus Washington\\nAlle japanischen Kriegsschiffe in der Nähe der amerikanischen Küste erhielten den Befehl, sich nach ihren Heimatstationen zu begeben mit Ausnahme derjenigen, die mit der Bergung der „Asama" zu tun haben. Der Kommandant des Kreuzers „New Orleans" berichtete, er habe nichts von einer angeblichen Tätigkeit der Japaner in der Turtle-Vai gefunden, außer daß sie das Wrack des Kriegsschiffes „Asama" zu bergen suchten.",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting property name enclosed in double quotes: line 2 column 435 (char 436)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "Die Musikgesellschaft spielt die französische, belgische und luxemburgische Nationalhymne, welche von den Anwesenden stehenb angehört wird. — Hr. Oberschulinspektor Welter, der Vertreter der Regierung, richtet in luxemburgischem Dialekt eine kurze Ansprache an die Versammelten, in welcher er seiner Freude Ausbruch verleiht, batz das schöne Werk, entsprechenb dem Grundsatz, „Was lange währt, wird endlich gut", zu einem solch schönen Ende geführt werden konnte. Wenn auch in einer Ansprache bemerkt würbe, die Bevölkerung rüge den großen Luxus des Baues, so sei dem entgegenzustellen, batz für die Schule nichts zu klar sei. mild batz gerade die Schule bem",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 429 (char 430)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "Das Informationsamt gab die Bildung eines obersten Ausschusses für die Kriegslenkung bekannt. In der Bekanntmachung heißt es v. a.: „Mit Billigung des Kaisers wurde ein oberster Ausschuss für die Kriegslenkung eingerichtet, um die grundlegende Politik der Kriegführung und die Herstellung einer größeren Harmonie der Zusammenarbeit zwischen den kämpfenden Streitkräften und der Zivilverwaltung festzulegen."",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 2 column 115 (char 116)
+--- RAW MODEL OUTPUT START ---
+'{\n  "corrected_text": "A LITTLE MORE GRAPE. Now, Charley, my boy, there\'s a bottle of wine that\'s forty years old." "Forty years! by Jove, I\'m astonished!" What, because it is so old?" No, Jack; but to find it so infernally small of its age." GENTEEL PEOPLE The young lady who lets her mother do the ironing for fear of spoiling her hands; the miss who wears thin shoes on a rainy day; the young gentleman who is ashamed to be seen walking with his father.",\n  "has_modifications": true\n}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0365 ± 0.0300
+Model CER:     0.0470 ± 0.0293
+CER Reduction: -29.01%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.2257 ± 0.2254
+Model WER:     0.3130 ± 0.1815
+WER Reduction: -38.71%
+==================================================
+
+Detailed results saved to model_eval_logs/zeroshot_Qwen3-4B_impresso-snippets_test_meta_results.parquet

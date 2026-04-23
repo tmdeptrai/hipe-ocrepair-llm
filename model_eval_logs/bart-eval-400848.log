@@ -1,0 +1,29 @@
+Thu Apr 23 13:41:39 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:67:00.0 Off |                  N/A |
+| 58%   84C    P0             97W /  250W |       0MiB /  11264MiB |     29%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Loading model from model/bart-large-ocr-german-metadata...
+Loading weights:   0%|          | 0/512 [00:00<?, ?it/s]Loading weights:  19%|█▉        | 97/512 [00:00<00:00, 767.70it/s]Loading weights:  34%|███▍      | 174/512 [00:00<00:01, 230.26it/s]Loading weights:  42%|████▏     | 214/512 [00:00<00:01, 211.73it/s]Loading weights:  48%|████▊     | 244/512 [00:01<00:01, 187.62it/s]Loading weights:  52%|█████▏    | 268/512 [00:01<00:01, 173.16it/s]Loading weights:  56%|█████▋    | 288/512 [00:01<00:01, 157.26it/s]Loading weights:  60%|█████▉    | 305/512 [00:01<00:01, 157.00it/s]Loading weights:  64%|██████▎   | 326/512 [00:01<00:01, 166.11it/s]Loading weights:  67%|██████▋   | 344/512 [00:01<00:01, 165.91it/s]Loading weights:  71%|███████   | 362/512 [00:01<00:01, 137.60it/s]Loading weights:  74%|███████▎  | 377/512 [00:02<00:01, 119.38it/s]Loading weights:  76%|███████▌  | 390/512 [00:02<00:01, 114.18it/s]Loading weights:  79%|███████▉  | 405/512 [00:02<00:00, 121.76it/s]Loading weights:  83%|████████▎ | 424/512 [00:02<00:00, 133.48it/s]Loading weights:  87%|████████▋ | 446/512 [00:02<00:00, 150.00it/s]Loading weights:  91%|█████████ | 466/512 [00:02<00:00, 157.49it/s]Loading weights:  94%|█████████▍| 483/512 [00:02<00:00, 156.85it/s]Loading weights:  98%|█████████▊| 500/512 [00:03<00:00, 141.16it/s]Loading weights: 100%|██████████| 512/512 [00:03<00:00, 169.80it/s]
+Loading data from data/languages/german_test.parquet...
+Running batch inference on 479 samples...
+Generating Corrections:   0%|          | 0/120 [00:00<?, ?it/s]Generating Corrections:   1%|          | 1/120 [00:11<22:27, 11.32s/it]Generating Corrections:   2%|▏         | 2/120 [00:25<25:17, 12.86s/it]Generating Corrections:   2%|▎         | 3/120 [00:50<35:50, 18.38s/it]Generating Corrections:   3%|▎         | 4/120 [01:03<31:27, 16.27s/it]Generating Corrections:   4%|▍         | 5/120 [01:19<30:52, 16.11s/it]Generating Corrections:   5%|▌         | 6/120 [01:34<29:56, 15.76s/it]Generating Corrections:   6%|▌         | 7/120 [02:06<39:41, 21.08s/it]Generating Corrections:   7%|▋         | 8/120 [02:18<33:51, 18.14s/it]Generating Corrections:   8%|▊         | 9/120 [02:26<27:52, 15.07s/it]
