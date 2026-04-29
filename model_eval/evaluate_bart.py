@@ -126,8 +126,8 @@ def main():
     model_id = os.path.basename(os.path.normpath(args.model_path))
     dataset_id = os.path.splitext(os.path.basename(args.data_path))[0]
     meta_flag = "meta" if args.with_metadata else "nometa"
-    
-    filename = f"{model_id}_{dataset_id}_{meta_flag}_results.parquet"
+    pykale_flag = "pykale" if "pykale" in args.model_path else ""
+    filename = f"{pykale_flag}_{model_id}_{dataset_id}_{meta_flag}_results.parquet"
     output_file = os.path.join("model_eval_logs", filename)
     
     df.to_parquet(output_file)

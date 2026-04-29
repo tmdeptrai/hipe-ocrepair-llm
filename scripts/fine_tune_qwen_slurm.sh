@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=qwen_pronounced_gwen_or_queen
+#SBATCH --job-name=qwen_fine_tune
 #SBATCH --partition=gpu-a40
 #SBATCH --qos=normal
 #SBATCH --nodes=1
@@ -131,47 +131,47 @@ echo "--- TEST COMPLETE ---"
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/datasets/dta19_train.parquet\
+#     --data data/datasets/dta19_train.parquet \
 #     --output_name qwen3-8B-ocr-dta19
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/datasets/icdar2017_train.parquet\
+#     --data data/datasets/icdar2017_train.parquet \
 #     --output_name qwen3-8B-ocr-icdar2017
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/datasets/impresso-nzz_train.parquet\
+#     --data data/datasets/impresso-nzz_train.parquet \
 #     --output_name qwen3-8B-ocr-impresso-nzz
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/datasets/impresso-snippets_train.parquet\
+#     --data data/datasets/impresso-snippets_train.parquet \
 #     --output_name qwen3-8B-ocr-impresso-snippets
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/datasets/overproof-combined_train.parquet\
+#     --data data/datasets/overproof-combined_train.parquet \
 #     --output_name qwen3-8B-ocr-overproof-combined
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/languages/english_train.parquet\
+#     --data data/languages/english_train.parquet \
 #     --output_name qwen3-8B-ocr-english
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/languages/french_train.parquet\
+#     --data data/languages/french_train.parquet \
 #     --output_name qwen3-8B-ocr-french
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/languages/german_train.parquet\
+#     --data data/languages/german_train.parquet \
 #     --output_name qwen3-8B-ocr-german
 
 # python finetune/qwen3.py \
 #     --model qwen3-8B \
-#     --data data/hipe_aggregated_train.parquet\
+#     --data data/hipe_aggregated_train.parquet \
 #     --output_name qwen3-8B-ocr-hipe_aggregated
 
 # ==================== QWEN3-8B (WITH METADATA) ==================
@@ -224,8 +224,8 @@ echo "--- TEST COMPLETE ---"
 #     --data data/languages/german_train.parquet \
 #     --output_name qwen3-8B-ocr-meta-german
 
-# python finetune/qwen3.py \
-#     --model qwen3-8B \
-#     --with_metadata \
-#     --data data/hipe_aggregated_train.parquet \
-#     --output_name qwen3-8B-ocr-meta-hipe_aggregated
+python finetune/qwen3.py \
+    --model qwen3-8B \
+    --with_metadata \
+    --data data/hipe_aggregated_train.parquet \
+    --output_name qwen3-8B-ocr-meta-hipe_aggregated

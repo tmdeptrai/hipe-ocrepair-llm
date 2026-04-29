@@ -1,0 +1,113 @@
+Tue Apr 28 17:32:38 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:88:00.0 Off |                    0 |
+|  0%   55C    P0             93W /  300W |       0MiB /  46068MiB |    100%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-8B...
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<03:41,  1.80it/s]Loading weights:   4%|▍         | 16/399 [00:00<00:12, 31.10it/s]Loading weights:   7%|▋         | 27/399 [00:00<00:07, 46.96it/s]Loading weights:   9%|▉         | 37/399 [00:00<00:06, 53.19it/s]Loading weights:  14%|█▎        | 54/399 [00:01<00:04, 80.07it/s]Loading weights:  17%|█▋        | 66/399 [00:01<00:04, 72.34it/s]Loading weights:  20%|██        | 81/399 [00:01<00:03, 87.41it/s]Loading weights:  24%|██▎       | 94/399 [00:01<00:03, 95.44it/s]Loading weights:  29%|██▊       | 114/399 [00:01<00:02, 117.67it/s]Loading weights:  32%|███▏      | 128/399 [00:01<00:02, 98.76it/s] Loading weights:  36%|███▌      | 142/399 [00:01<00:02, 98.23it/s]Loading weights:  38%|███▊      | 153/399 [00:02<00:02, 86.75it/s]Loading weights:  42%|████▏     | 168/399 [00:02<00:02, 91.76it/s]Loading weights:  48%|████▊     | 190/399 [00:02<00:01, 120.13it/s]Loading weights:  51%|█████     | 204/399 [00:02<00:01, 121.28it/s]Loading weights:  56%|█████▌    | 224/399 [00:02<00:01, 137.15it/s]Loading weights:  60%|█████▉    | 239/399 [00:02<00:01, 135.66it/s]Loading weights:  64%|██████▍   | 257/399 [00:02<00:01, 141.36it/s]Loading weights:  68%|██████▊   | 272/399 [00:02<00:01, 112.75it/s]Loading weights:  72%|███████▏  | 289/399 [00:03<00:00, 122.49it/s]Loading weights:  77%|███████▋  | 307/399 [00:03<00:00, 135.34it/s]Loading weights:  81%|████████  | 323/399 [00:03<00:00, 139.74it/s]Loading weights:  85%|████████▍ | 338/399 [00:03<00:00, 129.71it/s]Loading weights:  89%|████████▊ | 354/399 [00:03<00:00, 132.13it/s]Loading weights:  94%|█████████▍| 375/399 [00:03<00:00, 151.51it/s]Loading weights:  98%|█████████▊| 391/399 [00:03<00:00, 134.51it/s]Loading weights: 100%|██████████| 399/399 [00:03<00:00, 104.25it/s]
+Loading LoRA Adapter from model/qwen3-8B-ocr-impresso-nzz-base...
+Loading data from data/datasets/impresso-nzz_test.parquet...
+Running batch inference on 96 samples...
+Generating Corrections:   0%|          | 0/24 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   4%|▍         | 1/24 [00:49<19:07, 49.91s/it]Generating Corrections:   8%|▊         | 2/24 [01:34<17:15, 47.07s/it]Generating Corrections:  12%|█▎        | 3/24 [02:18<15:52, 45.36s/it]Generating Corrections:  17%|█▋        | 4/24 [03:04<15:11, 45.56s/it]Generating Corrections:  21%|██        | 5/24 [03:49<14:26, 45.58s/it]Generating Corrections:  25%|██▌       | 6/24 [04:41<14:15, 47.50s/it]Generating Corrections:  29%|██▉       | 7/24 [05:30<13:37, 48.07s/it]Generating Corrections:  33%|███▎      | 8/24 [06:23<13:14, 49.63s/it]Generating Corrections:  38%|███▊      | 9/24 [07:10<12:13, 48.89s/it]Generating Corrections:  42%|████▏     | 10/24 [08:23<13:10, 56.47s/it]Generating Corrections:  46%|████▌     | 11/24 [09:12<11:42, 54.04s/it]Generating Corrections:  50%|█████     | 12/24 [09:57<10:17, 51.44s/it]Generating Corrections:  54%|█████▍    | 13/24 [11:11<10:38, 58.07s/it]Generating Corrections:  58%|█████▊    | 14/24 [12:01<09:15, 55.59s/it]Generating Corrections:  62%|██████▎   | 15/24 [12:46<07:51, 52.40s/it]Generating Corrections:  67%|██████▋   | 16/24 [13:32<06:45, 50.65s/it]Generating Corrections:  71%|███████   | 17/24 [14:18<05:44, 49.20s/it]Generating Corrections:  75%|███████▌  | 18/24 [15:14<05:06, 51.12s/it]Generating Corrections:  79%|███████▉  | 19/24 [16:27<04:48, 57.77s/it]Generating Corrections:  83%|████████▎ | 20/24 [17:22<03:47, 56.92s/it]Generating Corrections:  88%|████████▊ | 21/24 [18:11<02:43, 54.49s/it]Generating Corrections:  92%|█████████▏| 22/24 [18:57<01:44, 52.03s/it]Generating Corrections:  96%|█████████▌| 23/24 [19:51<00:52, 52.55s/it]Generating Corrections: 100%|██████████| 24/24 [20:35<00:00, 50.20s/it]Generating Corrections: 100%|██████████| 24/24 [20:35<00:00, 51.50s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 1345 (char 1344)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Das erste Kapitel behandelt die Wohnstätten des Hochgebirges, jene einfache Häuser, die lediglich praktischen Rücksichten ihre Existenz verdanken; künst¬ lerische Gesichtspunkte kamen hier nicht in Frage. Trotz¬ dem wirken diese Häuser so anziehend malerisch, wie das eben nur ein gesunder, naiver, allem Abstrakten fernem Sinn hervor dringen kann. Im folgenden Ab¬ schnitt behandelt der Verfasser das Aaretal mit seinen Neventeln, die Zentral- und Weltschmerz ohne Jura und Gei¬ fersce. Dein in seiner Kunst so weit und vollkommen ausgebildetes Holzbau des Bernerobertländers, der insgeheim seiner reichen Ausbildung bei Forschern und Künstlern längst das grösste Interesse gewonnen, wird besondere Aufmerksamkeit geschenkt. In bezug auf den ganzen Aufbau, in der architektonischen Gliederung und Geschlossenheit, sowie im grossen Reichtum der Formen bei gleichem Materialverbrauch kommt kein Land der Schweiz dem Bernerobertländertypus gleich. Wie kräftig und stolz, wie freundlich und heimelig muten uns diese Fassaden an, die mit ihrem weissen Unterbau, dem tiefroten Ton der Holzgewände und dem steifbesserten Schindeldach zur satt¬ grünen Alpenlandschaft so wundervoll strahlen. Wir hätten es bedauert, wenn eines der herrlichen Doppelhäuser aus Erlenbach oder Voltigen hier ausgenommen worden wäre, in der „Barn¬ haus"-Publikation sind sie leider nicht, doch gebieten sie zum Schönsten und Besten was wir in Holzarchi¬ tektur besitzen. Vom Bernerobertland kommen wir seinem monumentalen Bauernhof der Aare entlang in das Gebiet des Strohdaches. Nach diesem groben Streifzug folgen die einzelnen Städte dieses Gebietes, jeweils mit dem Hinweis auf die ortsüblichen Motive. Da ist Thun, diese reizende","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Unterminated string starting at: line 1 column 19 (char 18)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Nr. 77. Erstes Blatt. Sechzigster Jahrgang. Mittwoch, 17. März 1909. Neue Zürcher Zeitung 1440. Abonnementspreise. 3 Monate. 6 Monate. 81t 14 «wenn die Zeitung abgeholt wird) Fr. 5.50 Fr. 10. — Schweiz (Bestellung beim Postbureau) . . . 6.75 13.50 10.50 (direkte Bestellung bei der Expedition und Bezug unter Privatadresse) ... 7.50 14. — Deutschland (Bestellung beim Postamt) Mk. 7.05 Oesterreich-Ungarn (Best. beim Postamt) fl. 6.50 12.50 22.50 Frankreich, Italien und übrige Staaten der Weltpostvereinigung (direkte Be¬ stellung bei der Expedition) . . . Fr. 11.50 Fr. 22. — Insertionsgebühr. Für die Schweiz 20 Rp., für das Ausland 25 Rp. oder 20 Rp. per sechsspaltige Zeile. Reklamen rc. (unter dem Redaktionsraster) 50 Rp. per vierspaltige Petitzeile. Inserate und Reclamen sind einzusenden an die Annoncen-Abteilung von Orell Füssli & Co. in Zürich und werden durch die übrigen bekannten Annoncenbüreauer beantwortet. Abonnementspreise für einzelne Nummern: Einfache 15 Rp., mit Beilage 25 Rp., doppelt 30 Rp. Täglich, mit Ausnahme des Sonntags, zweimalige Ausgabe. Wiedereinnahme und Bezug: Zweitausgabe Nr. 2 in Zürich. Tagesbericht vom 16. März. Da die Dynastien, so lange man ihrer über¬ haupt zu bedürfen glaubt, nun einmal auch darauf sehen müssen, sich ihren Ländern zu erhalten, so ist ein Wetteifer unter ihnen, ihre Stammhalter bei Zeiten in die süssen Bande der Ehe zu schmieden. In hyperloyalem Jubel vergeffen in diesem Augen¬ blick die vielsprachigen Völker Oesterreichs und Bel¬ giens die Roth der Zeit über der Verlobung des Kronprinzen Rudolf (21 ½ Jahr alt) mit der Prin¬ zessin Stephanie (bald 16 Jahre alt). Kaum aber ist diese Partie bekannt geworden, so trägt die ge¬ schäftige Fama auch schon eine Brautschaft des Freundes und Altersgenossen Erzherzog Rudolfs, des Prinzen Wilhelm von Preussen (ältesten Sohnes des Kronprinzen) auf ihren Fittigen durch die Lande. Die Auserlesene des 21 Jahre alten Prinzen soll eine Tochter des letzthin verstorbenen Herzogs von Holstein-Sonderburg. Augustenburg (des sog.'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 1265 (char 1264)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"So erörtert er auch die Frage, wie Holbein zu dem Auftrag, für den S. Ursrnmünster in Solothurn ein Altarbild zu malen, möge gekommen sein. Er sagt darüber frag¬ l4 f): „Es ist vielfach historisch festgestellt, dass schon zu jener Blüthe¬ zeit humanistischer Geisterrichtung zwischen Solothurn, Basel und Freiburg (im Breisgau) ein reger geistiger Verkehr war. Zu Basel lebte damals als Domdechant des Hochstifts der Probst des folothurnischen Chorherrenkapitels von S. Urs, der splendid freigebige Nikolaus von Dier¬ bach, zu Heidelberg promovirter Doktor der Rechte, der 1519 als Loadjutor und Mitregent des Bischofs von Basel, des hochbejahrten Christoph von Hltenheim, ernannt worden war. Dieser gelehrte Mann, dem Holbeins Ruf in Folge seiner Höchsten Umgebung genau bekannt sein musste, und der ab¬ wechselnd seinen Sitz bald in Solothurn, bald in Basel hatte, ist wohl derjenige, durch dessen Vermittlung die Bestellung des Bildes der Madonna von Solothurn für den E. Ursenmünster daselbst geschehen musste, den, da er zugleich die Würde eines ProbsteS des Pfarrstifts S. Urs hatte, konnte die Dotirung und Stiftung eines neuen Al¬ tars in seiner Kollegiatkirche zu Solothurn nicht wohl wissen und seine amtliche Mitwirkung ge¬ fchehen." Da ist denn die (bereits von anderer Seite geäusserte) Vermuthung gewiss naheliegend (pag. 45), die Figur des Bischofs auf dem Holbeinischen Madonnenbilde sei eben das Portrait Dirsbach\'s, der als Loadjutor und designir¬ ter Nachfolger des Bischofs von Basel schon damals kurz¬ weg „der Bischof\\" (P. Alex. Schmid, Ord. Cap. Die Kirchensätze, Stifts- und Pfarr-Geistlichkeit des Kantons Solothurn. Solothurn 1857) oder „der neuerwöhlte Bischof\\" hiess („edg. Abschiede III. 2, pag. 1229. 1529 Mörz 18.). Wüssten wir nur mehr von dem Manne, um uns über sein Verhältniss zu Holbein ein Urtheil bilden zu können. Was wir gefunden haben, ist Folgendes: Nikolaus von Diesbach, der Sohn des in der Berner- und Schweizer-Geschichte wiederholt hervortretenden Ludwig von Diesbach von Bern („edg.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Unterminated string starting at: line 1 column 19 (char 18)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Sonntag, 31. März 1929 Blatt 1 Der Zürcher Zeitung 150. Jahrgang Erste Sonntagausgabe. Nr. 612 Abonnements: Zürich und Umgebung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Unterminated string starting at: line 1 column 19 (char 18)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Nr. 11. 16. Briefe. Geldbestellungen. Dienstag Bestellungen beim Verlag (Wäwrgasse Nr. 10) oder bei der Administration (Goethestrasse Nr. 10) des „N. Z. Z.\\" . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting value: line 1 column 1 (char 0)
+--- RAW MODEL OUTPUT START ---
+'ittlung der E. S. 8. erfolgen kann, wird die E. S. 8. mitteilen, dass die bisherigen Beschränkungen der Einfuhr aus den Ländern der Entente nach der Schweiz, die durch die Regierungen der Schweiz und der Entente getroffen wurden, nicht aufgehoben sind, sondern dass die E. S. 8. lediglich die Einfuhr aus den Ländern der Entente nach der Schweiz über¬ nehmen wird, die unter die bisherigen Beschränkungen fallen. Die Einfuhr aus den Ländern der Entente nach der Schweiz, die nicht unter die bisherigen Beschränkungen fallen, kann weiterhin direkt nach wie vor erfolgen.'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Unterminated string starting at: line 1 column 19 (char 18)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"ihrer Untersyndikate, in unserm Fall der E. S. S., möglich sein wird, ge¬ statten wir uns, zur Orientierung noch fol¬ gende Wegleitung zu geben. Bezüglich des Bei¬ trittes von Stickerei-Lohnfabrikanten möchten wir solchen von mindestens drei Schiffli¬ maschinen beliebiger Länge bezw. von min¬ destens zehn Handmaschinen dringend den Bei¬ tritt zur E. S. S. empfehlen. Für Lohnfabri¬ kanten mit weniger als vorgenannter Ma¬ schinenzahl ist beabsichtigt, sie auf den Verkehr mit den Zwirnereien und Garnhandlungen zu verweisen, da auch letztere ihrerseits der Kontrolle der E. S. S. unterstellt werden, unter Vorlegung der Kontroll¬ instruktionen von seiten der E. S. S. Ferner machen wir aufmerksam, dass nach den Bestim¬ mungen der Statuten des Hauptexporttrusts, also der S. S. S., die Mitglieder derselben beim ihrer Untersyndikate, also der E. S. S., die statu¬ tarischen Verpflichtungen hinsichtlich der Wieder¬ ausfuhr von Artikeln, welche aus und über Länder der Entente eingeführt wurden, an die Bestimmungen der Statuten der E. S. S. ge¬ bunden sind, nicht bloss für Waren, welche durch die E. S. S. bezw. S. S. S. für Rechnung der Mit¬ glieder aus und über Länder der Entente in die Schweiz importiert werden, sondern auch für alle Waren, welche aus und über Länder früher direkt oder durch beliebige andere Ver¬ mittlungsstellen importiert wurden und am 18. November 1915, d. h. im Moment der Ge¬ schäftsbetriebs-Eröffnung der S. S. S. noch vor¬ rätig in Händen der Mitglieder der Untersyndikate, also der E. S. S., sich befunden haben. Was die Zwirnereifirmen betrifft, so hat der Verwaltungsrat auf Grund einer Interpretation des für Ausfuhrbewilligungen aus England zuständigen englischen Kriegs¬ ministeriums in London beschlossen, die Zwir¬ nereigeschäfte als Selbstverbringer zu be¬ trachten, in welcher Eigenschaft ihnen der Bei¬ tritt zur E. S. S. nunmehr definitiv offensteht. Ferner können Fabrikanten von gewobenen Plattstichartikeln der E. S. S. ebenfalls bei¬ treten. Kantone. Zürich. Altstetten, 21. Nov. A.'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Unterminated string starting at: line 1 column 19 (char 18)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Nr. 73 Drittes Abendblatt. Der Zürcher 13. Ausgabe. Montag, 14. März 1910. Neue Zürcher Zeitung Zürich 15rp. 25rp. 50rp. 1.50 „ 2.— 4.— 7.— 12.— 24.— 48.— 75.— 150.— 300.— 600.— 1200.— 2400.— 4800.— 9600.— 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0586 ± 0.0870
+Model CER:     0.0515 ± 0.0840
+CER Reduction: 12.15%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.2305 ± 0.3140
+Model WER:     0.1398 ± 0.3126
+WER Reduction: 39.34%
+==================================================
+
+Detailed results saved to model_eval_logs/qwen3-8B-ocr-impresso-nzz-base_impresso-nzz_test_nometa_results.parquet

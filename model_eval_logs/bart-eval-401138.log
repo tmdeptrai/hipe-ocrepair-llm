@@ -1,0 +1,60 @@
+Sun Apr 26 10:45:19 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 590.48.01              Driver Version: 590.48.01      CUDA Version: 13.1     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3090        Off |   00000000:02:00.0 Off |                  N/A |
+| 80%   71C    P0            158W /  350W |       1MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Loading model from model/mbart-large-50-ocr-overproof-combined-metadata...
+Loading weights:   0%|          | 0/516 [00:00<?, ?it/s]Loading weights:   5%|▍         | 24/516 [00:00<00:02, 185.02it/s]Loading weights:  15%|█▍        | 76/516 [00:00<00:01, 327.67it/s]Loading weights:  21%|██▏       | 110/516 [00:00<00:01, 205.89it/s]Loading weights:  26%|██▌       | 135/516 [00:00<00:01, 217.25it/s]Loading weights:  31%|███       | 160/516 [00:00<00:01, 211.23it/s]Loading weights:  35%|███▌      | 183/516 [00:00<00:01, 208.91it/s]Loading weights:  43%|████▎     | 221/516 [00:00<00:01, 251.69it/s]Loading weights:  48%|████▊     | 248/516 [00:01<00:01, 176.81it/s]Loading weights:  53%|█████▎    | 273/516 [00:01<00:01, 189.48it/s]Loading weights:  57%|█████▋    | 296/516 [00:01<00:01, 172.25it/s]Loading weights:  62%|██████▏   | 320/516 [00:01<00:01, 186.07it/s]Loading weights:  66%|██████▌   | 341/516 [00:01<00:00, 191.21it/s]Loading weights:  70%|███████   | 362/516 [00:01<00:01, 140.79it/s]Loading weights:  73%|███████▎  | 379/516 [00:02<00:00, 145.59it/s]Loading weights:  77%|███████▋  | 396/516 [00:02<00:00, 127.29it/s]Loading weights:  81%|████████  | 416/516 [00:02<00:00, 140.51it/s]Loading weights:  84%|████████▍ | 436/516 [00:02<00:00, 148.56it/s]Loading weights:  88%|████████▊ | 456/516 [00:02<00:00, 153.29it/s]Loading weights:  92%|█████████▏| 473/516 [00:02<00:00, 152.25it/s]Loading weights:  95%|█████████▍| 489/516 [00:02<00:00, 150.29it/s]Loading weights: 100%|██████████| 516/516 [00:02<00:00, 178.38it/s]
+Loading data from data/datasets/overproof-combined_test.parquet...
+Running batch inference on 56 samples...
+Generating Corrections:   0%|          | 0/14 [00:00<?, ?it/s]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+`use_return_dict` is deprecated! Use `return_dict` instead!
+Generating Corrections:   7%|▋         | 1/14 [00:08<01:51,  8.58s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  14%|█▍        | 2/14 [00:15<01:31,  7.63s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  21%|██▏       | 3/14 [00:22<01:18,  7.10s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  29%|██▊       | 4/14 [00:30<01:14,  7.45s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  36%|███▌      | 5/14 [00:36<01:04,  7.19s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  43%|████▎     | 6/14 [00:47<01:06,  8.29s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  50%|█████     | 7/14 [00:55<00:58,  8.42s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  57%|█████▋    | 8/14 [01:03<00:48,  8.09s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  64%|██████▍   | 9/14 [01:12<00:42,  8.48s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  71%|███████▏  | 10/14 [01:18<00:30,  7.62s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  79%|███████▊  | 11/14 [01:25<00:22,  7.57s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  86%|████████▌ | 12/14 [01:31<00:14,  7.08s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections:  93%|█████████▎| 13/14 [01:38<00:07,  7.04s/it]Both `max_new_tokens` (=1024) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Generating Corrections: 100%|██████████| 14/14 [01:46<00:00,  7.18s/it]Generating Corrections: 100%|██████████| 14/14 [01:46<00:00,  7.58s/it]
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.1037 ± 0.1384
+Model CER:     0.1352 ± 0.1708
+CER Reduction: -30.29%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.3041 ± 0.1932
+Model WER:     0.3100 ± 0.2325
+WER Reduction: -1.93%
+==================================================
+
+Detailed results saved to model_eval_logs/_mbart-large-50-ocr-overproof-combined-metadata_overproof-combined_test_meta_results.parquet

@@ -1,0 +1,46 @@
+Thu Apr 23 21:47:23 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:19:00.0 Off |                  N/A |
+| 24%   40C    P8             31W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading model from pykale/bart-base-ocr...
+Loading weights:   0%|          | 0/260 [00:00<?, ?it/s]Loading weights: 100%|██████████| 260/260 [00:00<00:00, 3282.20it/s]
+Loading data from data/datasets/impresso-nzz_test.parquet...
+Running batch inference on 96 samples...
+Generating Corrections:   0%|          | 0/24 [00:00<?, ?it/s]Generating Corrections:   4%|▍         | 1/24 [00:19<07:30, 19.60s/it]Generating Corrections:   8%|▊         | 2/24 [00:38<07:06, 19.40s/it]Generating Corrections:  12%|█▎        | 3/24 [00:52<05:52, 16.80s/it]Generating Corrections:  17%|█▋        | 4/24 [01:11<05:50, 17.53s/it]Generating Corrections:  21%|██        | 5/24 [01:31<05:48, 18.35s/it]Generating Corrections:  25%|██▌       | 6/24 [01:49<05:31, 18.43s/it]Generating Corrections:  29%|██▉       | 7/24 [02:07<05:11, 18.31s/it]Generating Corrections:  33%|███▎      | 8/24 [02:23<04:38, 17.39s/it]Generating Corrections:  38%|███▊      | 9/24 [02:39<04:17, 17.18s/it]Generating Corrections:  42%|████▏     | 10/24 [02:58<04:05, 17.55s/it]Generating Corrections:  46%|████▌     | 11/24 [03:17<03:55, 18.15s/it]Generating Corrections:  50%|█████     | 12/24 [03:36<03:41, 18.45s/it]Generating Corrections:  54%|█████▍    | 13/24 [03:55<03:22, 18.43s/it]Generating Corrections:  58%|█████▊    | 14/24 [04:14<03:07, 18.75s/it]Generating Corrections:  62%|██████▎   | 15/24 [04:32<02:47, 18.56s/it]Generating Corrections:  67%|██████▋   | 16/24 [04:52<02:30, 18.75s/it]Generating Corrections:  71%|███████   | 17/24 [05:08<02:06, 18.10s/it]Generating Corrections:  75%|███████▌  | 18/24 [05:28<01:51, 18.55s/it]Generating Corrections:  79%|███████▉  | 19/24 [05:45<01:31, 18.30s/it]Generating Corrections:  83%|████████▎ | 20/24 [06:05<01:15, 18.79s/it]Generating Corrections:  88%|████████▊ | 21/24 [06:17<00:50, 16.78s/it]Generating Corrections:  92%|█████████▏| 22/24 [06:36<00:34, 17.45s/it]Generating Corrections:  96%|█████████▌| 23/24 [06:54<00:17, 17.63s/it]Generating Corrections: 100%|██████████| 24/24 [07:11<00:00, 17.35s/it]Generating Corrections: 100%|██████████| 24/24 [07:11<00:00, 17.99s/it]
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0586 ± 0.0870
+Model CER:     0.6272 ± 1.1972
+CER Reduction: -969.71%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.2305 ± 0.3140
+Model WER:     0.7788 ± 1.0789
+WER Reduction: -237.89%
+==================================================
+
+Detailed results saved to model_eval_logs/pykale_bart-base-ocr_impresso-nzz_test_meta_results.parquet

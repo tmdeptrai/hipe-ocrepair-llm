@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=bart_eval
-#SBATCH --partition=gpu-2080ti
+#SBATCH --partition=gpu-3090
 #SBATCH --qos=test
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32768
-#SBATCH --time=03:00:00
+#SBATCH --time=05:00:00
 #SBATCH --mail-user=mtran01@univ-lr.fr
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu:1
@@ -225,11 +225,11 @@ echo "--- TEST COMPLETE ---"
 #     --batch_size 4 \
 #     --with_metadata
 
-python model_eval/evaluate_bart.py \
-    --model_path model/bart-large-ocr-hipe_aggregated-metadata \
-    --data_path data/hipe_aggregated_test.parquet \
-    --batch_size 4 \
-    --with_metadata
+# python model_eval/evaluate_bart.py \
+#     --model_path model/bart-large-ocr-hipe_aggregated-metadata \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
 
 # =================== MULTI-LINGUAL BART VARIATION =====================
 
@@ -330,6 +330,109 @@ python model_eval/evaluate_bart.py \
 
 # python model_eval/evaluate_bart.py \
 #     --model_path model/mbart-large-50-ocr-hipe_aggregated-metadata \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# ======================= PYKALE NO METADATA =========================
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4
+
+# ======================= PYKALE WITH METADATA =========================
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_bart.py \
+#     --model_path pykale/bart-base-ocr \
 #     --data_path data/hipe_aggregated_test.parquet \
 #     --batch_size 4 \
 #     --with_metadata

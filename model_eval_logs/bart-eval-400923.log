@@ -1,0 +1,46 @@
+Thu Apr 23 21:47:12 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:1A:00.0 Off |                  N/A |
+| 23%   37C    P8             14W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading model from pykale/bart-base-ocr...
+Loading weights:   0%|          | 0/260 [00:00<?, ?it/s]Loading weights: 100%|██████████| 260/260 [00:00<00:00, 5357.89it/s]
+Loading data from data/datasets/dta19_test.parquet...
+Running batch inference on 283 samples...
+Generating Corrections:   0%|          | 0/71 [00:00<?, ?it/s]Generating Corrections:   1%|▏         | 1/71 [00:05<06:45,  5.79s/it]Generating Corrections:   3%|▎         | 2/71 [00:12<07:30,  6.52s/it]Generating Corrections:   4%|▍         | 3/71 [00:22<09:14,  8.15s/it]Generating Corrections:   6%|▌         | 4/71 [00:28<07:55,  7.10s/it]Generating Corrections:   7%|▋         | 5/71 [00:31<06:24,  5.82s/it]Generating Corrections:   8%|▊         | 6/71 [00:37<06:07,  5.65s/it]Generating Corrections:  10%|▉         | 7/71 [00:50<08:30,  7.98s/it]Generating Corrections:  11%|█▏        | 8/71 [00:55<07:34,  7.21s/it]Generating Corrections:  13%|█▎        | 9/71 [00:59<06:18,  6.11s/it]Generating Corrections:  14%|█▍        | 10/71 [01:18<10:20, 10.18s/it]Generating Corrections:  15%|█▌        | 11/71 [01:23<08:40,  8.68s/it]Generating Corrections:  17%|█▋        | 12/71 [01:29<07:31,  7.65s/it]Generating Corrections:  18%|█▊        | 13/71 [01:39<08:05,  8.37s/it]Generating Corrections:  20%|█▉        | 14/71 [01:56<10:30, 11.06s/it]Generating Corrections:  21%|██        | 15/71 [02:00<08:13,  8.81s/it]Generating Corrections:  23%|██▎       | 16/71 [02:03<06:35,  7.19s/it]Generating Corrections:  24%|██▍       | 17/71 [02:08<05:58,  6.63s/it]Generating Corrections:  25%|██▌       | 18/71 [02:15<05:56,  6.72s/it]Generating Corrections:  27%|██▋       | 19/71 [02:25<06:33,  7.57s/it]Generating Corrections:  28%|██▊       | 20/71 [02:31<06:10,  7.27s/it]Generating Corrections:  30%|██▉       | 21/71 [02:36<05:23,  6.46s/it]Generating Corrections:  31%|███       | 22/71 [02:44<05:34,  6.83s/it]Generating Corrections:  32%|███▏      | 23/71 [02:58<07:14,  9.04s/it]Generating Corrections:  34%|███▍      | 24/71 [03:04<06:22,  8.13s/it]Generating Corrections:  35%|███▌      | 25/71 [03:23<08:44, 11.39s/it]Generating Corrections:  37%|███▋      | 26/71 [03:34<08:34, 11.43s/it]Generating Corrections:  38%|███▊      | 27/71 [03:40<07:02,  9.59s/it]Generating Corrections:  39%|███▉      | 28/71 [03:46<06:13,  8.69s/it]Generating Corrections:  41%|████      | 29/71 [04:02<07:39, 10.94s/it]Generating Corrections:  42%|████▏     | 30/71 [04:22<09:13, 13.50s/it]Generating Corrections:  44%|████▎     | 31/71 [04:32<08:15, 12.40s/it]Generating Corrections:  45%|████▌     | 32/71 [04:39<07:02, 10.83s/it]Generating Corrections:  46%|████▋     | 33/71 [04:47<06:23, 10.10s/it]Generating Corrections:  48%|████▊     | 34/71 [04:55<05:46,  9.36s/it]Generating Corrections:  49%|████▉     | 35/71 [04:58<04:33,  7.60s/it]Generating Corrections:  51%|█████     | 36/71 [05:05<04:10,  7.16s/it]Generating Corrections:  52%|█████▏    | 37/71 [05:13<04:16,  7.54s/it]Generating Corrections:  54%|█████▎    | 38/71 [05:22<04:20,  7.90s/it]Generating Corrections:  55%|█████▍    | 39/71 [05:39<05:40, 10.63s/it]Generating Corrections:  56%|█████▋    | 40/71 [05:45<04:52,  9.44s/it]Generating Corrections:  58%|█████▊    | 41/71 [05:50<04:02,  8.07s/it]Generating Corrections:  59%|█████▉    | 42/71 [05:56<03:32,  7.31s/it]Generating Corrections:  61%|██████    | 43/71 [06:01<03:02,  6.53s/it]Generating Corrections:  62%|██████▏   | 44/71 [06:19<04:33, 10.14s/it]Generating Corrections:  63%|██████▎   | 45/71 [06:35<05:06, 11.80s/it]Generating Corrections:  65%|██████▍   | 46/71 [06:45<04:44, 11.38s/it]Generating Corrections:  66%|██████▌   | 47/71 [07:00<05:01, 12.56s/it]Generating Corrections:  68%|██████▊   | 48/71 [07:07<04:03, 10.61s/it]Generating Corrections:  69%|██████▉   | 49/71 [07:13<03:26,  9.40s/it]Generating Corrections:  70%|███████   | 50/71 [07:19<02:54,  8.32s/it]Generating Corrections:  72%|███████▏  | 51/71 [07:25<02:30,  7.53s/it]Generating Corrections:  73%|███████▎  | 52/71 [07:29<02:02,  6.47s/it]Generating Corrections:  75%|███████▍  | 53/71 [07:36<01:59,  6.63s/it]Generating Corrections:  76%|███████▌  | 54/71 [07:41<01:45,  6.20s/it]Generating Corrections:  77%|███████▋  | 55/71 [07:46<01:34,  5.88s/it]Generating Corrections:  79%|███████▉  | 56/71 [08:06<02:32, 10.16s/it]Generating Corrections:  80%|████████  | 57/71 [08:22<02:44, 11.76s/it]Generating Corrections:  82%|████████▏ | 58/71 [08:40<03:00, 13.87s/it]Generating Corrections:  83%|████████▎ | 59/71 [08:54<02:45, 13.78s/it]Generating Corrections:  85%|████████▍ | 60/71 [08:57<01:57, 10.68s/it]Generating Corrections:  86%|████████▌ | 61/71 [09:17<02:14, 13.40s/it]Generating Corrections:  87%|████████▋ | 62/71 [09:30<01:59, 13.25s/it]Generating Corrections:  89%|████████▊ | 63/71 [09:36<01:28, 11.08s/it]Generating Corrections:  90%|█████████ | 64/71 [09:45<01:13, 10.56s/it]Generating Corrections:  92%|█████████▏| 65/71 [10:04<01:17, 12.91s/it]Generating Corrections:  93%|█████████▎| 66/71 [10:12<00:57, 11.54s/it]Generating Corrections:  94%|█████████▍| 67/71 [10:26<00:48, 12.11s/it]Generating Corrections:  96%|█████████▌| 68/71 [10:30<00:29,  9.85s/it]Generating Corrections:  97%|█████████▋| 69/71 [10:47<00:24, 12.03s/it]Generating Corrections:  99%|█████████▊| 70/71 [11:03<00:13, 13.10s/it]Generating Corrections: 100%|██████████| 71/71 [11:06<00:00, 10.11s/it]Generating Corrections: 100%|██████████| 71/71 [11:06<00:00,  9.39s/it]
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0350 ± 0.0346
+Model CER:     0.5014 ± 0.6308
+CER Reduction: -1333.27%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.1870 ± 0.1391
+Model WER:     0.7075 ± 0.4408
+WER Reduction: -278.39%
+==================================================
+
+Detailed results saved to model_eval_logs/pykale_bart-base-ocr_dta19_test_meta_results.parquet

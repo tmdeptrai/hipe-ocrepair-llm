@@ -6,7 +6,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32768
-#SBATCH --time=03:00:00
+#SBATCH --time=6:00:00
 #SBATCH --mail-user=minhduongqo@gmail.com
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu:1
@@ -177,11 +177,11 @@ echo "--- TEST COMPLETE ---"
 #     --data_path data/languages/german_test.parquet \
 #     --batch_size 4
 
-python model_eval/evaluate_qwen.py \
-    --base_model Qwen/Qwen3-4B \
-    --adapter_path model/qwen3-4B-ocr-hipe_aggregated-base \
-    --data_path data/hipe_aggregated_test.parquet \
-    --batch_size 4
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-4B \
+#     --adapter_path model/qwen3-4B-ocr-hipe_aggregated-base \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4
 
 # ======================= QWEN3-4B FINE-TUNED (WITH METADATA) =========================
 
@@ -244,6 +244,243 @@ python model_eval/evaluate_qwen.py \
 # python model_eval/evaluate_qwen.py \
 #     --base_model Qwen/Qwen3-4B \
 #     --adapter_path model/qwen3-4B-ocr-hipe_aggregated-meta \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ======================= QWEN3-8B ZERO-SHOT =========================
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4
+
+# ======================= QWEN3-8B ZERO-SHOT METADATA =========================
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# ======================= QWEN3-8B FINE-TUNED =========================
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-dta19-base \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-icdar2017-base \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-impresso-nzz-base \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-impresso-snippets-base \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-overproof-combined-base \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-english-base \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-french-base \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-german-base \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-hipe_aggregated-base \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4
+
+# ======================= QWEN3-8B FINE-TUNED (WITH METADATA) =========================
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-dta19-meta \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-icdar2017-meta \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-impresso-nzz-meta \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-impresso-snippets-meta \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-overproof-combined-meta \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-english-meta \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-french-meta \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-german-meta \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-hipe_aggregated-meta \
 #     --data_path data/hipe_aggregated_test.parquet \
 #     --batch_size 4 \
 #     --with_metadata

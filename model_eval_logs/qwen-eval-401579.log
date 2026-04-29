@@ -1,0 +1,57 @@
+Tue Apr 28 19:21:15 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:CC:00.0 Off |                    0 |
+|  0%   49C    P0             83W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-8B...
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<00:47,  8.41it/s]Loading weights:   1%|          | 2/399 [00:00<01:03,  6.29it/s]Loading weights:   2%|▏         | 6/399 [00:00<00:26, 14.89it/s]Loading weights:   9%|▊         | 34/399 [00:00<00:03, 91.57it/s]Loading weights:  12%|█▏        | 46/399 [00:00<00:03, 95.62it/s]Loading weights:  15%|█▍        | 59/399 [00:00<00:03, 90.44it/s]Loading weights:  19%|█▉        | 77/399 [00:00<00:03, 101.17it/s]Loading weights:  23%|██▎       | 93/399 [00:01<00:02, 113.01it/s]Loading weights:  27%|██▋       | 106/399 [00:01<00:03, 89.71it/s]Loading weights:  32%|███▏      | 127/399 [00:01<00:02, 112.28it/s]Loading weights:  35%|███▌      | 140/399 [00:01<00:02, 114.23it/s]Loading weights:  40%|███▉      | 158/399 [00:01<00:01, 124.58it/s]Loading weights:  43%|████▎     | 172/399 [00:01<00:01, 115.29it/s]Loading weights:  48%|████▊     | 191/399 [00:01<00:01, 126.08it/s]Loading weights:  51%|█████▏    | 205/399 [00:02<00:01, 120.84it/s]Loading weights:  56%|█████▌    | 224/399 [00:02<00:01, 134.65it/s]Loading weights:  60%|█████▉    | 238/399 [00:02<00:01, 123.51it/s]Loading weights:  63%|██████▎   | 251/399 [00:02<00:01, 123.63it/s]Loading weights:  67%|██████▋   | 266/399 [00:02<00:01, 105.54it/s]Loading weights:  70%|██████▉   | 279/399 [00:02<00:01, 97.91it/s] Loading weights:  76%|███████▌  | 302/399 [00:02<00:00, 124.28it/s]Loading weights:  79%|███████▉  | 316/399 [00:02<00:00, 121.80it/s]Loading weights:  82%|████████▏ | 329/399 [00:03<00:00, 120.27it/s]Loading weights:  86%|████████▌ | 342/399 [00:03<00:00, 112.76it/s]Loading weights:  91%|█████████ | 362/399 [00:03<00:00, 124.41it/s]Loading weights:  95%|█████████▍| 379/399 [00:03<00:00, 126.64it/s]Loading weights:  98%|█████████▊| 392/399 [00:03<00:00, 116.95it/s]Loading weights: 100%|██████████| 399/399 [00:03<00:00, 109.05it/s]
+Loading LoRA Adapter from model/qwen3-8B-ocr-french-meta...
+Loading data from data/languages/french_test.parquet...
+Running batch inference on 295 samples...
+Generating Corrections:   0%|          | 0/74 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   1%|▏         | 1/74 [00:41<50:41, 41.66s/it]Generating Corrections:   3%|▎         | 2/74 [01:23<50:12, 41.84s/it]Generating Corrections:   4%|▍         | 3/74 [02:01<47:17, 39.97s/it]Generating Corrections:   5%|▌         | 4/74 [02:44<48:03, 41.19s/it]Generating Corrections:   7%|▋         | 5/74 [03:26<47:37, 41.41s/it]Generating Corrections:   8%|▊         | 6/74 [04:09<47:34, 41.97s/it]Generating Corrections:   9%|▉         | 7/74 [04:49<46:05, 41.27s/it]Generating Corrections:  11%|█         | 8/74 [05:37<47:49, 43.48s/it]Generating Corrections:  12%|█▏        | 9/74 [06:28<49:40, 45.85s/it]Generating Corrections:  14%|█▎        | 10/74 [07:09<47:20, 44.39s/it]Generating Corrections:  15%|█▍        | 11/74 [07:51<45:50, 43.66s/it]Generating Corrections:  16%|█▌        | 12/74 [08:32<44:09, 42.74s/it]Generating Corrections:  18%|█▊        | 13/74 [09:13<42:53, 42.19s/it]Generating Corrections:  19%|█▉        | 14/74 [09:58<43:15, 43.26s/it]Generating Corrections:  20%|██        | 15/74 [10:44<43:20, 44.08s/it]Generating Corrections:  22%|██▏       | 16/74 [11:24<41:27, 42.88s/it]Generating Corrections:  23%|██▎       | 17/74 [12:07<40:45, 42.91s/it]Generating Corrections:  24%|██▍       | 18/74 [12:50<39:51, 42.71s/it]Generating Corrections:  26%|██▌       | 19/74 [13:31<38:42, 42.23s/it]Generating Corrections:  27%|██▋       | 20/74 [14:13<38:02, 42.27s/it]Generating Corrections:  28%|██▊       | 21/74 [14:56<37:32, 42.49s/it]Generating Corrections:  30%|██▉       | 22/74 [15:39<36:51, 42.53s/it]Generating Corrections:  31%|███       | 23/74 [16:18<35:21, 41.60s/it]Generating Corrections:  32%|███▏      | 24/74 [16:56<33:50, 40.60s/it]Generating Corrections:  34%|███▍      | 25/74 [17:39<33:31, 41.05s/it]Generating Corrections:  35%|███▌      | 26/74 [18:22<33:23, 41.73s/it]Generating Corrections:  36%|███▋      | 27/74 [19:09<33:58, 43.38s/it]Generating Corrections:  38%|███▊      | 28/74 [19:46<31:51, 41.55s/it]Generating Corrections:  39%|███▉      | 29/74 [20:27<31:01, 41.37s/it]Generating Corrections:  41%|████      | 30/74 [21:06<29:48, 40.65s/it]Generating Corrections:  42%|████▏     | 31/74 [21:44<28:23, 39.63s/it]Generating Corrections:  43%|████▎     | 32/74 [22:26<28:24, 40.59s/it]Generating Corrections:  45%|████▍     | 33/74 [23:07<27:47, 40.67s/it]Generating Corrections:  46%|████▌     | 34/74 [23:44<26:19, 39.50s/it]Generating Corrections:  47%|████▋     | 35/74 [24:25<25:54, 39.85s/it]Generating Corrections:  49%|████▊     | 36/74 [25:03<25:00, 39.50s/it]Generating Corrections:  50%|█████     | 37/74 [25:46<24:54, 40.39s/it]Generating Corrections:  51%|█████▏    | 38/74 [26:24<23:48, 39.69s/it]Generating Corrections:  53%|█████▎    | 39/74 [27:02<22:57, 39.36s/it]Generating Corrections:  54%|█████▍    | 40/74 [27:44<22:37, 39.93s/it]Generating Corrections:  55%|█████▌    | 41/74 [28:25<22:11, 40.35s/it]Generating Corrections:  57%|█████▋    | 42/74 [29:06<21:34, 40.46s/it]Generating Corrections:  58%|█████▊    | 43/74 [29:51<21:34, 41.77s/it]Generating Corrections:  59%|█████▉    | 44/74 [30:34<21:06, 42.20s/it]Generating Corrections:  61%|██████    | 45/74 [31:15<20:18, 42.03s/it]Generating Corrections:  62%|██████▏   | 46/74 [31:58<19:43, 42.25s/it]Generating Corrections:  64%|██████▎   | 47/74 [32:38<18:42, 41.56s/it]Generating Corrections:  65%|██████▍   | 48/74 [33:21<18:12, 42.00s/it]Generating Corrections:  66%|██████▌   | 49/74 [34:00<17:08, 41.15s/it]Generating Corrections:  68%|██████▊   | 50/74 [34:14<13:06, 32.77s/it]Generating Corrections:  69%|██████▉   | 51/74 [34:32<10:57, 28.60s/it]Generating Corrections:  70%|███████   | 52/74 [34:52<09:28, 25.85s/it]Generating Corrections:  72%|███████▏  | 53/74 [35:11<08:19, 23.77s/it]Generating Corrections:  73%|███████▎  | 54/74 [35:23<06:45, 20.26s/it]Generating Corrections:  74%|███████▍  | 55/74 [35:38<05:55, 18.70s/it]Generating Corrections:  76%|███████▌  | 56/74 [35:51<05:04, 16.89s/it]Generating Corrections:  77%|███████▋  | 57/74 [36:05<04:32, 16.03s/it]Generating Corrections:  78%|███████▊  | 58/74 [36:18<04:01, 15.11s/it]Generating Corrections:  80%|███████▉  | 59/74 [36:33<03:50, 15.33s/it]Generating Corrections:  81%|████████  | 60/74 [36:47<03:25, 14.68s/it]Generating Corrections:  82%|████████▏ | 61/74 [36:58<02:59, 13.82s/it]Generating Corrections:  84%|████████▍ | 62/74 [37:11<02:41, 13.47s/it]Generating Corrections:  85%|████████▌ | 63/74 [37:30<02:45, 15.02s/it]Generating Corrections:  86%|████████▋ | 64/74 [37:44<02:29, 14.93s/it]Generating Corrections:  88%|████████▊ | 65/74 [38:03<02:23, 15.97s/it]Generating Corrections:  89%|████████▉ | 66/74 [38:24<02:20, 17.55s/it]Generating Corrections:  91%|█████████ | 67/74 [38:38<01:54, 16.41s/it]Generating Corrections:  92%|█████████▏| 68/74 [38:56<01:41, 16.87s/it]Generating Corrections:  93%|█████████▎| 69/74 [39:16<01:29, 17.89s/it]Generating Corrections:  95%|█████████▍| 70/74 [39:35<01:12, 18.10s/it]Generating Corrections:  96%|█████████▌| 71/74 [39:47<00:49, 16.52s/it]Generating Corrections:  97%|█████████▋| 72/74 [40:01<00:31, 15.79s/it]Generating Corrections:  99%|█████████▊| 73/74 [40:23<00:17, 17.56s/it]Generating Corrections: 100%|██████████| 74/74 [40:37<00:00, 16.54s/it]Generating Corrections: 100%|██████████| 74/74 [40:37<00:00, 32.94s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 431 (char 430)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"La commune de St-Maurice émet des obligations au porteur\\nrnUo f PUleS de 5 °° Ct 10 °° francs » J J ^ concurrence dé\\n00 . 000 irancs .\\nCes obligations sont productives d\'un intérêt annuel de 4 / j° /,\\npayables au dl décembre de chaque année.\\nElle sont versables dès ce jour et remboursables en 50 ans par\\ntrite au sort annuel a partir du 31 décembre 1918.\\nAdresser les souscriptions au Greffe municipal "de St-Maurice.\\nLe Secrétaire : Le Président :","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0301 ± 0.0261
+Model CER:     0.0256 ± 0.0299
+CER Reduction: 14.88%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.1626 ± 0.1611
+Model WER:     0.1145 ± 0.1303
+WER Reduction: 29.63%
+==================================================
+
+Detailed results saved to model_eval_logs/qwen3-8B-ocr-french-meta_french_test_meta_results.parquet

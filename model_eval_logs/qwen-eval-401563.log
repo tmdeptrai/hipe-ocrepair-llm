@@ -1,0 +1,105 @@
+Tue Apr 28 17:33:24 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:48:00.0 Off |                    0 |
+|  0%   19C    P8             30W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: Qwen/Qwen3-8B...
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:06,  6.02it/s]Loading weights:   1%|          | 2/399 [00:00<01:28,  4.50it/s]Loading weights:   4%|▎         | 14/399 [00:00<00:13, 29.43it/s]Loading weights:   5%|▍         | 18/399 [00:00<00:13, 28.97it/s]Loading weights:   7%|▋         | 27/399 [00:00<00:08, 43.05it/s]Loading weights:   9%|▉         | 36/399 [00:01<00:08, 41.83it/s]Loading weights:  15%|█▍        | 59/399 [00:01<00:04, 79.38it/s]Loading weights:  18%|█▊        | 71/399 [00:01<00:03, 87.46it/s]Loading weights:  21%|██        | 82/399 [00:01<00:03, 91.29it/s]Loading weights:  26%|██▌       | 102/399 [00:01<00:02, 118.92it/s]Loading weights:  29%|██▉       | 116/399 [00:01<00:02, 96.95it/s] Loading weights:  33%|███▎      | 131/399 [00:01<00:02, 105.79it/s]Loading weights:  36%|███▋      | 145/399 [00:01<00:02, 113.65it/s]Loading weights:  40%|███▉      | 158/399 [00:02<00:02, 103.99it/s]Loading weights:  43%|████▎     | 170/399 [00:02<00:02, 103.20it/s]Loading weights:  46%|████▌     | 182/399 [00:02<00:02, 104.51it/s]Loading weights:  50%|████▉     | 199/399 [00:02<00:01, 120.19it/s]Loading weights:  53%|█████▎    | 213/399 [00:02<00:01, 122.69it/s]Loading weights:  57%|█████▋    | 226/399 [00:02<00:01, 118.57it/s]Loading weights:  60%|██████    | 241/399 [00:02<00:01, 126.71it/s]Loading weights:  64%|██████▍   | 257/399 [00:02<00:01, 126.07it/s]Loading weights:  68%|██████▊   | 270/399 [00:02<00:01, 124.98it/s]Loading weights:  72%|███████▏  | 286/399 [00:03<00:01, 94.57it/s] Loading weights:  75%|███████▌  | 301/399 [00:03<00:01, 94.34it/s]Loading weights:  78%|███████▊  | 312/399 [00:03<00:01, 69.35it/s]Loading weights:  81%|████████  | 323/399 [00:03<00:00, 76.23it/s]Loading weights:  84%|████████▍ | 335/399 [00:03<00:00, 82.68it/s]Loading weights:  88%|████████▊ | 352/399 [00:04<00:00, 89.68it/s]Loading weights:  94%|█████████▍| 376/399 [00:04<00:00, 112.93it/s]Loading weights: 100%|██████████| 399/399 [00:04<00:00, 93.01it/s] 
+Loading LoRA Adapter from model/qwen3-8B-ocr-impresso-snippets-base...
+Loading data from data/datasets/impresso-snippets_test.parquet...
+Running batch inference on 300 samples...
+Generating Corrections:   0%|          | 0/75 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Generating Corrections:   1%|▏         | 1/75 [00:22<27:53, 22.62s/it]Generating Corrections:   3%|▎         | 2/75 [00:42<25:17, 20.78s/it]Generating Corrections:   4%|▍         | 3/75 [00:58<22:43, 18.94s/it]Generating Corrections:   5%|▌         | 4/75 [01:18<22:44, 19.22s/it]Generating Corrections:   7%|▋         | 5/75 [01:37<22:22, 19.17s/it]Generating Corrections:   8%|▊         | 6/75 [01:56<22:01, 19.16s/it]Generating Corrections:   9%|▉         | 7/75 [02:15<21:34, 19.04s/it]Generating Corrections:  11%|█         | 8/75 [02:35<21:41, 19.42s/it]Generating Corrections:  12%|█▏        | 9/75 [02:53<20:50, 18.95s/it]Generating Corrections:  13%|█▎        | 10/75 [03:10<19:47, 18.27s/it]Generating Corrections:  15%|█▍        | 11/75 [03:28<19:25, 18.21s/it]Generating Corrections:  16%|█▌        | 12/75 [03:55<22:01, 20.98s/it]Generating Corrections:  17%|█▋        | 13/75 [04:11<20:03, 19.41s/it]Generating Corrections:  19%|█▊        | 14/75 [04:26<18:14, 17.95s/it]Generating Corrections:  20%|██        | 15/75 [04:44<17:57, 17.96s/it]Generating Corrections:  21%|██▏       | 16/75 [04:59<16:56, 17.23s/it]Generating Corrections:  23%|██▎       | 17/75 [05:19<17:18, 17.91s/it]Generating Corrections:  24%|██▍       | 18/75 [05:33<16:04, 16.92s/it]Generating Corrections:  25%|██▌       | 19/75 [05:50<15:42, 16.83s/it]Generating Corrections:  27%|██▋       | 20/75 [06:06<15:18, 16.70s/it]Generating Corrections:  28%|██▊       | 21/75 [06:24<15:13, 16.93s/it]Generating Corrections:  29%|██▉       | 22/75 [06:37<14:04, 15.94s/it]Generating Corrections:  31%|███       | 23/75 [06:51<13:05, 15.10s/it]Generating Corrections:  32%|███▏      | 24/75 [07:09<13:41, 16.11s/it]Generating Corrections:  33%|███▎      | 25/75 [07:29<14:17, 17.16s/it]Generating Corrections:  35%|███▍      | 26/75 [07:41<12:49, 15.70s/it]Generating Corrections:  36%|███▌      | 27/75 [07:56<12:26, 15.55s/it]Generating Corrections:  37%|███▋      | 28/75 [08:09<11:37, 14.83s/it]Generating Corrections:  39%|███▊      | 29/75 [08:22<10:58, 14.33s/it]Generating Corrections:  40%|████      | 30/75 [08:38<10:55, 14.57s/it]Generating Corrections:  41%|████▏     | 31/75 [08:53<10:53, 14.84s/it]Generating Corrections:  43%|████▎     | 32/75 [09:09<10:55, 15.25s/it]Generating Corrections:  44%|████▍     | 33/75 [09:32<12:10, 17.40s/it]Generating Corrections:  45%|████▌     | 34/75 [10:04<14:54, 21.83s/it]Generating Corrections:  47%|████▋     | 35/75 [10:25<14:28, 21.72s/it]Generating Corrections:  48%|████▊     | 36/75 [10:38<12:25, 19.11s/it]Generating Corrections:  49%|████▉     | 37/75 [10:56<11:52, 18.74s/it]Generating Corrections:  51%|█████     | 38/75 [11:08<10:22, 16.81s/it]Generating Corrections:  52%|█████▏    | 39/75 [11:25<10:01, 16.71s/it]Generating Corrections:  53%|█████▎    | 40/75 [11:39<09:17, 15.93s/it]Generating Corrections:  55%|█████▍    | 41/75 [11:54<08:46, 15.50s/it]Generating Corrections:  56%|█████▌    | 42/75 [12:09<08:30, 15.46s/it]Generating Corrections:  57%|█████▋    | 43/75 [12:24<08:10, 15.34s/it]Generating Corrections:  59%|█████▊    | 44/75 [12:38<07:45, 15.02s/it]Generating Corrections:  60%|██████    | 45/75 [12:53<07:26, 14.87s/it]Generating Corrections:  61%|██████▏   | 46/75 [13:05<06:48, 14.07s/it]Generating Corrections:  63%|██████▎   | 47/75 [13:21<06:51, 14.70s/it]Generating Corrections:  64%|██████▍   | 48/75 [13:40<07:11, 16.00s/it]Generating Corrections:  65%|██████▌   | 49/75 [13:58<07:10, 16.57s/it]Generating Corrections:  67%|██████▋   | 50/75 [14:10<06:18, 15.13s/it]Generating Corrections:  68%|██████▊   | 51/75 [14:23<05:46, 14.42s/it]Generating Corrections:  69%|██████▉   | 52/75 [14:36<05:26, 14.21s/it]Generating Corrections:  71%|███████   | 53/75 [14:55<05:44, 15.66s/it]Generating Corrections:  72%|███████▏  | 54/75 [15:13<05:43, 16.38s/it]Generating Corrections:  73%|███████▎  | 55/75 [15:32<05:42, 17.11s/it]Generating Corrections:  75%|███████▍  | 56/75 [15:47<05:12, 16.43s/it]Generating Corrections:  76%|███████▌  | 57/75 [15:57<04:22, 14.60s/it]Generating Corrections:  77%|███████▋  | 58/75 [16:11<04:05, 14.43s/it]Generating Corrections:  79%|███████▊  | 59/75 [16:24<03:43, 13.95s/it]Generating Corrections:  80%|████████  | 60/75 [16:40<03:36, 14.43s/it]Generating Corrections:  81%|████████▏ | 61/75 [16:52<03:12, 13.76s/it]Generating Corrections:  83%|████████▎ | 62/75 [17:04<02:53, 13.36s/it]Generating Corrections:  84%|████████▍ | 63/75 [17:17<02:37, 13.11s/it]Generating Corrections:  85%|████████▌ | 64/75 [17:35<02:41, 14.68s/it]Generating Corrections:  87%|████████▋ | 65/75 [17:52<02:32, 15.28s/it]Generating Corrections:  88%|████████▊ | 66/75 [18:09<02:23, 15.94s/it]Generating Corrections:  89%|████████▉ | 67/75 [18:31<02:20, 17.53s/it]Generating Corrections:  91%|█████████ | 68/75 [18:49<02:03, 17.63s/it]Generating Corrections:  92%|█████████▏| 69/75 [19:07<01:46, 17.79s/it]Generating Corrections:  93%|█████████▎| 70/75 [19:27<01:32, 18.51s/it]Generating Corrections:  95%|█████████▍| 71/75 [19:41<01:09, 17.29s/it]Generating Corrections:  96%|█████████▌| 72/75 [20:00<00:53, 17.81s/it]Generating Corrections:  97%|█████████▋| 73/75 [20:15<00:33, 16.71s/it]Generating Corrections:  99%|█████████▊| 74/75 [20:28<00:15, 15.85s/it]Generating Corrections: 100%|██████████| 75/75 [20:50<00:00, 17.57s/it]Generating Corrections: 100%|██████████| 75/75 [20:50<00:00, 16.67s/it]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 266 (char 265)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"London, 21. April. Reuter meldet aus Washington:\\nAlle japanischen Kriegsschiffe in der Nähe der amerikani¬\\nschen Küste erhielten den Befehl, sich nach ihre Heimat¬\\nstationen zu begeben mit Ausnahme derjenigen, die mit\\nder Bergung der „Asama" zu tun haben. Der Komman¬\\ndant des Kreuzers „New Orleans" berichtete, er habe nichts\\nvon einer angeblichen Tätigkeit der Japaner in der\\nTurtle-Vai gefunden, außer daß sie das Wrack des Kriegs¬\\nschiffes „Asama" zu bergen suchten.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting property name enclosed in double quotes: line 1 column 446 (char 445)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Die Musikgesellschaft spielt die französische,\\nbelgische und luxemburgische Nationalhymne,\\nwelche von den Anwesenden stehenb angehört\\nwürde. - Hr. Oberschulinspektor Welter, der\\nVertreter der Regierung, richtet in luxembur¬\\ngischem Dialekt eine kurze Ansprache an die\\nVersammelten, in welcher er seiner Freude\\nAusbruch verleiht, daß das schöne Werk, ent¬\\nsprechenb dem Grunbsatz, „Was lange währt,\\nwird endlich gut", zu einem solch schönen Ende\\ngeführt werden konnte. Wenn auch in einer\\nAnsprache bemerkt wurde, die Bevölkerung\\nrühre den großen Luxus des Baues, so sei dem\\nentgegenzustellen, daß gerade die Schule nichts\\nto klagen sei. Es sei denn, daß gerade die Schule bem","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 294 (char 293)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"Der britische Treuhänder für das\\nfeindliche Vermögen verwaltet solche\\nVermögenswerte in Gegenwart von etwa\\n50 Millionen Pfund Sterling. Die britische\\nLabour-Regierung hat eine Gesetzesvor¬\\nlage eingebracht, die Realisierung dieser\\nVermögenswerte und Aufteilung des Er¬\\löses unter die Vorkriegsgläubiger deut¬\\nscher Personen oder der deutschen Re¬\\ngierung zu genehmigen. Die Forderungen\\ndieser Gläubiger belaufen sich auf ins¬\\ngesamt etwa 120 Millionen Pfund.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 43 (char 42)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"A LITTLE MORE GRAPE.-" Now, Charley, my\\nboy, there\'s a bottle of wine that\'s forty years old." " Forty\\nyears! by Jove, I\'m astonished!" " What, because it is so\\nold?" " No, Jack; but to find it so infernally small of its\\nage.\\nGENTEEL PEOPLE. The young lady who lets her\\nmother do the ironing for fear of spoiling her hands; the miss\\nwho wears thin shoes on a rainy day; the young gentleman who\\nis ashamed to be seen walking with his father.","has_modifications":false}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Invalid \escape: line 1 column 236 (char 235)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"By the Judge—The wounds were not sufficient\\nto produce the fatal syncope.\\nExamination continued—The syncope came on\\nfrom natural causes, and the wounds did not, I\\nbelieve, contribute to cause death. Any hard sub¬\\stance would produce the bruises on the arms.\\nThe bruises might have been got by falling over\\na heap of stones. I cannot believe that\\nhemorrhage was the cause of death. Death, I\\nthink, was the result of a combination of disease\\nof the brain, disease of the heart, and intemper¬\\ate habits.","has_modifications":false}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 35 (char 34)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"In a paper on "The Highland Regiments,"\\nread before the Gaelic Society of Inverness, the\\nwriter said:—"The first of our Highland regi¬\\nmonts is the 42nd, the Black Watch, or Freicea¬\\ndan Dubh. In 1729 there were six independent\\ncompanies raised among the Whig clans, and ten\\nyears after they, along with other four companies,\\nwere regimented, and thus was formed the Black\\nWatch—its rank and file being largely recruited\\nfrom the North, and Highland chiefs and chiet¬\\ntrans holding commissions in it. The generally\\naccepted theory with regard to the name of\\naccepted to tith ne regi tet tas so called","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JSON PARSE ERROR: Expecting ',' delimiter: line 1 column 103 (char 102)
+--- RAW MODEL OUTPUT START ---
+'{"corrected_text":"BROADMAYNE.\\nSUDDEN DEATH. — On Easter Monday a number of youths\\nwere playing at "dagger," in Mr. Croad\'s field, when they\\nwere beckoned to by Mr. Croad. On perceiving they\\nwere watched they ran off, when one of them, known as\\n"Nelson," about twelve years of age, dropped down dead.\\nThe inquest took place on Tuesday before Mr. Lock,\\ndeputy-coroner. Mr. Good, of Dorchester, who had made\\na post mortem examination, was of opinion that death had\\nbeen caused by the bursting of a blood vessel in the head.\\nThe jury gave a verdict in accordance with the medical\\nevidence.","has_modifications":true}'
+--- RAW MODEL OUTPUT END ---
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0365 ± 0.0300
+Model CER:     0.0246 ± 0.0284
+CER Reduction: 32.63%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.2257 ± 0.2254
+Model WER:     0.0945 ± 0.1029
+WER Reduction: 58.11%
+==================================================
+
+Detailed results saved to model_eval_logs/qwen3-8B-ocr-impresso-snippets-base_impresso-snippets_test_nometa_results.parquet
