@@ -1,0 +1,48 @@
+Wed Apr 29 13:02:09 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:C8:00.0 Off |                    0 |
+|  0%   70C    P0            110W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: PleIAs/OCRonos...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<00:59,  4.84it/s]Loading weights:   1%|          | 2/291 [00:00<01:01,  4.67it/s]Loading weights:   3%|▎         | 9/291 [00:00<00:12, 22.96it/s]Loading weights:   8%|▊         | 22/291 [00:00<00:05, 51.41it/s]Loading weights:  11%|█         | 31/291 [00:00<00:04, 59.98it/s]Loading weights:  14%|█▍        | 41/291 [00:00<00:03, 71.00it/s]Loading weights:  18%|█▊        | 51/291 [00:00<00:03, 78.54it/s]Loading weights:  21%|██        | 60/291 [00:01<00:02, 81.56it/s]Loading weights:  24%|██▎       | 69/291 [00:01<00:02, 80.48it/s]Loading weights:  28%|██▊       | 81/291 [00:01<00:02, 91.31it/s]Loading weights:  32%|███▏      | 94/291 [00:01<00:02, 98.21it/s]Loading weights:  36%|███▌      | 105/291 [00:01<00:02, 89.58it/s]Loading weights:  40%|███▉      | 115/291 [00:01<00:01, 92.22it/s]Loading weights:  43%|████▎     | 125/291 [00:01<00:02, 78.99it/s]Loading weights:  46%|████▌     | 134/291 [00:01<00:02, 74.04it/s]Loading weights:  54%|█████▎    | 156/291 [00:02<00:01, 102.05it/s]Loading weights:  57%|█████▋    | 167/291 [00:02<00:01, 79.73it/s] Loading weights:  66%|██████▋   | 193/291 [00:02<00:00, 116.88it/s]Loading weights:  71%|███████   | 207/291 [00:02<00:00, 87.51it/s] Loading weights:  79%|███████▉  | 230/291 [00:02<00:00, 111.08it/s]Loading weights:  84%|████████▍ | 244/291 [00:03<00:00, 73.36it/s] Loading weights:  91%|█████████ | 265/291 [00:03<00:00, 69.09it/s]Loading weights: 100%|██████████| 291/291 [00:03<00:00, 82.26it/s]
+No adapter path provided. Evaluating the BASE MODEL...
+Loading data from data/datasets/dta19_test.parquet...
+Running batch inference on 283 samples...
+Generating Corrections:   0%|          | 0/71 [00:00<?, ?it/s]Generating Corrections:   1%|▏         | 1/71 [00:45<53:36, 45.95s/it]Generating Corrections:   3%|▎         | 2/71 [01:31<52:34, 45.71s/it]Generating Corrections:   4%|▍         | 3/71 [02:19<52:54, 46.68s/it]Generating Corrections:   6%|▌         | 4/71 [03:04<51:38, 46.25s/it]Generating Corrections:   7%|▋         | 5/71 [03:51<50:51, 46.24s/it]Generating Corrections:   8%|▊         | 6/71 [04:37<50:00, 46.17s/it]Generating Corrections:  10%|▉         | 7/71 [05:25<50:08, 47.01s/it]Generating Corrections:  11%|█▏        | 8/71 [06:11<49:01, 46.69s/it]Generating Corrections:  13%|█▎        | 9/71 [06:56<47:31, 45.99s/it]Generating Corrections:  14%|█▍        | 10/71 [07:45<47:36, 46.83s/it]Generating Corrections:  15%|█▌        | 11/71 [08:33<47:12, 47.21s/it]Generating Corrections:  17%|█▋        | 12/71 [09:18<45:50, 46.62s/it]Generating Corrections:  18%|█▊        | 13/71 [10:05<45:07, 46.68s/it]Generating Corrections:  20%|█▉        | 14/71 [10:53<44:42, 47.06s/it]Generating Corrections:  21%|██        | 15/71 [11:39<43:43, 46.84s/it]Generating Corrections:  23%|██▎       | 16/71 [12:27<43:09, 47.08s/it]Generating Corrections:  24%|██▍       | 17/71 [13:12<41:57, 46.62s/it]Generating Corrections:  25%|██▌       | 18/71 [13:58<40:55, 46.33s/it]Generating Corrections:  27%|██▋       | 19/71 [14:46<40:39, 46.91s/it]Generating Corrections:  28%|██▊       | 20/71 [15:33<39:45, 46.77s/it]Generating Corrections:  30%|██▉       | 21/71 [16:17<38:24, 46.09s/it]Generating Corrections:  31%|███       | 22/71 [17:03<37:41, 46.15s/it]Generating Corrections:  32%|███▏      | 23/71 [17:52<37:29, 46.86s/it]Generating Corrections:  34%|███▍      | 24/71 [18:38<36:30, 46.62s/it]Generating Corrections:  35%|███▌      | 25/71 [19:26<36:03, 47.04s/it]Generating Corrections:  37%|███▋      | 26/71 [20:14<35:29, 47.33s/it]Generating Corrections:  38%|███▊      | 27/71 [20:59<34:17, 46.77s/it]Generating Corrections:  39%|███▉      | 28/71 [21:46<33:25, 46.64s/it]Generating Corrections:  41%|████      | 29/71 [22:34<32:55, 47.03s/it]Generating Corrections:  42%|████▏     | 30/71 [23:22<32:20, 47.34s/it]Generating Corrections:  44%|████▎     | 31/71 [24:09<31:31, 47.30s/it]Generating Corrections:  45%|████▌     | 32/71 [24:54<30:22, 46.73s/it]Generating Corrections:  46%|████▋     | 33/71 [25:42<29:46, 47.01s/it]Generating Corrections:  48%|████▊     | 34/71 [26:28<28:43, 46.58s/it]Generating Corrections:  49%|████▉     | 35/71 [27:12<27:30, 45.84s/it]Generating Corrections:  51%|█████     | 36/71 [27:57<26:43, 45.81s/it]Generating Corrections:  52%|█████▏    | 37/71 [28:43<25:55, 45.76s/it]Generating Corrections:  54%|█████▎    | 38/71 [29:31<25:27, 46.28s/it]Generating Corrections:  55%|█████▍    | 39/71 [30:19<25:03, 46.99s/it]Generating Corrections:  56%|█████▋    | 40/71 [31:05<24:01, 46.50s/it]Generating Corrections:  58%|█████▊    | 41/71 [31:50<23:04, 46.14s/it]Generating Corrections:  59%|█████▉    | 42/71 [32:35<22:11, 45.92s/it]Generating Corrections:  61%|██████    | 43/71 [33:20<21:16, 45.59s/it]Generating Corrections:  62%|██████▏   | 44/71 [34:09<20:55, 46.49s/it]Generating Corrections:  63%|██████▎   | 45/71 [34:57<20:21, 46.96s/it]Generating Corrections:  65%|██████▍   | 46/71 [35:45<19:47, 47.50s/it]Generating Corrections:  66%|██████▌   | 47/71 [36:33<19:01, 47.57s/it]Generating Corrections:  68%|██████▊   | 48/71 [37:19<18:03, 47.10s/it]Generating Corrections:  69%|██████▉   | 49/71 [38:04<17:03, 46.52s/it]Generating Corrections:  70%|███████   | 50/71 [38:50<16:10, 46.20s/it]Generating Corrections:  72%|███████▏  | 51/71 [39:36<15:20, 46.05s/it]Generating Corrections:  73%|███████▎  | 52/71 [40:22<14:38, 46.23s/it]Generating Corrections:  75%|███████▍  | 53/71 [41:09<13:52, 46.27s/it]Generating Corrections:  76%|███████▌  | 54/71 [41:54<13:00, 45.88s/it]Generating Corrections:  77%|███████▋  | 55/71 [42:38<12:06, 45.40s/it]Generating Corrections:  79%|███████▉  | 56/71 [43:27<11:37, 46.50s/it]Generating Corrections:  80%|████████  | 57/71 [44:15<10:58, 47.02s/it]Generating Corrections:  82%|████████▏ | 58/71 [45:04<10:16, 47.45s/it]Generating Corrections:  83%|████████▎ | 59/71 [45:51<09:29, 47.43s/it]Generating Corrections:  85%|████████▍ | 60/71 [46:37<08:38, 47.14s/it]Generating Corrections:  86%|████████▌ | 61/71 [47:26<07:56, 47.62s/it]Generating Corrections:  87%|████████▋ | 62/71 [48:13<07:06, 47.44s/it]Generating Corrections:  89%|████████▊ | 63/71 [48:59<06:14, 46.85s/it]Generating Corrections:  90%|█████████ | 64/71 [49:46<05:29, 47.00s/it]Generating Corrections:  92%|█████████▏| 65/71 [50:35<04:45, 47.54s/it]Generating Corrections:  93%|█████████▎| 66/71 [51:22<03:57, 47.51s/it]Generating Corrections:  94%|█████████▍| 67/71 [52:11<03:12, 48.03s/it]Generating Corrections:  96%|█████████▌| 68/71 [52:57<02:21, 47.20s/it]Generating Corrections:  97%|█████████▋| 69/71 [53:45<01:35, 47.57s/it]Generating Corrections:  99%|█████████▊| 70/71 [54:34<00:47, 47.82s/it]Generating Corrections: 100%|██████████| 71/71 [55:17<00:00, 46.65s/it]Generating Corrections: 100%|██████████| 71/71 [55:17<00:00, 46.73s/it]
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.0350 ± 0.0346
+Model CER:     0.1407 ± 0.7745
+CER Reduction: -302.08%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.1870 ± 0.1391
+Model WER:     0.3340 ± 0.6561
+WER Reduction: -78.66%
+==================================================
+
+Detailed results saved to model_eval_logs/zeroshot_OCRonos_dta19_test_meta_results.parquet

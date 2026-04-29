@@ -484,3 +484,109 @@ echo "--- TEST COMPLETE ---"
 #     --data_path data/hipe_aggregated_test.parquet \
 #     --batch_size 4 \
 #     --with_metadata
+
+
+
+
+# ======================= PLEIAS/OCRONOS ZERO-SHOT =========================
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4
+
+python model_eval/evaluate_pleias.py \
+    --base_model PleIAs/OCRonos \
+    --data_path data/hipe_aggregated_test.parquet \
+    --batch_size 4
+
+# ======================= PLEIAS/OCRONOS ZERO-SHOT (WITH METADATA) =========================
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/dta19_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/icdar2017_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/impresso-nzz_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/impresso-snippets_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/datasets/overproof-combined_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/languages/english_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/languages/french_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/languages/german_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata

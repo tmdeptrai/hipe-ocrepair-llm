@@ -1,0 +1,48 @@
+Wed Apr 29 11:52:41 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:C8:00.0 Off |                    0 |
+|  0%   70C    P0            111W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+--- TESTING PYTORCH ---
+PyTorch loaded successfully!
+CUDA available: True
+--- TEST COMPLETE ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading Base Model: PleIAs/OCRonos...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:23,  3.47it/s]Loading weights:   1%|▏         | 4/291 [00:00<00:27, 10.32it/s]Loading weights:  10%|▉         | 29/291 [00:00<00:04, 65.19it/s]Loading weights:  13%|█▎        | 37/291 [00:00<00:03, 67.94it/s]Loading weights:  21%|██        | 60/291 [00:00<00:02, 105.60it/s]Loading weights:  25%|██▍       | 72/291 [00:01<00:03, 68.41it/s] Loading weights:  36%|███▋      | 106/291 [00:01<00:01, 120.18it/s]Loading weights:  43%|████▎     | 124/291 [00:01<00:01, 97.82it/s] Loading weights:  49%|████▉     | 143/291 [00:01<00:01, 114.24it/s]Loading weights:  55%|█████▍    | 159/291 [00:01<00:01, 90.67it/s] Loading weights:  62%|██████▏   | 180/291 [00:02<00:01, 78.13it/s]Loading weights:  74%|███████▎  | 214/291 [00:02<00:00, 117.43it/s]Loading weights:  80%|███████▉  | 232/291 [00:02<00:00, 111.95it/s]Loading weights:  85%|████████▌ | 248/291 [00:02<00:00, 105.73it/s]Loading weights:  90%|█████████ | 262/291 [00:02<00:00, 93.68it/s] Loading weights:  95%|█████████▍| 275/291 [00:03<00:00, 99.17it/s]Loading weights: 100%|██████████| 291/291 [00:03<00:00, 93.83it/s]
+No adapter path provided. Evaluating the BASE MODEL...
+Loading data from data/datasets/overproof-combined_test.parquet...
+Running batch inference on 56 samples...
+Generating Corrections:   0%|          | 0/14 [00:00<?, ?it/s]Generating Corrections:   7%|▋         | 1/14 [00:46<10:10, 46.95s/it]Generating Corrections:  14%|█▍        | 2/14 [01:33<09:18, 46.56s/it]Generating Corrections:  21%|██▏       | 3/14 [02:18<08:25, 45.92s/it]Generating Corrections:  29%|██▊       | 4/14 [03:05<07:43, 46.30s/it]Generating Corrections:  36%|███▌      | 5/14 [03:52<06:58, 46.50s/it]Generating Corrections:  43%|████▎     | 6/14 [04:39<06:14, 46.87s/it]Generating Corrections:  50%|█████     | 7/14 [05:25<05:26, 46.61s/it]Generating Corrections:  57%|█████▋    | 8/14 [06:11<04:38, 46.36s/it]Generating Corrections:  64%|██████▍   | 9/14 [06:59<03:54, 46.97s/it]Generating Corrections:  71%|███████▏  | 10/14 [07:45<03:05, 46.47s/it]Generating Corrections:  79%|███████▊  | 11/14 [08:32<02:19, 46.61s/it]Generating Corrections:  86%|████████▌ | 12/14 [09:17<01:32, 46.08s/it]Generating Corrections:  93%|█████████▎| 13/14 [10:03<00:46, 46.10s/it]Generating Corrections: 100%|██████████| 14/14 [10:48<00:00, 45.99s/it]Generating Corrections: 100%|██████████| 14/14 [10:48<00:00, 46.35s/it]
+
+==================================================
+GLOBAL EVALUATION REPORT
+==================================================
+--- Character Error Rate (CER) ---
+Original CER:  0.1037 ± 0.1384
+Model CER:     0.1750 ± 0.4830
+CER Reduction: -68.74%
+
+--- Word Error Rate (WER) ---
+Original WER:  0.3041 ± 0.1932
+Model WER:     0.3236 ± 0.4575
+WER Reduction: -6.40%
+==================================================
+
+Detailed results saved to model_eval_logs/zeroshot_OCRonos_overproof-combined_test_nometa_results.parquet
