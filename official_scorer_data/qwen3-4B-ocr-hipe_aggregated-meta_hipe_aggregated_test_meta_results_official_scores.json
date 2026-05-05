@@ -1,0 +1,884 @@
+{
+  "per_file": {
+    "hipe-ocrepair-bench_v0.9_dta19-l0_v0.1_test-unmatched_de": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0056,
+          0.0042,
+          0.0072
+        ],
+        "wmer_micro": [
+          0.0264,
+          0.02,
+          0.0329
+        ],
+        "cmer_macro": [
+          0.0057,
+          0.0039,
+          0.0083
+        ],
+        "wmer_macro": [
+          0.0224,
+          0.0179,
+          0.0275
+        ],
+        "pref_score_cmer_macro": [
+          -0.05,
+          -0.2375,
+          0.15
+        ],
+        "pref_score_wmer_macro": [
+          0.05,
+          -0.1375,
+          0.2375
+        ],
+        "pcis_cmer_macro": [
+          -0.0025,
+          -0.005,
+          -0.0007
+        ],
+        "pcis_wmer_macro": [
+          -0.0021,
+          -0.0074,
+          0.0025
+        ]
+      },
+      "fold_scores": {
+        "dta19": {
+          "cmer_micro": [
+            0.0056,
+            0.0042,
+            0.0072
+          ],
+          "wmer_micro": [
+            0.0264,
+            0.02,
+            0.0329
+          ],
+          "cmer_macro": [
+            0.0057,
+            0.0039,
+            0.0083
+          ],
+          "wmer_macro": [
+            0.0224,
+            0.0179,
+            0.0275
+          ],
+          "pref_score_cmer_macro": [
+            -0.05,
+            -0.2375,
+            0.15
+          ],
+          "pref_score_wmer_macro": [
+            0.05,
+            -0.1375,
+            0.2375
+          ],
+          "pcis_cmer_macro": [
+            -0.0025,
+            -0.005,
+            -0.0007
+          ],
+          "pcis_wmer_macro": [
+            -0.0021,
+            -0.0074,
+            0.0025
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_dta19-l1_v0.1_test-unmatched_de": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0275,
+          0.0193,
+          0.0394
+        ],
+        "wmer_micro": [
+          0.0909,
+          0.0783,
+          0.1035
+        ],
+        "cmer_macro": [
+          0.0235,
+          0.0189,
+          0.0295
+        ],
+        "wmer_macro": [
+          0.08,
+          0.0713,
+          0.0892
+        ],
+        "pref_score_cmer_macro": [
+          0.5,
+          0.3125,
+          0.675
+        ],
+        "pref_score_wmer_macro": [
+          0.9,
+          0.8,
+          0.975
+        ],
+        "pcis_cmer_macro": [
+          0.0003,
+          -0.0057,
+          0.0051
+        ],
+        "pcis_wmer_macro": [
+          0.0997,
+          0.0874,
+          0.1114
+        ]
+      },
+      "fold_scores": {
+        "dta19": {
+          "cmer_micro": [
+            0.0275,
+            0.0193,
+            0.0394
+          ],
+          "wmer_micro": [
+            0.0909,
+            0.0783,
+            0.1035
+          ],
+          "cmer_macro": [
+            0.0235,
+            0.0189,
+            0.0295
+          ],
+          "wmer_macro": [
+            0.08,
+            0.0713,
+            0.0892
+          ],
+          "pref_score_cmer_macro": [
+            0.5,
+            0.3125,
+            0.675
+          ],
+          "pref_score_wmer_macro": [
+            0.9,
+            0.8,
+            0.975
+          ],
+          "pcis_cmer_macro": [
+            0.0003,
+            -0.0057,
+            0.0051
+          ],
+          "pcis_wmer_macro": [
+            0.0997,
+            0.0874,
+            0.1114
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_dta19-l2_v0.1_test-unmatched_de": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0531,
+          0.0467,
+          0.0631
+        ],
+        "wmer_micro": [
+          0.1525,
+          0.1384,
+          0.1656
+        ],
+        "cmer_macro": [
+          0.05,
+          0.0457,
+          0.055
+        ],
+        "wmer_macro": [
+          0.1409,
+          0.1302,
+          0.1526
+        ],
+        "pref_score_cmer_macro": [
+          0.3875,
+          0.1875,
+          0.5875
+        ],
+        "pref_score_wmer_macro": [
+          0.9375,
+          0.8625,
+          0.9875
+        ],
+        "pcis_cmer_macro": [
+          0.005,
+          -0.0002,
+          0.0094
+        ],
+        "pcis_wmer_macro": [
+          0.2147,
+          0.1944,
+          0.2347
+        ]
+      },
+      "fold_scores": {
+        "dta19": {
+          "cmer_micro": [
+            0.0531,
+            0.0467,
+            0.0631
+          ],
+          "wmer_micro": [
+            0.1525,
+            0.1384,
+            0.1656
+          ],
+          "cmer_macro": [
+            0.05,
+            0.0457,
+            0.055
+          ],
+          "wmer_macro": [
+            0.1409,
+            0.1302,
+            0.1526
+          ],
+          "pref_score_cmer_macro": [
+            0.3875,
+            0.1875,
+            0.5875
+          ],
+          "pref_score_wmer_macro": [
+            0.9375,
+            0.8625,
+            0.9875
+          ],
+          "pcis_cmer_macro": [
+            0.005,
+            -0.0002,
+            0.0094
+          ],
+          "pcis_wmer_macro": [
+            0.2147,
+            0.1944,
+            0.2347
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_icdar2017_v1.1_test_en": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0164,
+          0.0116,
+          0.0223
+        ],
+        "wmer_micro": [
+          0.0413,
+          0.0325,
+          0.0518
+        ],
+        "cmer_macro": [
+          0.0205,
+          0.0145,
+          0.0276
+        ],
+        "wmer_macro": [
+          0.0516,
+          0.0412,
+          0.063
+        ],
+        "pref_score_cmer_macro": [
+          0.7822,
+          0.6535,
+          0.8911
+        ],
+        "pref_score_wmer_macro": [
+          0.9406,
+          0.8812,
+          0.9901
+        ],
+        "pcis_cmer_macro": [
+          0.01,
+          0.0044,
+          0.014
+        ],
+        "pcis_wmer_macro": [
+          0.0935,
+          0.0799,
+          0.1089
+        ]
+      },
+      "fold_scores": {
+        "icdar2017": {
+          "cmer_micro": [
+            0.0164,
+            0.0116,
+            0.0223
+          ],
+          "wmer_micro": [
+            0.0413,
+            0.0325,
+            0.0518
+          ],
+          "cmer_macro": [
+            0.0205,
+            0.0145,
+            0.0276
+          ],
+          "wmer_macro": [
+            0.0516,
+            0.0412,
+            0.063
+          ],
+          "pref_score_cmer_macro": [
+            0.7822,
+            0.6535,
+            0.8911
+          ],
+          "pref_score_wmer_macro": [
+            0.9406,
+            0.8812,
+            0.9901
+          ],
+          "pcis_cmer_macro": [
+            0.01,
+            0.0044,
+            0.014
+          ],
+          "pcis_wmer_macro": [
+            0.0935,
+            0.0799,
+            0.1089
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_icdar2017_v1.1_test_fr": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0225,
+          0.0176,
+          0.0279
+        ],
+        "wmer_micro": [
+          0.0884,
+          0.0804,
+          0.0967
+        ],
+        "cmer_macro": [
+          0.0224,
+          0.0175,
+          0.0278
+        ],
+        "wmer_macro": [
+          0.0893,
+          0.0814,
+          0.0977
+        ],
+        "pref_score_cmer_macro": [
+          0.39,
+          0.21,
+          0.57
+        ],
+        "pref_score_wmer_macro": [
+          0.62,
+          0.46,
+          0.76
+        ],
+        "pcis_cmer_macro": [
+          -0.0038,
+          -0.0084,
+          0.0001
+        ],
+        "pcis_wmer_macro": [
+          0.0209,
+          0.0119,
+          0.0308
+        ]
+      },
+      "fold_scores": {
+        "icdar2017": {
+          "cmer_micro": [
+            0.0225,
+            0.0176,
+            0.0279
+          ],
+          "wmer_micro": [
+            0.0884,
+            0.0804,
+            0.0967
+          ],
+          "cmer_macro": [
+            0.0224,
+            0.0175,
+            0.0278
+          ],
+          "wmer_macro": [
+            0.0893,
+            0.0814,
+            0.0977
+          ],
+          "pref_score_cmer_macro": [
+            0.39,
+            0.21,
+            0.57
+          ],
+          "pref_score_wmer_macro": [
+            0.62,
+            0.46,
+            0.76
+          ],
+          "pcis_cmer_macro": [
+            -0.0038,
+            -0.0084,
+            0.0001
+          ],
+          "pcis_wmer_macro": [
+            0.0209,
+            0.0119,
+            0.0308
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_impresso-nzz_v1.1_test_de": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0484,
+          0.0368,
+          0.0638
+        ],
+        "wmer_micro": [
+          0.1505,
+          0.1317,
+          0.1712
+        ],
+        "cmer_macro": [
+          0.112,
+          0.0463,
+          0.2227
+        ],
+        "wmer_macro": [
+          0.2495,
+          0.1493,
+          0.388
+        ],
+        "pref_score_cmer_macro": [
+          -0.1765,
+          -0.6471,
+          0.2941
+        ],
+        "pref_score_wmer_macro": [
+          0.3529,
+          -0.0588,
+          0.7647
+        ],
+        "pcis_cmer_macro": [
+          0.1013,
+          -0.1596,
+          0.4787
+        ],
+        "pcis_wmer_macro": [
+          -0.0324,
+          -0.1437,
+          0.0341
+        ]
+      },
+      "fold_scores": {
+        "impresso-nzz": {
+          "cmer_micro": [
+            0.0484,
+            0.0368,
+            0.0638
+          ],
+          "wmer_micro": [
+            0.1505,
+            0.1317,
+            0.1712
+          ],
+          "cmer_macro": [
+            0.112,
+            0.0463,
+            0.2227
+          ],
+          "wmer_macro": [
+            0.2495,
+            0.1493,
+            0.388
+          ],
+          "pref_score_cmer_macro": [
+            -0.1765,
+            -0.6471,
+            0.2941
+          ],
+          "pref_score_wmer_macro": [
+            0.3529,
+            -0.0588,
+            0.7647
+          ],
+          "pcis_cmer_macro": [
+            0.1013,
+            -0.1596,
+            0.4787
+          ],
+          "pcis_wmer_macro": [
+            -0.0324,
+            -0.1437,
+            0.0341
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_impresso-snippets_v1.0_test_de": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0235,
+          0.0188,
+          0.0284
+        ],
+        "wmer_micro": [
+          0.0747,
+          0.0618,
+          0.0893
+        ],
+        "cmer_macro": [
+          0.0257,
+          0.02,
+          0.0323
+        ],
+        "wmer_macro": [
+          0.0782,
+          0.0645,
+          0.0933
+        ],
+        "pref_score_cmer_macro": [
+          0.48,
+          0.31,
+          0.64
+        ],
+        "pref_score_wmer_macro": [
+          0.9,
+          0.81,
+          0.97
+        ],
+        "pcis_cmer_macro": [
+          0.0064,
+          0.003,
+          0.0097
+        ],
+        "pcis_wmer_macro": [
+          0.1322,
+          0.11,
+          0.1573
+        ]
+      },
+      "fold_scores": {
+        "impresso-snippets": {
+          "cmer_micro": [
+            0.0235,
+            0.0188,
+            0.0284
+          ],
+          "wmer_micro": [
+            0.0747,
+            0.0618,
+            0.0893
+          ],
+          "cmer_macro": [
+            0.0257,
+            0.02,
+            0.0323
+          ],
+          "wmer_macro": [
+            0.0782,
+            0.0645,
+            0.0933
+          ],
+          "pref_score_cmer_macro": [
+            0.48,
+            0.31,
+            0.64
+          ],
+          "pref_score_wmer_macro": [
+            0.9,
+            0.81,
+            0.97
+          ],
+          "pcis_cmer_macro": [
+            0.0064,
+            0.003,
+            0.0097
+          ],
+          "pcis_wmer_macro": [
+            0.1322,
+            0.11,
+            0.1573
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_impresso-snippets_v1.0_test_en": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0157,
+          0.0097,
+          0.0249
+        ],
+        "wmer_micro": [
+          0.0305,
+          0.0232,
+          0.0398
+        ],
+        "cmer_macro": [
+          0.0143,
+          0.0099,
+          0.0207
+        ],
+        "wmer_macro": [
+          0.0297,
+          0.0234,
+          0.0369
+        ],
+        "pref_score_cmer_macro": [
+          0.62,
+          0.47,
+          0.76
+        ],
+        "pref_score_wmer_macro": [
+          0.79,
+          0.68,
+          0.89
+        ],
+        "pcis_cmer_macro": [
+          0.0032,
+          -0.0032,
+          0.0073
+        ],
+        "pcis_wmer_macro": [
+          0.0488,
+          0.0372,
+          0.0605
+        ]
+      },
+      "fold_scores": {
+        "impresso-snippets": {
+          "cmer_micro": [
+            0.0157,
+            0.0097,
+            0.0249
+          ],
+          "wmer_micro": [
+            0.0305,
+            0.0232,
+            0.0398
+          ],
+          "cmer_macro": [
+            0.0143,
+            0.0099,
+            0.0207
+          ],
+          "wmer_macro": [
+            0.0297,
+            0.0234,
+            0.0369
+          ],
+          "pref_score_cmer_macro": [
+            0.62,
+            0.47,
+            0.76
+          ],
+          "pref_score_wmer_macro": [
+            0.79,
+            0.68,
+            0.89
+          ],
+          "pcis_cmer_macro": [
+            0.0032,
+            -0.0032,
+            0.0073
+          ],
+          "pcis_wmer_macro": [
+            0.0488,
+            0.0372,
+            0.0605
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_impresso-snippets_v1.0_test_fr": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0179,
+          0.0102,
+          0.0287
+        ],
+        "wmer_micro": [
+          0.0426,
+          0.032,
+          0.0553
+        ],
+        "cmer_macro": [
+          0.0191,
+          0.0109,
+          0.0304
+        ],
+        "wmer_macro": [
+          0.0477,
+          0.0348,
+          0.0625
+        ],
+        "pref_score_cmer_macro": [
+          0.5,
+          0.34,
+          0.66
+        ],
+        "pref_score_wmer_macro": [
+          0.76,
+          0.64,
+          0.87
+        ],
+        "pcis_cmer_macro": [
+          -0.0009,
+          -0.0114,
+          0.0065
+        ],
+        "pcis_wmer_macro": [
+          0.0625,
+          0.047,
+          0.0775
+        ]
+      },
+      "fold_scores": {
+        "impresso-snippets": {
+          "cmer_micro": [
+            0.0179,
+            0.0102,
+            0.0287
+          ],
+          "wmer_micro": [
+            0.0426,
+            0.032,
+            0.0553
+          ],
+          "cmer_macro": [
+            0.0191,
+            0.0109,
+            0.0304
+          ],
+          "wmer_macro": [
+            0.0477,
+            0.0348,
+            0.0625
+          ],
+          "pref_score_cmer_macro": [
+            0.5,
+            0.34,
+            0.66
+          ],
+          "pref_score_wmer_macro": [
+            0.76,
+            0.64,
+            0.87
+          ],
+          "pcis_cmer_macro": [
+            -0.0009,
+            -0.0114,
+            0.0065
+          ],
+          "pcis_wmer_macro": [
+            0.0625,
+            0.047,
+            0.0775
+          ]
+        }
+      }
+    },
+    "hipe-ocrepair-bench_v0.9_overproof-combined_v1.0_test_en": {
+      "averaged_scores": {
+        "cmer_micro": [
+          0.0556,
+          0.0312,
+          0.0877
+        ],
+        "wmer_micro": [
+          0.1017,
+          0.069,
+          0.1424
+        ],
+        "cmer_macro": [
+          0.0541,
+          0.0309,
+          0.0833
+        ],
+        "wmer_macro": [
+          0.0983,
+          0.0667,
+          0.1354
+        ],
+        "pref_score_cmer_macro": [
+          0.625,
+          0.3438,
+          0.875
+        ],
+        "pref_score_wmer_macro": [
+          0.9688,
+          0.9062,
+          1.0
+        ],
+        "pcis_cmer_macro": [
+          0.0167,
+          0.0009,
+          0.0311
+        ],
+        "pcis_wmer_macro": [
+          0.2003,
+          0.1506,
+          0.2528
+        ]
+      },
+      "fold_scores": {
+        "overproof-combined": {
+          "cmer_micro": [
+            0.0556,
+            0.0312,
+            0.0877
+          ],
+          "wmer_micro": [
+            0.1017,
+            0.069,
+            0.1424
+          ],
+          "cmer_macro": [
+            0.0541,
+            0.0309,
+            0.0833
+          ],
+          "wmer_macro": [
+            0.0983,
+            0.0667,
+            0.1354
+          ],
+          "pref_score_cmer_macro": [
+            0.625,
+            0.3438,
+            0.875
+          ],
+          "pref_score_wmer_macro": [
+            0.9688,
+            0.9062,
+            1.0
+          ],
+          "pcis_cmer_macro": [
+            0.0167,
+            0.0009,
+            0.0311
+          ],
+          "pcis_wmer_macro": [
+            0.2003,
+            0.1506,
+            0.2528
+          ]
+        }
+      }
+    }
+  }
+}
