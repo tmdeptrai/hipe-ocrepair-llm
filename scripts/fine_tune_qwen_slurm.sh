@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH --job-name=qwen_fine_tune
+#SBATCH --job-name=qwen_fine_tune_improv
 #SBATCH --partition=gpu-a40
 #SBATCH --qos=normal
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=32768
-#SBATCH --time=20:00:00
+#SBATCH --mem=16384
+#SBATCH --time=50:00:00
 #SBATCH --mail-user=minhduongqo@gmail.com
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu:1
@@ -224,8 +224,20 @@ echo "--- TEST COMPLETE ---"
 #     --data data/languages/german_train.parquet \
 #     --output_name qwen3-8B-ocr-meta-german
 
-python finetune/qwen3.py \
+# python finetune/qwen3.py \
+#     --model qwen3-8B \
+#     --with_metadata \
+#     --data data/hipe_aggregated_train.parquet \
+#     --output_name qwen3-8B-ocr-meta-hipe_aggregated
+
+
+
+
+
+# ================= ATTEMPTS TO IMPROVE PERFORMANCE =========
+# Better prompt + more epochs + increasing lora ranks and alpha
+python finetune/qwen3_but_better.py \
     --model qwen3-8B \
     --with_metadata \
     --data data/hipe_aggregated_train.parquet \
-    --output_name qwen3-8B-ocr-meta-hipe_aggregated
+    --output_name qwen3-8B-ocr-meta-hipe_aggregated-improv1

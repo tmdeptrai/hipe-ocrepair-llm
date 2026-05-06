@@ -54,7 +54,7 @@ python src/bart_base_ocr.py
 
 Rsync from local machine to l3icalculmaster:
 ```bash
-rsync -avz ~/Desktop/hipe-ocrepair-llm mtran01@l3icalculmaster:/Utilisateurs/mtran01/ --exclude={'.venv/*','.venv'}
+rsync -avz ~/Desktop/hipe-ocrepair-llm mtran01@l3icalculmaster:/Utilisateurs/mtran01/ --exclude={'.venv/*','.venv','uv.lock','.git','.git/*'}
 ```
 
 l3icalculmaster to local machine:

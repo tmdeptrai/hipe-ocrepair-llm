@@ -57,10 +57,26 @@ qwen3-4B:
   warmup_ratio: 0.03
   lr_scheduler_type: 'constant'
 
+# qwen3-8B:
+#   num_train_epochs: 5
+#   per_device_train_batch_size: 8
+#   gradient_accumulation_steps: 2
+#   gradient_checkpointing: True
+#   optim: 'paged_adamw_32bit'
+#   logging_steps: 10
+#   save_strategy: 'no'
+#   learning_rate: 2e-4
+#   bf16: True
+#   fp16: False
+#   tf32: True
+#   max_grad_norm: 0.3
+#   warmup_ratio: 0.03
+#   lr_scheduler_type: 'constant'
+
 qwen3-8B:
-  num_train_epochs: 5
-  per_device_train_batch_size: 8
-  gradient_accumulation_steps: 2
+  num_train_epochs: 10
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8
   gradient_checkpointing: True
   optim: 'paged_adamw_32bit'
   logging_steps: 10
@@ -70,5 +86,6 @@ qwen3-8B:
   fp16: False
   tf32: True
   max_grad_norm: 0.3
-  warmup_ratio: 0.03
-  lr_scheduler_type: 'constant'
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  lr_scheduler_type: 'cosine'
