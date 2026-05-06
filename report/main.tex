@@ -484,6 +484,15 @@ The exact same mathematical formulation is applied to compute $\Delta WER$.
 
 A positive percentage indicates a successful reduction in OCR noise, whereas a negative percentage would indicate that the model introduced more errors than it fixed (e.g., through severe hallucinations or aggressive over-correction). By tracking both the absolute scores and the relative reduction percentages, we can systematically compare the operational efficiency of the BART and Qwen architectures.
 
+\subsubsection{Training and Evaluation Strategies}
+To thoroughly assess the models' capacity for both domain adaptation and cross-lingual generalization, we implement two distinct experimental workflows:
+
+\begin{itemize}
+    \item \textbf{Dataset-Level Protocol (Domain-Specific):} In this localized setup, a model is fine-tuned and evaluated strictly within the boundaries of a single historical collection. For instance, the model is trained exclusively on the \texttt{dta19\_train} split and subsequently evaluated on the \texttt{dta19\_test} split. This approach establishes a baseline for how well the architecture masters a specific historical period, language, and layout.
+    
+    \item \textbf{Aggregation-Level Protocol (Cross-Domain):} To evaluate generalized learning, all available training datasets are merged into a single, unified multilingual corpus (\texttt{hipe\_aggregated\_train}). The model fine-tuned on this comprehensive dataset is then independently evaluated against each individual test set (e.g., \texttt{dta19\_test}, \texttt{icdar2017\_test}, \texttt{french\_test}). This protocol reveals whether exposure to a highly diverse dataset creates beneficial transfer learning across languages, or if it causes interference that degrades domain-specific accuracy.
+\end{itemize}
+
 %========================================== RESULTS =================================================
 \section{Results}
 % Purely objective findings
