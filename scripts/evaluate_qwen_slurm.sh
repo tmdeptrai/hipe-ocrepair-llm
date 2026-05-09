@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=qwen_eval
-#SBATCH --partition=gpu-a40
+#SBATCH --partition=gpu-a6000
 #SBATCH --qos=normal
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32768
-#SBATCH --time=6:00:00
+#SBATCH --time=8:00:00
 #SBATCH --mail-user=minhduongqo@gmail.com
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu:1
@@ -485,8 +485,26 @@ echo "--- TEST COMPLETE ---"
 #     --batch_size 4 \
 #     --with_metadata
 
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-meta-hipe_aggregated-improv1-meta \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
 
+# python model_eval/evaluate_qwen_better.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-meta-hipe_aggregated-improv2-meta \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
 
+python model_eval/evaluate_qwen.py \
+    --base_model Qwen/Qwen3-8B \
+    --adapter_path model/qwen3-8B-ocr-meta-hipe_aggregated-improv3-meta \
+    --data_path data/hipe_aggregated_test.parquet \
+    --batch_size 4 \
+    --with_metadata
 
 # ======================= PLEIAS/OCRONOS ZERO-SHOT =========================
 
@@ -530,10 +548,10 @@ echo "--- TEST COMPLETE ---"
 #     --data_path data/languages/german_test.parquet \
 #     --batch_size 4
 
-python model_eval/evaluate_pleias.py \
-    --base_model PleIAs/OCRonos \
-    --data_path data/hipe_aggregated_test.parquet \
-    --batch_size 4
+# python model_eval/evaluate_pleias.py \
+#     --base_model PleIAs/OCRonos \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4
 
 # ======================= PLEIAS/OCRONOS ZERO-SHOT (WITH METADATA) =========================
 

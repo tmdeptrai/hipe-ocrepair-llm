@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=qwen_fine_tune_improv
-#SBATCH --partition=gpu-a40
+#SBATCH --partition=gpu-a6000
 #SBATCH --qos=normal
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=16
 #SBATCH --mem=16384
-#SBATCH --time=50:00:00
-#SBATCH --mail-user=minhduongqo@gmail.com
+#SBATCH --time=30:00:00
+#SBATCH --mail-user=mtran@univ-lr.fr
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu:1
 #SBATCH --output=finetune-logs/qwen-ft-%j.log
@@ -236,8 +236,32 @@ echo "--- TEST COMPLETE ---"
 
 # ================= ATTEMPTS TO IMPROVE PERFORMANCE =========
 # Better prompt + more epochs + increasing lora ranks and alpha
+# python finetune/qwen3_but_better.py \
+#     --model qwen3-8B \
+#     --with_metadata \
+#     --data data/hipe_aggregated_train.parquet \
+#     --output_name qwen3-8B-ocr-meta-hipe_aggregated-improv1
+
+# python finetune/qwen3.py \
+#     --model qwen3-8B \
+#     --with_metadata \
+#     --data data/hipe_aggregated_train.parquet \
+#     --output_name qwen3-8B-ocr-meta-hipe_aggregated-improv1
+
+# python finetune/qwen3_but_better.py \
+#     --model qwen3-8B \
+#     --with_metadata \
+#     --data data/hipe_aggregated_train.parquet \
+#     --output_name qwen3-8B-ocr-meta-hipe_aggregated-improv2
+
+# python finetune/qwen3.py \
+#     --model qwen3-8B \
+#     --with_metadata \
+#     --data data/hipe_aggregated_train.parquet \
+#     --output_name qwen3-8B-ocr-meta-hipe_aggregated-improv3
+
 python finetune/qwen3_but_better.py \
     --model qwen3-8B \
     --with_metadata \
     --data data/hipe_aggregated_train.parquet \
-    --output_name qwen3-8B-ocr-meta-hipe_aggregated-improv1
+    --output_name qwen3-8B-ocr-meta-hipe_aggregated-improv4
