@@ -499,9 +499,16 @@ echo "--- TEST COMPLETE ---"
 #     --batch_size 4 \
 #     --with_metadata
 
-python model_eval/evaluate_qwen.py \
+# python model_eval/evaluate_qwen.py \
+#     --base_model Qwen/Qwen3-8B \
+#     --adapter_path model/qwen3-8B-ocr-meta-hipe_aggregated-improv3-meta \
+#     --data_path data/hipe_aggregated_test.parquet \
+#     --batch_size 4 \
+#     --with_metadata
+
+python model_eval/evaluate_qwen_better.py \
     --base_model Qwen/Qwen3-8B \
-    --adapter_path model/qwen3-8B-ocr-meta-hipe_aggregated-improv3-meta \
+    --adapter_path model/qwen3-8B-ocr-meta-hipe_aggregated-improv4-meta \
     --data_path data/hipe_aggregated_test.parquet \
     --batch_size 4 \
     --with_metadata

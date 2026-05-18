@@ -6,7 +6,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=16384
-#SBATCH --time=30:00:00
+#SBATCH --time=15:00:00
 #SBATCH --mail-user=mtran@univ-lr.fr
 #SBATCH --mail-type=END
 #SBATCH --gres=gpu:1
