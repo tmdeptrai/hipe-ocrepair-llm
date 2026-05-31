@@ -12,7 +12,7 @@ def get_text_stats(text):
         "num_tokens": len(text.split())
     }
 
-def generate_hypotheses_from_refs(df, ref_dir, hyp_dir, team_name="TMDUONG", run_name="run1"):
+def generate_hypotheses_from_refs(df, ref_dir, hyp_dir, team_name="tranminhduong", run_name="run10"):
     os.makedirs(hyp_dir, exist_ok=True)
     
     print("Reconstructing full documents from chunks...")

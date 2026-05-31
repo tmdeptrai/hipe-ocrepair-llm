@@ -6,12 +6,12 @@ set -e
 # ==============================================================================
 # Configuration & Defaults
 # ==============================================================================
-PARQUET_FILE=${1:-"model_eval_logs/qwen3-8B-ocr-hipe_aggregated-meta_hipe_aggregated_test_meta_results.parquet"}
+PARQUET_FILE=${1:-"model_eval_logs/qwen3-8B-ocr-meta-hipe_aggregated-improv4-meta_hipe_aggregated_test_meta_results.parquet"}
 RAW_REF_DIR=${2:-"./HIPE-OCRepair-2026-data/data/v0.9/"}
 OUTPUT_DIR="official_scorer_data"
 FLAT_REF_DIR="${OUTPUT_DIR}/reference"
-TEAM_NAME="TMDUONG"
-RUN_NAME="run1"
+TEAM_NAME="tmdeptrai"
+RUN_NAME="run10"
 
 # Extract just the base name of the parquet file to name our final JSON report
 BASE_NAME=$(basename "$PARQUET_FILE" .parquet)
