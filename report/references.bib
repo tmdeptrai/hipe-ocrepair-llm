@@ -153,3 +153,210 @@ doi = {10.1145/3075645}
       primaryClass={cs.LG},
       url={https://arxiv.org/abs/2305.14314}, 
 }
+
+@inproceedings{chironicdar2017,
+author = {Chiron, Guillaume and Doucet, Antoine and Coustaty, Mickaël and Moreux, Jean-Philippe},
+pages = {1423-1428},
+title = {{ICDAR2017 Competition on Post-OCR Text Correction}},
+doi = {10.1109/ICDAR.2017.232}
+}
+
+@INPROCEEDINGS{rigaudicdar2019,
+  author={Rigaud, Christophe and Doucet, Antoine and Coustaty, Mickaël and Moreux, Jean-Philippe},
+  booktitle={2019 International Conference on Document Analysis and Recognition (ICDAR)}, 
+  title={{ICDAR 2019 Competition on Post-OCR Text Correction}}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1588-1593},
+  doi={10.1109/ICDAR.2019.00255}}
+
+@inproceedings{dong-smith-2018-multi,
+    title = "Multi-Input Attention for Unsupervised {OCR} Correction",
+    author = "Dong, Rui  and
+      Smith, David",
+    editor = "Gurevych, Iryna  and
+      Miyao, Yusuke",
+    booktitle = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2018",
+    address = "Melbourne, Australia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P18-1220/",
+    doi = "10.18653/v1/P18-1220",
+    pages = "2363--2372",
+    abstract = "We propose a novel approach to OCR post-correction that exploits repeated texts in large corpora both as a source of noisy target outputs for unsupervised training and as a source of evidence when decoding. A sequence-to-sequence model with attention is applied for single-input correction, and a new decoder with multi-input attention averaging is developed to search for consensus among multiple sequences. We design two ways of training the correction model without human annotation, either training to match noisily observed textual variants or bootstrapping from a uniform error model. On two corpora of historical newspapers and books, we show that these unsupervised techniques cut the character and word error rates nearly in half on single inputs and, with the addition of multi-input decoding, can rival supervised methods."
+}
+
+@inproceedings{schaefer-neudecker-2020-two,
+    title = "{A Two-Step Approach for Automatic {OCR} Post-Correction}",
+    author = "Schaefer, Robin  and
+      Neudecker, Clemens",
+    editor = "DeGaetano, Stefania  and
+      Kazantseva, Anna  and
+      Reiter, Nils  and
+      Szpakowicz, Stan",
+    booktitle = "Proceedings of the 4th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature",
+    month = dec,
+    year = "2020",
+    address = "Online",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2020.latechclfl-1.6/",
+    pages = "52--57",
+    abstract = "The quality of Optical Character Recognition (OCR) is a key factor in the digitisation of historical documents. OCR errors are a major obstacle for downstream tasks and have hindered advances in the usage of the digitised documents. In this paper we present a two-step approach to automatic OCR post-correction. The first component is responsible for detecting erroneous sequences in a set of OCRed texts, while the second is designed for correcting OCR errors in them. We show that applying the preceding detection model reduces both the character error rate (CER) compared to a simple one-step correction model and the amount of falsely changed correct characters."
+}
+
+@inproceedings{thomas-etal-2024-leveraging,
+    title = "{Leveraging {LLM}s for Post-{OCR} Correction of Historical Newspapers}",
+    author = "Thomas, Alan  and
+      Gaizauskas, Robert  and
+      Lu, Haiping",
+    editor = "Sprugnoli, Rachele  and
+      Passarotti, Marco",
+    booktitle = "Proceedings of the Third Workshop on Language Technologies for Historical and Ancient Languages (LT4HALA) @ LREC-COLING-2024",
+    month = may,
+    year = "2024",
+    address = "Torino, Italia",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.lt4hala-1.14/",
+    pages = "116--121",
+    abstract = "Poor OCR quality continues to be a major obstacle for humanities scholars seeking to make use of digitised primary sources such as historical newspapers. Typical approaches to post-OCR correction employ sequence-to-sequence models for a neural machine translation task, mapping erroneous OCR texts to accurate reference texts. We shift our focus towards the adaptation of generative LLMs for a prompt-based approach. By instruction-tuning Llama 2 and comparing it to a fine-tuned BART on BLN600, a parallel corpus of 19th century British newspaper articles, we demonstrate the potential of a prompt-based approach in detecting and correcting OCR errors, even with limited training data. We achieve a significant enhancement in OCR quality with Llama 2 outperforming BART, achieving a 54.51{\%} reduction in the character error rate against BART{'}s 23.30{\%}. This paves the way for future work leveraging generative LLMs to improve the accessibility and unlock the full potential of historical texts for humanities research."
+}
+
+@inproceedings{soper-etal-2021-bart,
+    title = "{{BART} for Post-Correction of {OCR} Newspaper Text}",
+    author = "Soper, Elizabeth  and
+      Fujimoto, Stanley  and
+      Yu, Yen-Yun",
+    editor = "Xu, Wei  and
+      Ritter, Alan  and
+      Baldwin, Tim  and
+      Rahimi, Afshin",
+    booktitle = "Proceedings of the Seventh Workshop on Noisy User-generated Text (W-NUT 2021)",
+    month = nov,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.wnut-1.31/",
+    doi = "10.18653/v1/2021.wnut-1.31",
+    pages = "284--290",
+    abstract = "Optical character recognition (OCR) from newspaper page images is susceptible to noise due to degradation of old documents and variation in typesetting. In this report, we present a novel approach to OCR post-correction. We cast error correction as a translation task, and fine-tune BART, a transformer-based sequence-to-sequence language model pretrained to denoise corrupted text. We are the first to use sentence-level transformer models for OCR post-correction, and our best model achieves a 29.4{\%} improvement in character accuracy over the original noisy OCR text. Our results demonstrate the utility of pretrained language models for dealing with noisy text."
+}
+
+@inproceedings{boros-etal-2024-post,
+    title = "{Post-Correction of Historical Text Transcripts with Large Language Models: An Exploratory Study}",
+    author = "Boros, Emanuela  and
+      Ehrmann, Maud  and
+      Romanello, Matteo  and
+      Najem-Meyer, Sven  and
+      Kaplan, Fr{\'e}d{\'e}ric",
+    editor = "Bizzoni, Yuri  and
+      Degaetano-Ortlieb, Stefania  and
+      Kazantseva, Anna  and
+      Szpakowicz, Stan",
+    booktitle = "Proceedings of the 8th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH-CLfL 2024)",
+    month = mar,
+    year = "2024",
+    address = "St. Julians, Malta",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.latechclfl-1.14/",
+    doi = "10.18653/v1/2024.latechclfl-1.14",
+    pages = "133--159",
+    abstract = "The quality of automatic transcription of heritage documents, whether from printed, manuscripts or audio sources, has a decisive impact on the ability to search and process historical texts. Although significant progress has been made in text recognition (OCR, HTR, ASR), textual materials derived from library and archive collections remain largely erroneous and noisy. Effective post-transcription correction methods are therefore necessary and have been intensively researched for many years. As large language models (LLMs) have recently shown exceptional performances in a variety of text-related tasks, we investigate their ability to amend poor historical transcriptions. We evaluate fourteen foundation language models against various post-correction benchmarks comprising different languages, time periods and document types, as well as different transcription quality and origins. We compare the performance of different model sizes and different prompts of increasing complexity in zero and few-shot settings. Our evaluation shows that LLMs are anything but efficient at this task. Quantitative and qualitative analyses of results allow us to share valuable insights for future work on post-correcting historical texts with LLMs."
+}
+
+@inproceedings{guan2024advancing,
+  title={{Advancing post-OCR correction: A comparative study of synthetic data}},
+  author={Guan, Shuhao and Greene, Derek},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2024},
+  pages={6036--6047},
+  year={2024}
+}
+@article{bourne2025scrambled,
+  author    = {Bourne, J.},
+  title     = {Scrambled text: fine-tuning language models for OCR error correction using synthetic data},
+  journal   = {International Journal on Document Analysis and Recognition (IJDAR)},
+  volume    = {28},
+  pages     = {741--755},
+  year      = {2025},
+  doi       = {10.1007/s10032-025-00522-0},
+  publisher = {Springer}
+}
+
+@inproceedings{do2025reference,
+  title={{Reference-based post-OCR processing with LLM for precise diacritic text in historical document recognition}},
+  author={Do, Thao and Tran, Dinh Phu and Vo, An and Kim, Daeyoung},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={27},
+  pages={27951--27959},
+  year={2025}
+}
+@article {sastre2025postocr,
+	Title = {{Post-OCR Correction Using Large Language Models with Constrained Decoding}},
+	Author = {Sastre, Ignacio and Etcheverry, Lorena and Rey, Guillermo and Moncecchi, Guillermo and Rosá, Aiala},
+	DOI = {10.21203/rs.3.rs-6823036/v1},
+	Journal = {Research Square},
+	Year = {2025},
+	URL = {https://doi.org/10.21203/rs.3.rs-6823036/v1},
+}
+@article{greif2025multimodal,
+  title={{Multimodal LLMs for OCR, OCR post-correction, and named entity recognition in historical documents}},
+  author={Greif, Gavin and Griesshaber, Niclas and Greif, Robin},
+  journal={arXiv preprint arXiv:2504.00414},
+  year={2025}
+}
+
+@inproceedings{debaene2025evaluating,
+  title={{Evaluating transformers for ocr post-correction in early modern dutch theatre}},
+  author={Debaene, Florian and Maladry, Aaron and Lefever, Els and Hoste, V{\'e}ronique},
+  booktitle={Proceedings of the 31st International Conference on Computational Linguistics},
+  pages={10367--10374},
+  year={2025}
+}
+@inproceedings
+
+@inproceedings{vanstrien2020assessing,
+  ids = {vanstrien2020assessing},
+  title = {{Assessing the {{Impact}} of {{OCR Quality}} on {{Downstream NLP Tasks}}:}},
+  shorttitle = {Assessing the {{Impact}} of {{OCR Quality}} on {{Downstream NLP Tasks}}},
+  booktitle = {Proceedings of the 12th {{International Conference}} on {{Agents}} and {{Artificial Intelligence}}},
+  author = {{van Strien}, Daniel and Beelen, Kaspar and Ardanuy, Mariona and Hosseini, Kasra and McGillivray, Barbara and Colavizza, Giovanni},
+  year = {2020},
+  pages = {484--496},
+  publisher = {{SCITEPRESS - Science and Technology Publications}},
+  address = {{Valletta, Malta}},
+  url = {http://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0009169004840496},
+  urldate = {2023-03-24},
+  isbn = {978-989-758-395-7},
+  keywords = {cited}
+}
+
+@inproceedings{debaene-etal-2025-evaluating,
+    title = "Evaluating Transformers for {OCR} Post-Correction in Early {M}odern {D}utch Theatre",
+    author = "Debaene, Florian  and
+      Maladry, Aaron  and
+      Lefever, Els  and
+      Hoste, Veronique",
+    editor = "Rambow, Owen  and
+      Wanner, Leo  and
+      Apidianaki, Marianna  and
+      Al-Khalifa, Hend  and
+      Eugenio, Barbara Di  and
+      Schockaert, Steven",
+    booktitle = "Proceedings of the 31st International Conference on Computational Linguistics",
+    month = jan,
+    year = "2025",
+    address = "Abu Dhabi, UAE",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.coling-main.690/",
+    pages = "10367--10374"
+}
+
+@inproceedings{agarwal2025ailla,
+  title={AILLA-OCR: A First Textual and Structural Post-OCR Dataset for 8 Indigenous Languages of Latin America},
+  author={Agarwal, Milind and Anastasopoulos, Antonios},
+  booktitle={Proceedings of the Eight Workshop on the Use of Computational Methods in the Study of Endangered Languages},
+  pages={120--127},
+  year={2025}
+}
