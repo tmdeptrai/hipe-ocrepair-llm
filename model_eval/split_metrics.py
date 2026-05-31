@@ -24,9 +24,9 @@ def analyze_aggregated_results(file_path):
                 subset['ocr_text'].tolist(),
                 subset['model_output'].tolist()
             )
-            # cer_red = report['relative_cer_reduction'] * 100
-            # wer_red = report['relative_wer_reduction'] * 100
-            # print(f"{dataset_name:<20} | CER Red: {cer_red:>7.2f}% | WER Red: {wer_red:>7.2f}% | (Samples: {len(subset)})")
+            cer_red = report['relative_cer_reduction'] * 100
+            wer_red = report['relative_wer_reduction'] * 100
+            print(f"{dataset_name:<20} | CER Red: {cer_red:>7.2f}% | WER Red: {wer_red:>7.2f}% | (Samples: {len(subset)})")
             print(f"{dataset_name:<20} | CER: {report['model_cer_stats']['mean']*100} | WER: {report['model_wer_stats']['mean']*100} (Samples: {len(subset)})")
     else:
         print("No 'dataset' column found in this file.")
@@ -47,6 +47,7 @@ def analyze_aggregated_results(file_path):
             cer_red = report['relative_cer_reduction'] * 100
             wer_red = report['relative_wer_reduction'] * 100
             print(f"{lang:<20} | CER Red: {cer_red:>7.2f}% | WER Red: {wer_red:>7.2f}% | (Samples: {len(subset)})")
+            print(f"{lang:<20} | CER: {report['model_cer_stats']['mean']*100} | WER: {report['model_wer_stats']['mean']*100} (Samples: {len(subset)})")
     else:
         print("No 'language' column found in this file.")
 
